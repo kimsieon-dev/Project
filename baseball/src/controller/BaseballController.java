@@ -41,13 +41,13 @@ public class BaseballController extends HttpServlet {
 		} else if (command.equals("/memberJoin.do")) {
 			forward = new ActionForward();
 			forward.setPath("/joinForm.jsp");
-		} else if (command.equals("/memberLoginAction.do")) {
-			action = new MemberLoginAction();
-			try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+//		} else if (command.equals("/memberLoginAction.do")) {
+//			action = new MemberLoginAction();
+//			try {
+//				forward = action.execute(request, response);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
 		} else if (command.equals("/memberJoinAction.do")) {
 			action = new MemberJoinAction();
 			try {
@@ -55,36 +55,38 @@ public class BaseballController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if (command.equals("/memberListAction.do")) {
-			action = new MemberListAction();
-			try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		} else if (command.equals("/memberViewAction.do")) {
-			action = new MemberViewAction();
-			try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		} else if (command.equals("/memberDeleteAction.do")) {
-			action = new MemberDeleteAction();
-			try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			} 
-		} else {
-			response.setContentType("text/html;charset=UTF-8");
-			PrintWriter out = response.getWriter();
-			out.println("<script>");
-			out.println("alert('잘못된 경로입니다.')");
-			out.println("</script>");
-			forward = new ActionForward();
-			forward.setPath("/loginForm.jsp");		
+		
 		}
+//		} else if (command.equals("/memberListAction.do")) {
+//			action = new MemberListAction();
+//			try {
+//				forward = action.execute(request, response);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//		} else if (command.equals("/memberViewAction.do")) {
+//			action = new MemberViewAction();
+//			try {
+//				forward = action.execute(request, response);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//		} else if (command.equals("/memberDeleteAction.do")) {
+//			action = new MemberDeleteAction();
+//			try {
+//				forward = action.execute(request, response);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			} 
+//		} else {
+//			response.setContentType("text/html;charset=UTF-8");
+//			PrintWriter out = response.getWriter();
+//			out.println("<script>");
+//			out.println("alert('잘못된 경로입니다.')");
+//			out.println("</script>");
+//			forward = new ActionForward();
+//			forward.setPath("/loginForm.jsp");		
+//		}
 
 		if (forward != null) {
 			if (forward.isRedirect()) {
@@ -95,6 +97,4 @@ public class BaseballController extends HttpServlet {
 			}
 		}
 	}
-	}
-
 }

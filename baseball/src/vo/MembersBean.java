@@ -5,8 +5,8 @@ public class MembersBean {
 	private String member_id;
 	private String member_password;
 	private String member_name;
-	private int member_age;
 	private String member_email;
+	private String member_birthday;
 	
 	public int getMember_num() {
 		return member_num;
@@ -32,18 +32,17 @@ public class MembersBean {
 	public void setMember_name(String member_name) {
 		this.member_name = member_name;
 	}
-	public int getMember_age() {
-		return member_age;
-	}
-	public void setMember_age(int member_age) {
-		this.member_age = member_age;
-	}
 	public String getMember_email() {
 		return member_email;
 	}
 	public void setMember_email(String member_email) {
 		this.member_email = member_email;
 	}
-	
+	public String getMember_birthday() {
+		return member_birthday;
+	}
+	public void setMember_birthday(String member_birthday) {
+		this.member_birthday = member_birthday;
+	}
 	
 }
