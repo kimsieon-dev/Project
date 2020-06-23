@@ -43,20 +43,25 @@ $(document).ready(function(){
 });
 </script>
 
+
 </head>
 <body>
 	<header>
-		<p>로그인</p>
+		<h5><a href="loginForm.jsp">로그인</a></h5>
 	</header>
 	<nav>
-		<div class="dropmenu">
-			<img src="image/logo.jpg" />
+		<div class="dropmenu">			
 			<ul>
+				<li id="logo1">
+					<img src="image/logo1.jpg">
+					<h1><a href="main.jsp">SAMSUNG LIONS</a></h1>
+				</li>
+				
+			
 				<li><a href="#">구단</a>
 					<ul>
 						<li><a href="club.jsp">구단 소개</a></li>
-						<li><a href="#">구장 소개</a></li>
-						<li><a href="#">구장 오시는 길</a></li>
+						<li><a href="laPark.jsp">GO 라팍!</a></li>
 					</ul>
 				</li>
 				

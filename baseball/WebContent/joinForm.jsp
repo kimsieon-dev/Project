@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/join.css" />
 </head>
 <body>
-		<form name="joinForm" action="memberJoinAction.do" method="post">
+		<form name="joinForm" action="memberJoinAction.bd" method="post">
 			<div id="header">
 				<img src="image/catch.jpg" id="logo">
 			</div>
@@ -71,7 +71,7 @@
 
                 <!-- JOIN BTN-->
                 <div class="btn_area">
-                    <button type="button" id="btnJoin">
+                    <button type="button" id="btnJoin" onclick="location.href='javascript:joinForm.submit()'">
                         <span>가입하기</span>
                     </button>
                 </div>

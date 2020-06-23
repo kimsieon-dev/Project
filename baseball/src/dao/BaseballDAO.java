@@ -37,12 +37,11 @@ public class BaseballDAO {
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(parameterIndex, x);
-			pstmt.setString(1, members.getMember_id());
-			pstmt.setString(2, members.getMember_password());
-			pstmt.setString(3, members.getMember_name());
-			pstmt.setString(4, members.getMember_email());
-			pstmt.setString(5, members.getMember_birthday());
+			pstmt.setString(1, members.getMembers_id());
+			pstmt.setString(2, members.getMembers_password());
+			pstmt.setString(3, members.getMembers_name());
+			pstmt.setString(4, members.getMembers_email());
+			pstmt.setString(5, members.getMembers_birthday());
 			insertCount = pstmt.executeUpdate();
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -50,5 +49,27 @@ public class BaseballDAO {
 			close(pstmt);
 		}
 		return insertCount;
+	}
+
+	public String selectLoginId(MembersBean members) {
+		String loginId = null;
+		String sql = "select members_id from members where members_id = ? and members_password = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, members.getMembers_id());
+			pstmt.setString(2, members.getMembers_password());
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				loginId = rs.getString("members_id");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return loginId;
 	}
 }

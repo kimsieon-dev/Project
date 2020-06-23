@@ -16,11 +16,11 @@ public class MemberJoinAction implements Action {
 		MembersBean members = new MembersBean();
 		boolean joinResult = false;
 		
-		members.setMember_id(request.getParameter("member_id"));
-		members.setMember_password(request.getParameter("member_pw"));
-		members.setMember_name(request.getParameter("member_name"));
-		members.setMember_email(request.getParameter("member_email"));
-		members.setMember_birthday(request.getParameter("member_birthday"));
+		members.setMembers_id(request.getParameter("members_id"));
+		members.setMembers_password(request.getParameter("members_password"));
+		members.setMembers_name(request.getParameter("members_name"));
+		members.setMembers_email(request.getParameter("members_email"));
+		members.setMembers_birthday(request.getParameter("members_birthday"));
 		MemberJoinService memberJoinService = new MemberJoinService();
 		joinResult = memberJoinService.joinMember(members);
 		

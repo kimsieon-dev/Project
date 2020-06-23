@@ -10,6 +10,12 @@
 	font-family: 'GmarketSansBold'; 
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal; }
 
+@font-face { 
+	font-family: 'yg-jalnan'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; }
+
 * {
 	margin: 0;
 	padding: 0;
@@ -63,12 +69,7 @@ nav {
 	border-bottom: 1px solid black;
 }
 
-section {
-	width: 1200px;
-	margin: 0 auto;
-	height: 800px;
-	margin-top: 20px;
-}
+
 
 footer {
 	width: 1200px;
@@ -122,7 +123,7 @@ footer {
 	height: auto;
 	border: 0px;
 	position: absolute;
-	width: 150px;
+	width: 200px;
 	z-index: 200;
 	/*top:1em;
 /*left:0;*/
@@ -137,7 +138,7 @@ footer {
 	float: none;
 	margin: 0px;
 	padding: 0px;
-	width: 150px;
+	width: 200px;
 	 background-color: rgba( 255, 255, 255, 0.8 );
 }
 
@@ -164,4 +165,19 @@ footer {
 	clear: left;
 }
 
+section {
+	width: 1200px;
+	margin: 0 auto;
+	height: 800px;
+	margin-top: 20px;
+}
 
+img {
+	display: block;
+	margin: 0px auto;
+}
+
+h4 {
+	font-family: 'yg-jalnan';
+	font-size: 1.25rem;
+}

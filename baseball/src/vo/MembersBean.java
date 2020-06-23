@@ -1,48 +1,43 @@
 package vo;
 
 public class MembersBean {
-	private int member_num;
-	private String member_id;
-	private String member_password;
-	private String member_name;
-	private String member_email;
-	private String member_birthday;
+	private String members_id;
+	private String members_password;
+	private String members_name;
+	private String members_email;
+	private String members_birthday;
 	
-	public int getMember_num() {
-		return member_num;
+	public String getMembers_id() {
+		return members_id;
 	}
-	public void setMember_num(int member_num) {
-		this.member_num = member_num;
+	public void setMembers_id(String members_id) {
+		this.members_id = members_id;
 	}
-	public String getMember_id() {
-		return member_id;
+	public String getMembers_password() {
+		return members_password;
 	}
-	public void setMember_id(String member_id) {
-		this.member_id = member_id;
+	public void setMembers_password(String members_password) {
+		this.members_password = members_password;
 	}
-	public String getMember_password() {
-		return member_password;
+	public String getMembers_name() {
+		return members_name;
 	}
-	public void setMember_password(String member_password) {
-		this.member_password = member_password;
+	public void setMembers_name(String members_name) {
+		this.members_name = members_name;
 	}
-	public String getMember_name() {
-		return member_name;
+	public String getMembers_email() {
+		return members_email;
 	}
-	public void setMember_name(String member_name) {
-		this.member_name = member_name;
+	public void setMembers_email(String members_email) {
+		this.members_email = members_email;
 	}
-	public String getMember_email() {
-		return member_email;
+	public String getMembers_birthday() {
+		return members_birthday;
 	}
-	public void setMember_email(String member_email) {
-		this.member_email = member_email;
+	public void setMembers_birthday(String members_birthday) {
+		this.members_birthday = members_birthday;
 	}
-	public String getMember_birthday() {
-		return member_birthday;
-	}
-	public void setMember_birthday(String member_birthday) {
-		this.member_birthday = member_birthday;
-	}
+	
+	
 	
 }

@@ -8,13 +8,13 @@
 <link rel="stylesheet" href="css/login.css" />
 </head>
 <body>
+			<form name="loginForm" action="memberLoginAction.bd" method="post">
 	<div class="logo">
-		<img src="image/logo.jpg" />
+		<img src="image/logo4.jpg" />
 	</div>
 	
 	<div class="inner_login">
 		<div class="login_tistory">
-			<form name="loginForm" action="memberLoginAction.do" method="post">
 				<fieldset>
 					<div class="box_login">
 						<div class="inp_text">
@@ -28,7 +28,7 @@
 								placeholder="Password" autocomplete="off" />
 						</div>
 					</div>
-					<button type="submit" class="btn_login" disabled>로그인</button>
+					<button type="submit" class="btn_login">로그인</button>
 					<div class="login_append">
 						<div class="inp_chk">
 							<!-- 체크시 checked 추가 -->
@@ -38,13 +38,13 @@
 									상태 유지</span>
 							</label>
 						</div>
-						<span class="txt_find"> <a href="joinForm.jsp"
+						<span class="txt_find"> <a href="memberJoin.bd"
 							class="link_find">회원 가입</a>
 						</span>
 					</div>
 				</fieldset>
-			</form>
 		</div>
 	</div>
+			</form>
 </body>
 </html>

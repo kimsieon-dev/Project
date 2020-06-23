@@ -12,10 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import action.Action;
 import action.MemberJoinAction;
+import action.MemberLoginAction;
 import vo.ActionForward;
 
 
-@WebServlet("*.do")
+@WebServlet("*.bd")
 public class BaseballController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -35,20 +36,19 @@ public class BaseballController extends HttpServlet {
 		ActionForward forward = null;
 		Action action = null;
 		
-		if (command.equals("/memberLogin.do")) {
+		if (command.equals("/memberLogin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/loginForm.jsp");
-		} else if (command.equals("/memberJoin.do")) {
+		} else if (command.equals("/memberJoin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/joinForm.jsp");
-//		} else if (command.equals("/memberLoginAction.do")) {
-//			action = new MemberLoginAction();
-//			try {
-//				forward = action.execute(request, response);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-		} else if (command.equals("/memberJoinAction.do")) {
+		} else if (command.equals("/memberLoginAction.bd")) {
+			action = new MemberLoginAction();
+			try {
+				forward = action.execute(request, response);
+		} catch (Exception e) {				e.printStackTrace();
+			}
+		} else if (command.equals("/memberJoinAction.bd")) {
 			action = new MemberJoinAction();
 			try {
 				forward = action.execute(request, response);
