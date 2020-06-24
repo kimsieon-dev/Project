@@ -174,15 +174,8 @@ footer {
 
 section {
 	width: 1200px;
-	margin: 0 auto;
 	margin-top: 20px;
-}
-
-.intro >img {
-	display: block;
 	margin: 0px auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 h4 {
@@ -191,34 +184,75 @@ h4 {
 	margin-top: 20px;
 }
 
-.fri > p:first-child {
-	font-family: 'NanumSquareRound'; 
-	color: #1976D2;
-	font-size: 1.5rem;
+section > .map {
+	height: 410px;
 }
 
-.fri > p {
-	font-family: 'NanumSquareRound'; 
-	font-size: 2rem;
-}
-
-.co {
-	float:left;
-	margin: 0px auto;
-	margin-bottom: 50px;
-}
-.co > .gLeft {
+section > .info {
+	margin-top: 20px;
 	float: left;
-	width: 280px;
-	margin-right: 20px;
-	text-align: justify;
-	font-family: 'NanumSquareRound'; 
+	height: 600px;
+	width: 700px;
 }
 
-.co > .gRight {
-	font-family: 'NanumSquareRound';
-	float: right;
-	width: 260px;
-	margin-left: 40px;
-	text-align: justify;
+
+ul{
+	list-style:none;
 }
+
+.tabmenu{ 
+  max-width:800px; 
+  margin: 0 auto; 
+  position:relative; 
+  margin-top: 20px;
+}
+.tabmenu ul li{
+  display:  inline-block;
+  width:33.33%; 
+  float:left;  
+  text-align:center; 
+  background :#f9f9f9;
+  line-height:50px;
+}
+.tabmenu label{
+  display:block;
+  height:50px;
+  line-height:50px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid #1976D2;
+  font-family: 'NanumSquareRound'; 
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.tabmenu input{
+	display:none;
+	
+}
+.tabCon{
+	width: 100%;
+  display:none; 
+  text-align:left; 
+  position:absolute; 
+  left:0; top:40px; 
+  box-sizing: border-box; 
+}
+
+.tabmenu input:checked ~ label {
+	background: white;
+	border-right: 3px solid #1976D2;
+	border-top: 3px solid #1976D2;
+	border-left: 3px solid #1976D2;
+	border-bottom: 3px solid transparent;
+	color: #1976D2;
+}
+
+.tabmenu input:checked ~ .tabCon{
+  display:block;
+}
+
+.intro {
+	top: 600;
+	width: 800px;
+}
+
