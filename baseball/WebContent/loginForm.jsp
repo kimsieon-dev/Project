@@ -18,13 +18,13 @@
 				<fieldset>
 					<div class="box_login">
 						<div class="inp_text">
-							<label for="member_id" class="screen_out">아이디</label> <input
-								type="text" id="member_id" name="member_id" placeholder="ID"
+							<label for="members_id" class="screen_out">아이디</label> <input
+								type="text" id="members_id" name="members_id" placeholder="ID"
 								autocomplete="off" />
 						</div>
 						<div class="inp_text">
-							<label for="member_password" class="screen_out">비밀번호</label> <input
-								type="password" id="member_password" name="member_password"
+							<label for="members_password" class="screen_out">비밀번호</label> <input
+								type="password" id="members_password" name="members_password"
 								placeholder="Password" autocomplete="off" />
 						</div>
 					</div>

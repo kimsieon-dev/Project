@@ -201,7 +201,7 @@ ul{
 }
 
 .tabmenu{ 
-  max-width:800px; 
+  max-width:1000px; 
   margin: 0 auto; 
   position:relative; 
   margin-top: 20px;
@@ -252,6 +252,31 @@ ul{
 }
 
 .intro {
-	width: 800px;
+	width: 1000px;
 }
+
+.tra > th,td {
+	padding: 10px;
+}
+
+table.tra {
+	text-align: center;
+border-collapse: collapse;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-left: 5px solid #369;
+}
+
+table.tra th {
+    font-weight: bold;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+table.tra td {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    
+}
+
 

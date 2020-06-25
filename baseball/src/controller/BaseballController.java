@@ -36,7 +36,10 @@ public class BaseballController extends HttpServlet {
 		ActionForward forward = null;
 		Action action = null;
 		
-		if (command.equals("/memberLogin.bd")) {
+		if (command.equals("/main.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/main.jsp");
+		} else if (command.equals("/memberLogin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/loginForm.jsp");
 		} else if (command.equals("/memberJoin.bd")) {
