@@ -58,8 +58,10 @@ public class BaseballController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		
-		}
+		} else if (command.equals("/memberJoin.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/joinForm.jsp");
+		} 
 //		} else if (command.equals("/memberListAction.do")) {
 //			action = new MemberListAction();
 //			try {

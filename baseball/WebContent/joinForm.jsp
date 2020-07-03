@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/join.css" />
+
+<script src="js/jquery-3.5.1.min.js"></script>
 </head>
 <body>
 	<form name="joinForm" action="memberJoinAction.bd" method="post">
@@ -72,16 +74,49 @@
                     <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>    
                 </div>
                 
+                <!-- BIRTH -->
                 <div>
-                    <h3 class="join_title"><label for="members_birthday">생년월일</label></h3>
-                    <span class="box">
-                        <input type="text" id="members_birthday" name="members_birthday" class="int" maxlength="100">
-                    </span>
-                    <span class="error_next_box">생년월일을 다시 확인해주세요.</span>    
+                    <h3 class="join_title"><label for="members_yy">생년월일</label></h3>
+
+                    <div id="bir_wrap">
+                        <!-- BIRTH_YY -->
+                        <div id="bir_yy">
+                            <span class="box">
+                                <input type="text" id="members_yy" name="members_yy" class="int" maxlength="4" placeholder="년(4자)">
+                            </span>
+                        </div>
+
+                        <!-- BIRTH_MM -->
+                        <div id="bir_mm">
+                            <span class="box">
+                                <select id="members_mm" name="members_mm" class="sel">
+                                    <option>월</option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>                                    
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </span>
+                        </div>
+
+                        <!-- BIRTH_DD -->
+                        <div id="bir_dd">
+                            <span class="box">
+                                <input type="text" id="members_dd" name="members_dd" class="int" maxlength="2" placeholder="일">
+                            </span>
+                        </div>
+
+                    </div>
+                    <span class="error_next_box"></span>    
                 </div>
-
-     
-
 
                 <!-- JOIN BTN-->
                 <div class="btn_area">
@@ -89,8 +124,6 @@
                         <span>가입하기</span>
                     </button>
                 </div>
-
-                
 
             </div> 
             <!-- content-->

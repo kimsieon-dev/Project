@@ -15,6 +15,10 @@ var userName = document.querySelector('#members_name');
 
 var email = document.querySelector('#members_email');
 
+var yy = document.querySelector('#members_yy');
+var mm = document.querySelector('#members_mm');
+var dd = document.querySelector('#members_dd');
+
 var error = document.querySelectorAll('.error_next_box');
 
 
@@ -27,6 +31,9 @@ pw1.addEventListener("change", checkPw);
 pw2.addEventListener("change", comparePw);
 userName.addEventListener("change", checkName);
 email.addEventListener("change", isEmailCorrect);
+yy.addEventListener("change", isBirthCompleted);
+mm.addEventListener("change", isBirthCompleted);
+dd.addEventListener("change", isBirthCompleted);
 
 
 
@@ -115,5 +122,44 @@ function isEmailCorrect() {
         error[4].style.display = "block";
     } else {
         error[4].style.display = "none"; 
+    }
+}
+
+function isBirthCompleted() {
+    var yearPattern = /[0-9]{4}/;
+
+    if(!yearPattern.test(yy.value)) {
+        error[5].innerHTML = "태어난 년도 4자리를 정확하게 입력하세요.";
+        error[5].style.display = "block";
+    } else {
+        isMonthSelected();
+    }
+
+
+    function isMonthSelected() {
+        if(mm.value === "월") {
+            error[5].innerHTML = "태어난 월을 선택하세요.";
+        } else {
+            isDateCompleted();
+        }
+    }
+
+    function isDateCompleted() {
+        if(dd.value === "") {
+            error[5].innerHTML = "태어난 일(날짜) 2자리를 정확하게 입력하세요.";
+        } else {
+            isBirthRight();
+        }
+    }
+}
+
+
+
+function isBirthRight() {
+    var datePattern = /\d{1,2}/;
+    if(!datePattern.test(dd.value) || Number(dd.value)<1 || Number(dd.value)>31) {
+        error[5].innerHTML = "생년월일을 다시 확인해주세요.";
+    } else {
+        checkAge();
     }
 }
