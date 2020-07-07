@@ -1,18 +1,15 @@
 package svc;
 
-import static db.JdbcUtil.close;
-import static db.JdbcUtil.commit;
-import static db.JdbcUtil.getConnection;
-import static db.JdbcUtil.rollback;
-
 import java.sql.Connection;
 
+import static db.JdbcUtil.*;
 import dao.LineupDAO;
 import vo.LineupBean;
 
-public class LineupWriteService {
+public class LineupWriteProService {
 
-	public boolean registArticle(LineupBean lineupBean) throws Exception {
+	public boolean registArticle(LineupBean lineupBean) {
+		
 		boolean isWriteSuccess = false;
 		Connection conn = getConnection();
 		LineupDAO lineupDAO = LineupDAO.getInstance();
@@ -29,4 +26,5 @@ public class LineupWriteService {
 		close(conn);
 		return isWriteSuccess;
 	}
+
 }

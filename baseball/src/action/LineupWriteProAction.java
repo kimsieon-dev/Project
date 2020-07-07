@@ -2,23 +2,21 @@ package action;
 
 import java.io.PrintWriter;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import svc.LineupWriteService;
+import svc.LineupWriteProService;
 import vo.ActionForward;
 import vo.LineupBean;
 
-public class LineupWriteAction implements Action {
+public class LineupWriteProAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = null;
 		LineupBean lineupBean = null;
-		
 		lineupBean = new LineupBean();
-	
+		
 		lineupBean.setLineup_title(request.getParameter("lineup_title"));
 		lineupBean.setLineup_pit(request.getParameter("lineup_pit"));
 		lineupBean.setLineup_bat1(request.getParameter("lineup_bat1"));
@@ -31,18 +29,19 @@ public class LineupWriteAction implements Action {
 		lineupBean.setLineup_bat8(request.getParameter("lineup_bat8"));
 		lineupBean.setLineup_bat9(request.getParameter("lineup_bat9"));
 		
-		LineupWriteService lineupWriteService = new LineupWriteService();
-		boolean isWriteSuccess = lineupWriteService.registArticle(lineupBean);
+		LineupWriteProService lineupWriteProService = new LineupWriteProService();
+		boolean isWriteSuccess = lineupWriteProService.registArticle(lineupBean);
 		
-		if(!isWriteSuccess) {
+		if(!isWriteSuccess){
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
-			out.println("alert('등록실패');");
+			out.println("alert('등록실패')");
 			out.println("history.back();");
 			out.println("</script>");
 			out.close();
-		} else {
+		}
+		else{
 			forward = new ActionForward();
 			forward.setRedirect(true);
 			forward.setPath("lineupList.bd");

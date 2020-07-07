@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="vo.MembersBean" %>
+<%@ page import="dao.BaseballDAO" %>
+
+ <%
+	String id = (String)session.getAttribute("members_id");
+  	BaseballDAO baseballdao = BaseballDAO.getInstance();
+  	MembersBean membersBean = 
+ %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +18,7 @@
 <script src="js/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-	<form name="joinForm" action="memberJoinAction.bd" method="post">
+	<form name="memberModifyForm" action="memberModifyAction.bd" method="post">
 		<div id="header">
 			<img src="image/catch.jpg" id="logo">
 		</div>
@@ -28,6 +36,8 @@
                     </h3>
                     <span class="box int_id">
                         <input type="text" id="members_id" name="members_id" class="int" maxlength="20">
+                        <%=membersBean.getMembers_id() %>
+                  
                     </span>
                     	<div class="check_font" id="id_check"></div>
                     <span class="error_next_box"></span>

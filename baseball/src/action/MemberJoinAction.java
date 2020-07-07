@@ -20,7 +20,7 @@ public class MemberJoinAction implements Action {
 		members.setMembers_password(request.getParameter("members_password"));
 		members.setMembers_name(request.getParameter("members_name"));
 		members.setMembers_email(request.getParameter("members_email"));
-		members.setMembers_birthday(request.getParameter("members_yy")+request.getParameter("members_mm")+request.getParameter("members_dd"));
+		members.setMembers_birthday(request.getParameter("members_yy") + request.getParameter("members_mm") + request.getParameter("members_dd"));
 		MemberJoinService memberJoinService = new MemberJoinService();
 		joinResult = memberJoinService.joinMember(members);
 		

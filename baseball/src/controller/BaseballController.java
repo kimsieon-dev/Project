@@ -11,6 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import action.Action;
+import action.LineupDeleteProAction;
+import action.LineupDetailAction;
+import action.LineupListAction;
+import action.LineupModifyFormAction;
+import action.LineupModifyProAction;
+import action.LineupWriteAction;
+import action.LineupWriteProAction;
 import action.MemberJoinAction;
 import action.MemberLoginAction;
 import vo.ActionForward;
@@ -61,7 +68,65 @@ public class BaseballController extends HttpServlet {
 		} else if (command.equals("/memberJoin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/joinForm.jsp");
-		} 
+		
+		// 라인업 게시판 
+		} else if (command.equals("/lineupWriteForm.bd")){
+			forward=new ActionForward();
+			forward.setPath("/lineup/lineupWrite.jsp");
+		}else if(command.equals("/lineupWritePro.bd")){
+			action  = new LineupWriteProAction();
+			try {
+				forward=action.execute(request, response );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}	else if(command.equals("/lineupList.bd")){
+			action = new LineupListAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}	else if(command.equals("/lineupDetail.bd")){
+				action = new LineupDetailAction();
+				try{
+					forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		} else if(command.equals("/lineupModifyForm.bd")){
+			action = new LineupModifyFormAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}else if(command.equals("/linupModifyPro.bd")){
+			action = new LineupModifyProAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}else if(command.equals("/lineupDeleteForm.bd")){
+			String nowPage = request.getParameter("page");
+			request.setAttribute("page", nowPage);
+			int lineup_no = Integer.parseInt(request.getParameter("lineup_no"));
+			request.setAttribute("lineup_no",lineup_no);
+			forward = new ActionForward();
+			forward.setPath("/lineup/lineupDelete.jsp");
+		}
+		else if(command.equals("/lineupDeletePro.bd")){
+			action = new LineupDeleteProAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		// 라인업 게시판 끝
+		
+		
 //		} else if (command.equals("/memberListAction.do")) {
 //			action = new MemberListAction();
 //			try {
