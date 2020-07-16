@@ -18,14 +18,16 @@ public class LineupListService {
 		return listCount;
 	}
 
-	public ArrayList<LineupBean> getArticleList(int page, int limit) {
-		ArrayList<LineupBean> articleList = null;
+	public ArrayList<LineupBean> getlineupList(int page, int limit) throws Exception {
+		ArrayList<LineupBean> lineupList = null;
 		Connection conn = getConnection();
 		LineupDAO lineupDAO = LineupDAO.getInstance();
 		lineupDAO.setConnection(conn);
-		articleList = lineupDAO.selectArticleList(page,limit);
+		lineupList = lineupDAO.lineupList(page,limit);
 		close(conn);
-		return articleList;
+		return lineupList;
 	}
+
+	
 
 }

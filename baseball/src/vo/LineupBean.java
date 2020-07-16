@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class LineupBean {
 	private int lineup_no;
+	private String lineup_id;
 	private String lineup_title;
 	private String lineup_pit;
 	private String lineup_bat1;
@@ -15,17 +16,20 @@ public class LineupBean {
 	private String lineup_bat7;
 	private String lineup_bat8;
 	private String lineup_bat9;
-	private int lineup_re_ref;
-	private int lineup_re_seq;
-	private Date lineup_date;
 	private int lineup_readcount;
-	private String members_id;
+	private Date lineup_date;
 	
 	public int getLineup_no() {
 		return lineup_no;
 	}
 	public void setLineup_no(int lineup_no) {
 		this.lineup_no = lineup_no;
+	}
+	public String getLineup_id() {
+		return lineup_id;
+	}
+	public void setLineup_id(String lineup_id) {
+		this.lineup_id = lineup_id;
 	}
 	public String getLineup_title() {
 		return lineup_title;
@@ -93,17 +97,11 @@ public class LineupBean {
 	public void setLineup_bat9(String lineup_bat9) {
 		this.lineup_bat9 = lineup_bat9;
 	}
-	public int getLineup_re_ref() {
-		return lineup_re_ref;
+	public int getLineup_readcount() {
+		return lineup_readcount;
 	}
-	public void setLineup_re_ref(int lineup_re_ref) {
-		this.lineup_re_ref = lineup_re_ref;
-	}
-	public int getLineup_re_seq() {
-		return lineup_re_seq;
-	}
-	public void setLineup_re_seq(int lineup_re_seq) {
-		this.lineup_re_seq = lineup_re_seq;
+	public void setLineup_readcount(int lineup_readcount) {
+		this.lineup_readcount = lineup_readcount;
 	}
 	public Date getLineup_date() {
 		return lineup_date;
@@ -111,19 +109,8 @@ public class LineupBean {
 	public void setLineup_date(Date lineup_date) {
 		this.lineup_date = lineup_date;
 	}
-	public int getLineup_readcount() {
-		return lineup_readcount;
-	}
-	public void setLineup_readcount(int lineup_readcount) {
-		this.lineup_readcount = lineup_readcount;
-	}
-	public String getMembers_id() {
-		return members_id;
-	}
-	public void setMembers_id(String members_id) {
-		this.members_id = members_id;
-	}
 	
+
 	
 	
 }

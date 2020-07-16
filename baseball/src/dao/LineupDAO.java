@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import vo.LineupBean;
 
 public class LineupDAO {
@@ -16,8 +18,8 @@ public class LineupDAO {
 	ResultSet rs;
 	
 	private LineupDAO() {
-	
-		}
+		
+	}
 
 	public static LineupDAO getInstance() {
 		if (lineupDAO == null) {
@@ -39,7 +41,7 @@ public class LineupDAO {
 			rs = pstmt.executeQuery();
 
 			if(rs.next()){
-				listCount=rs.getInt(1);
+				listCount = rs.getInt(1);
 			}
 		}catch(Exception ex){
 			System.out.println("getListCount 에러: " + ex);			
@@ -51,13 +53,13 @@ public class LineupDAO {
 		return listCount;
 	}
 	
-	public ArrayList<LineupBean> selectArticleList(int page, int limit) {
+	public ArrayList<LineupBean> lineupList(int page, int limit) {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String lineupList = "select * from lineup order by lineup_re_ref desc,lineup_re_seq asc limit ?,10";
+		String lineupList = "select lineup_no, lineup_title, lineup_id, lineup_readcount, lineup_date from lineup order by lineup_no desc limit ?,10";
 		ArrayList<LineupBean> articleList = new ArrayList<LineupBean>();
 		LineupBean lineup = null;
-		int startrow=(page-1)*10; //읽기 시작할 row 번호..	
+		int startrow = (page-1) * limit; //읽기 시작할 row 번호..	
 
 		try{
 			pstmt = conn.prepareStatement(lineupList);
@@ -67,26 +69,15 @@ public class LineupDAO {
 			while(rs.next()){
 				lineup = new LineupBean();
 				lineup.setLineup_no(rs.getInt("lineup_no"));
-				lineup.setLineup_pit(rs.getString("lineup_pit"));
-				lineup.setLineup_bat1(rs.getString("lineup_bat1"));
-				lineup.setLineup_bat2(rs.getString("lineup_bat2"));
-				lineup.setLineup_bat3(rs.getString("lineup_bat3"));
-				lineup.setLineup_bat4(rs.getString("lineup_bat4"));
-				lineup.setLineup_bat5(rs.getString("lineup_bat5"));
-				lineup.setLineup_bat6(rs.getString("lineup_bat6"));
-				lineup.setLineup_bat7(rs.getString("lineup_bat7"));
-				lineup.setLineup_bat8(rs.getString("lineup_bat8"));
-				lineup.setLineup_bat9(rs.getString("lineup_bat9"));
-				lineup.setLineup_re_ref(rs.getInt("lineup_re_ref"));
-				lineup.setLineup_re_seq(rs.getInt("lineup_re_seq"));
+				lineup.setLineup_title(rs.getString("lineup_title"));
+				lineup.setLineup_id(rs.getString("lineup_id"));
 				lineup.setLineup_readcount(rs.getInt("lineup_readcount"));
-				lineup.setMembers_id(rs.getString("members_id"));
 				lineup.setLineup_date(rs.getDate("lineup_date"));
 				articleList.add(lineup);
 			}
 
 		}catch(Exception ex){
-			System.out.println("getBoardList 에러 : " + ex);
+			System.out.println("getLineupList 에러 : " + ex);
 		}finally{
 			close(rs);
 			close(pstmt);
@@ -108,6 +99,8 @@ public class LineupDAO {
 			if(rs.next()){
 				lineupBean = new LineupBean();
 				lineupBean.setLineup_no(rs.getInt("lineup_no"));
+				lineupBean.setLineup_id(rs.getString("lineup_id"));
+				lineupBean.setLineup_title(rs.getString("lineup_title"));
 				lineupBean.setLineup_pit(rs.getString("lineup_pit"));
 				lineupBean.setLineup_bat1(rs.getString("lineup_bat1"));
 				lineupBean.setLineup_bat2(rs.getString("lineup_bat2"));
@@ -118,10 +111,7 @@ public class LineupDAO {
 				lineupBean.setLineup_bat7(rs.getString("lineup_bat7"));
 				lineupBean.setLineup_bat8(rs.getString("lineup_bat8"));
 				lineupBean.setLineup_bat9(rs.getString("lineup_bat9"));
-				lineupBean.setLineup_re_ref(rs.getInt("lineup_re_ref"));
-				lineupBean.setLineup_re_seq(rs.getInt("lineup_re_seq"));
 				lineupBean.setLineup_readcount(rs.getInt("lineup_readcount"));
-				lineupBean.setMembers_id(rs.getString("members_id"));
 				lineupBean.setLineup_date(rs.getDate("lineup_date"));
 			}
 		}catch(Exception ex){
@@ -167,30 +157,28 @@ public class LineupDAO {
 			else
 				num=1;
 
-			sql = "insert into lineup values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,now())";
-
-			pstmt = conn.prepareStatement(sql); 
+			sql = "insert into lineup values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,now())";
+			
+			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, num);
-			pstmt.setString(2, article.getLineup_pit());
-			pstmt.setString(3, article.getLineup_bat1());
-			pstmt.setString(4, article.getLineup_bat2());
-			pstmt.setString(5, article.getLineup_bat3());
-			pstmt.setString(6, article.getLineup_bat4());
-			pstmt.setString(7, article.getLineup_bat5());
-			pstmt.setString(8, article.getLineup_bat6());
-			pstmt.setString(9, article.getLineup_bat7());
-			pstmt.setString(10, article.getLineup_bat8());
-			pstmt.setString(11, article.getLineup_bat9());
-			pstmt.setInt(12, num);
-			pstmt.setInt(13, 0);
+			pstmt.setString(2, article.getLineup_id());
+			pstmt.setString(3, article.getLineup_title());
+			pstmt.setString(4, article.getLineup_pit());
+			pstmt.setString(5, article.getLineup_bat1());
+			pstmt.setString(6, article.getLineup_bat2());
+			pstmt.setString(7, article.getLineup_bat3());
+			pstmt.setString(8, article.getLineup_bat4());
+			pstmt.setString(9, article.getLineup_bat5());
+			pstmt.setString(10, article.getLineup_bat6());
+			pstmt.setString(11, article.getLineup_bat7());
+			pstmt.setString(12, article.getLineup_bat8());
+			pstmt.setString(13, article.getLineup_bat9());
 			pstmt.setInt(14, 0);
-			pstmt.setString(15, article.getMembers_id());
-			pstmt.setInt(16, 0);
-
+			
 			insertCount = pstmt.executeUpdate();
 
 		}catch(Exception ex){
-			System.out.println("boardInsert 에러 : "+ex);
+			System.out.println("lineupInsert 에러 : "+ex);
 		}finally{
 			close(rs);
 			close(pstmt);
@@ -268,23 +256,19 @@ public class LineupDAO {
 
 
 
-	public boolean isArticleLineupWriter(int lineup_no, String id) {
+	public boolean isArticleLineupWriter(int lineup_no) {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String lineup_sql = "select * from lineup where lineup_no=?";
 		boolean isWriter = false;
-
+		
 		try{
 			pstmt = conn.prepareStatement(lineup_sql);
 			pstmt.setInt(1, lineup_no);
 			rs=pstmt.executeQuery();
-			if(rs.next()) {
-				if(id.equals(rs.getString("members_id"))){
-					isWriter = true;
-				}
-			}
+			
 		}catch(SQLException ex){
-			System.out.println("isBoardWriter 에러 : "+ex);
+			System.out.println("isLineupWriter 에러 : "+ex);
 		}
 		finally{
 			close(rs);
@@ -293,6 +277,7 @@ public class LineupDAO {
 
 		return isWriter;
 	}
+
 
 
 

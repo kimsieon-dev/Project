@@ -1,16 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="vo.LineupBean" %>
 <%
-	request.setCharacterEncoding("UTF-8");
-	String userId = "";
-	if(session.getAttribute("id") != null) {
-		userId = (String)session.getAttribute("id");
-	}
-	
-	if(session.getAttribute("id") == null) {
+	LineupBean article = (LineupBean) request.getAttribute("article");
+	String nowPage = (String) request.getAttribute("page");
+	if(!article.getLineup_id().equals(session.getAttribute("id"))) {
 		out.println("<script>");
-		out.println("alert('로그인이 필요한 서비스입니다.');");
-		out.println("location.href='memberLogin.bd';");
+		out.println("alert('권한이 없습니다.');");
+		out.println("history.back();");
 		out.println("</script>");
 	}
 %>
@@ -21,14 +18,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="lineupWriteAction.bd" name="lineupWrite">
+	<form method="post" action="lineupModifyPro.bd" name="lineupModifyForm">
+	<input type="hidden" name="lineup_no" value="<%=article.getLineup_no() %>" />
     <table width="700" border="3" bordercolor="lightgray" align="center">
-         <tr>
+            <tr>
             <td id="title">
                 제 목
             </td>
             <td>
                 <input id="lineup_title" name="lineup_title" type="text" size="70" maxlength="100" value=""/>
+            	
             </td>        
         </tr>
         
@@ -38,6 +37,7 @@
             </td>
             <td>
               <input id="lineup_pit" name="lineup_pit" type="text" size="70" maxlength="100" value=""/>         
+            	
             </td>        
         </tr>
         
@@ -47,6 +47,7 @@
             </td>
             <td>
                 <input id="lineup_bat1" name="lineup_bat1" type="text" size="70" maxlength="100" value=""/>                   
+            	
             </td>        
         </tr>
         
@@ -57,6 +58,7 @@
             </td>
             <td>
                <input id="lineup_bat2" name="lineup_bat2" type="text" size="70" maxlength="100" value=""/>         
+           			
             </td>        
         </tr>
         
@@ -67,16 +69,18 @@
             </td>
             <td>
                 <input id="lineup_bat3" name="lineup_bat3" type="text" size="70" maxlength="100" value=""/>         
+            	
             </td>        
         </tr>
         
         
         <tr>
             <td id="title">
-	4번타자
+			4번타자
             </td>
             <td>
               <input id="lineup_bat4" name="lineup_bat4" type="text" size="70" maxlength="100" value=""/>         
+            		
             </td>        
         </tr>
         
@@ -87,6 +91,7 @@
             </td>
             <td>
                 <input id="lineup_bat5" name="lineup_bat5" type="text" size="70" maxlength="100" value=""/>         
+            		
             </td>        
         </tr>
         
@@ -97,6 +102,7 @@
             </td>
             <td>
               <input id="lineup_bat6" name="lineup_bat6" type="text" size="70" maxlength="100" value=""/>         
+            		
             </td>        
         </tr>
         
@@ -107,6 +113,7 @@
             </td>
             <td>
               <input id="lineup_bat7" name="lineup_bat7" type="text" size="70" maxlength="100" value=""/>                   
+            		
             </td>        
         </tr>
         
@@ -117,6 +124,7 @@
             </td>
             <td>
                <input id="lineup_bat8" name="lineup_bat8" type="text" size="70" maxlength="100" value=""/>                   
+            		
             </td>        
         </tr>
         
@@ -127,6 +135,7 @@
             </td>
             <td>
                <input id="lineup_bat9" name="lineup_bat9" type="text" size="70" maxlength="100" value=""/>                 
+            		
             </td>        
         </tr>
         

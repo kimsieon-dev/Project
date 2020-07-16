@@ -20,14 +20,14 @@
 			<ul>
 				<li id="logo1"><img src="image/logo1.jpg">
 					<h1>
-						<a href="main.jsp">SAMSUNG LIONS</a>
+						<a href="main.bd">SAMSUNG LIONS</a>
 					</h1></li>
 
 
 				<li><a href="#">구단</a>
 					<ul>
-						<li><a href="club.jsp">구단 소개</a></li>
-						<li><a href="laPark.jsp">GO 라팍!</a></li>
+						<li><a href="club.bd">구단 소개</a></li>
+						<li><a href="laPark2.bd">GO 라팍!</a></li>
 					</ul></li>
 
 				<li><a href="#">선수단</a>
@@ -40,7 +40,7 @@
 				<li><a href="#">경기 정보</a>
 					<ul>
 						<li><a href="#">일정</a></li>
-						<li><a href="#">라인업</a></li>
+						<li><a href="lineupList.bd">라인업</a></li>
 					</ul></li>
 
 				<li><a href="#">소통</a>

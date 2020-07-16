@@ -16,7 +16,6 @@ public class LineupModifyFormAction implements Action {
 		String nowPage = request.getParameter("page");
 		LineupDetailService lineupDetailService = new LineupDetailService();	
 		LineupBean article = LineupDetailService.getArticle(lineup_no);
-//	   	LineupBean article = LineupDetailService.getArticle(lineup_no);
 	   	request.setAttribute("article", article);
 	   	request.setAttribute("page", nowPage);
    		forward.setPath("/lineup/lineupModify.jsp");

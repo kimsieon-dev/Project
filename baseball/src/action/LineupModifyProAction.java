@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import svc.LineupModifyProService;
 import vo.ActionForward;
@@ -15,10 +16,11 @@ public class LineupModifyProAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = null;
 		boolean isModifySuccess = false;
+		HttpSession session = request.getSession();
 		int lineup_no = Integer.parseInt(request.getParameter("lineup_no"));
 		LineupBean article = new LineupBean();
 		LineupModifyProService lineupModifyProService = new LineupModifyProService();
-		boolean isRightUser = lineupModifyProService.isArticleWriter(lineup_no, request.getParameter("members_id"));
+		boolean isRightUser = lineupModifyProService.isArticleWriter(lineup_no);
 
 		if(!isRightUser){
 			response.setContentType("text/html;charset=UTF-8");
@@ -29,6 +31,7 @@ public class LineupModifyProAction implements Action {
 			out.println("</script>");
 			out.close();
 		}
+		
 		else{
 			article.setLineup_no(lineup_no);
 			article.setLineup_title(request.getParameter("lineup_title"));

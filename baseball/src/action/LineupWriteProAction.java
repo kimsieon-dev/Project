@@ -28,6 +28,7 @@ public class LineupWriteProAction implements Action {
 		lineupBean.setLineup_bat7(request.getParameter("lineup_bat7"));
 		lineupBean.setLineup_bat8(request.getParameter("lineup_bat8"));
 		lineupBean.setLineup_bat9(request.getParameter("lineup_bat9"));
+		lineupBean.setMembers_id(request.getParameter("members_id"));
 		
 		LineupWriteProService lineupWriteProService = new LineupWriteProService();
 		boolean isWriteSuccess = lineupWriteProService.registArticle(lineupBean);

@@ -5,7 +5,9 @@ import java.io.PrintWriter;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import dao.LineupDAO;
 import svc.LineupWriteService;
 import vo.ActionForward;
 import vo.LineupBean;
@@ -16,9 +18,10 @@ public class LineupWriteAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = null;
 		LineupBean lineupBean = null;
-		
 		lineupBean = new LineupBean();
-	
+		HttpSession session = request.getSession();
+		
+		lineupBean.setLineup_id((String)session.getAttribute("id"));
 		lineupBean.setLineup_title(request.getParameter("lineup_title"));
 		lineupBean.setLineup_pit(request.getParameter("lineup_pit"));
 		lineupBean.setLineup_bat1(request.getParameter("lineup_bat1"));

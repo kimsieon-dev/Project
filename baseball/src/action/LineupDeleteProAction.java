@@ -16,7 +16,7 @@ public class LineupDeleteProAction implements Action {
 		int lineup_no =Integer.parseInt(request.getParameter("lineup_no"));
 		String nowPage = request.getParameter("page");
 		LineupDeleteProService lineupDeleteProService = new LineupDeleteProService();
-		boolean isArticleWriter = lineupDeleteProService.isArticleWriter(lineup_no, request.getParameter("members_id"));
+		boolean isArticleWriter = lineupDeleteProService.isArticleWriter(lineup_no);
 
 		if(!isArticleWriter){
 			response.setContentType("text/html;charset=UTF-8");

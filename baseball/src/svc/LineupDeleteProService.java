@@ -8,12 +8,12 @@ import static db.JdbcUtil.*;
 
 public class LineupDeleteProService {
 
-	public boolean isArticleWriter(int lineup_no, String id) {
+	public boolean isArticleWriter(int lineup_no) {
 		boolean isArticleWriter = false;
 		Connection conn = getConnection();
 		LineupDAO lineupDAO = LineupDAO.getInstance();
 		lineupDAO.setConnection(conn);
-		isArticleWriter = lineupDAO.isArticleLineupWriter(lineup_no, id);
+		isArticleWriter = lineupDAO.isArticleLineupWriter(lineup_no);
 		close(conn);
 		return isArticleWriter;
 	}

@@ -1,19 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+	String id = "";
+	if(session.getAttribute("id") != null) {
+		id = (String)session.getAttribute("id");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/main.css" />
-<link rel="stylesheet" href="../css/lineupView.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/jquery.bxslider.css" />
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+
+
+
 </head>
 <body>
+	<header>
+		<h5><%=id.equals("") ? "" : id + "님 반갑습니다." %><span><%=id.equals("") ? "<a href='loginForm.jsp'>로그인</a>" : "<a href='logoutAction.jsp'>로그아웃</a>" %></span><span><%=id.equals("") ? "<a href='joinForm.jsp'>회원 가입</a>" : "<a href='logoutAction.jsp'>회원 정보 변경</a>" %></span></h5>
+	</header>
 	<nav>
 		<div class="dropmenu">			
 			<ul>
 				<li id="logo1">
-					<img src="../image/logo1.jpg">
+					<img src="image/logo1.jpg">
 					<h1><a href="main.jsp">SAMSUNG LIONS</a></h1>
 				</li>
 				
@@ -36,7 +53,7 @@
 				<li><a href="#">경기 정보</a>
 					<ul>
 						<li><a href="#">일정</a></li>
-						<li><a href="#">라인업</a></li>
+						<li><a href="../lineup/linup.jsp">라인업</a></li>
 					</ul>
 				</li>
 				
@@ -50,11 +67,11 @@
 			</ul>
 		</div>
 	</nav>
-	
+
 	<section>
-		<div class="line">
 			
-		</div>
 	</section>
+
+	<footer></footer>
 </body>
 </html>

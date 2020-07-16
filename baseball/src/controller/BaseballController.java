@@ -46,6 +46,15 @@ public class BaseballController extends HttpServlet {
 		if (command.equals("/main.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/main.jsp");
+		} else if (command.equals("/club.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/club.jsp");
+		} else if (command.equals("/laPark2.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/laPark2.jsp");
+		} else if (command.equals("/lineupWrite.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/lineup/lineupWrite.jsp");
 		} else if (command.equals("/memberLogin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/loginForm.jsp");
@@ -56,7 +65,8 @@ public class BaseballController extends HttpServlet {
 			action = new MemberLoginAction();
 			try {
 				forward = action.execute(request, response);
-		} catch (Exception e) {				e.printStackTrace();
+		} catch (Exception e) {				
+			e.printStackTrace();
 			}
 		} else if (command.equals("/memberJoinAction.bd")) {
 			action = new MemberJoinAction();
@@ -70,19 +80,16 @@ public class BaseballController extends HttpServlet {
 			forward.setPath("/joinForm.jsp");
 		
 		// 라인업 게시판 
-		} else if (command.equals("/lineupWriteForm.bd")){
-			forward=new ActionForward();
-			forward.setPath("/lineup/lineupWrite.jsp");
-		}else if(command.equals("/lineupWritePro.bd")){
-			action  = new LineupWriteProAction();
+		} else if (command.equals("/lineupWriteAction.bd")) {
+			action = new LineupWriteAction();
 			try {
-				forward=action.execute(request, response );
+				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}	else if(command.equals("/lineupList.bd")){
+		} else if (command.equals("/lineupList.bd")) {
 			action = new LineupListAction();
-			try{
+			try {
 				forward=action.execute(request, response);
 			}catch(Exception e){
 				e.printStackTrace();
@@ -101,7 +108,7 @@ public class BaseballController extends HttpServlet {
 			}catch(Exception e){
 				e.printStackTrace();
 			}
-		}else if(command.equals("/linupModifyPro.bd")){
+		}else if(command.equals("/lineupModifyPro.bd")){
 			action = new LineupModifyProAction();
 			try{
 				forward=action.execute(request, response);

@@ -18,7 +18,7 @@ public class LineupDetailAction implements Action {
 		ActionForward forward = new ActionForward();
 		request.setAttribute("page", page);
 	   	request.setAttribute("article", article);
-   		forward.setPath("/lineup/lineupView.jsp");
+   		forward.setPath("/lineup/lineupDetail.jsp");
    		return forward;
 	}
 

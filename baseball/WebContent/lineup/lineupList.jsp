@@ -1,22 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="vo.PageInfo"%>
+<%@page import="vo.LineupBean"%>
+<%@page import="java.util.*" %>
+<%@ page import="java.io.PrintWriter"%>
+
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id = "";
 	if(session.getAttribute("id") != null) {
 		id = (String)session.getAttribute("id");
 	}
+	
+	ArrayList<LineupBean> lineupList = (ArrayList<LineupBean>) request.getAttribute("articleList");
+	PageInfo pageInfo = (PageInfo) request.getAttribute("pageInfo");
+	int listCount = pageInfo.getListCount();
+	int nowPage = pageInfo.getPage();
+	int maxPage = pageInfo.getMaxPage();
+	int startPage = pageInfo.getStartPage();
+	int endPage = pageInfo.getEndPage();
 %>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/main.css" />
-<link rel="stylesheet" href="css/jquery.bxslider.css" />
 
 <script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
 
 </head>
 <body>
@@ -28,14 +42,14 @@
 			<ul>
 				<li id="logo1">
 					<img src="image/logo1.jpg">
-					<h1><a href="main.jsp">SAMSUNG LIONS</a></h1>
+					<h1><a href="main.bd">SAMSUNG LIONS</a></h1>
 				</li>
 				
 			
 				<li><a href="#">구단</a>
 					<ul>
-						<li><a href="club.jsp">구단 소개</a></li>
-						<li><a href="laPark.jsp">GO 라팍!</a></li>
+						<li><a href="club.bd">구단 소개</a></li>
+						<li><a href="laPark2.bd">GO 라팍!</a></li>
 					</ul>
 				</li>
 				
@@ -50,7 +64,7 @@
 				<li><a href="#">경기 정보</a>
 					<ul>
 						<li><a href="#">일정</a></li>
-						<li><a href="#">라인업</a></li>
+						<li><a href="lineupList.bd">라인업</a></li>
 					</ul>
 				</li>
 				
@@ -64,5 +78,77 @@
 			</ul>
 		</div>
 	</nav>
+
+
+	<section>
+		<h2>
+			글 목록<input type="button" value="게시판글쓰기"
+				onclick="location.href='lineupWrite.bd'" />
+		</h2>
+		
+		<%
+			if(lineupList != null && listCount > 0) {
+		%>
+
+		<table>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>조회수</th>
+				<th>날짜</th>
+			</tr>
+			
+			<%
+				for(int i = 0; i < lineupList.size(); i++) {
+			%>
+			
+			<tr>
+				<td><%=lineupList.get(i).getLineup_no() %></td>
+				<td><a href="lineupDetail.bd?lineup_no=<%=lineupList.get(i).getLineup_no() %>&page=<%=nowPage %>"><%=lineupList.get(i).getLineup_title() %></a></td>
+				<td><%=lineupList.get(i).getLineup_id() %>
+				<td><%=lineupList.get(i).getLineup_readcount() %></td>
+				<td><%=lineupList.get(i).getLineup_date() %></td>
+			</tr>
+			<% 
+				}
+			%>
+		</table>
+		<%
+			} else {
+				out.println("<article id='emptyArea'>등록된 글이 없습니다.</article>");
+			}
+		%>
+	</section>
+	
+	<%
+	if(lineupList != null && listCount > 0) {
+	%>
+	<section id="pageList">
+		<%
+		if(nowPage<=1) { 
+			out.println("[이전]&nbsp;");
+		} else {
+			out.println("lineupList.bd?page=" + (nowPage-1) + "'>[이전]</a>&nbsp;");
+		}
+		
+		for(int a=startPage; a<=endPage; a++) {
+			if(a==nowPage) {	
+				out.println("["+a+"]");
+			} else {
+				out.println("<a href='lineupList.bd?page=" + a + "'>[" + a + "]</a>&nbsp;");
+			}
+		}
+		
+		if(nowPage>=maxPage) {
+			out.println("[다음]");		
+		} else {
+			out.println("<a href=lineupList.bd?page=" + (nowPage+1) + "'>[다음]</a>");
+		}
+		%>
+	</section>
+	<%
+	}
+	%>
 </body>
 </html>
