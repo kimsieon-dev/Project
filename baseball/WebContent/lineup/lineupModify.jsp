@@ -4,12 +4,6 @@
 <%
 	LineupBean article = (LineupBean) request.getAttribute("article");
 	String nowPage = (String) request.getAttribute("page");
-	if(!article.getLineup_id().equals(session.getAttribute("id"))) {
-		out.println("<script>");
-		out.println("alert('권한이 없습니다.');");
-		out.println("history.back();");
-		out.println("</script>");
-	}
 %>
 <!DOCTYPE html>
 <html>
@@ -20,6 +14,7 @@
 <body>
 	<form method="post" action="lineupModifyPro.bd" name="lineupModifyForm">
 	<input type="hidden" name="lineup_no" value="<%=article.getLineup_no() %>" />
+	<input type="hidden" name="lineup_id" value="<%=article.getLineup_id() %>" />
     <table width="700" border="3" bordercolor="lightgray" align="center">
             <tr>
             <td id="title">

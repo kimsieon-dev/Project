@@ -2,19 +2,19 @@ package svc;
 
 import java.sql.Connection;
 
-import dao.LineupDAO;
+import dao.SajahuDAO;
 
 import static db.JdbcUtil.*;
-import vo.LineupBean;
+import vo.SajahuBean;
 
-public class LineupModifyProService {
+public class SajahuModifyProService {
 
-	public boolean modifyArticle(LineupBean article) {
+	public boolean modifyArticle(SajahuBean article) {
 		boolean isModifySuccess = false;
 		Connection conn = getConnection();
-		LineupDAO lineupDAO = LineupDAO.getInstance();
-		lineupDAO.setConnection(conn);
-		int updateCount = lineupDAO.updateArticle(article);
+		SajahuDAO sajahuDAO = SajahuDAO.getInstance();
+		sajahuDAO.setConnection(conn);
+		int updateCount = sajahuDAO.updateArticle(article);
 		
 		if(updateCount > 0){
 			commit(conn);

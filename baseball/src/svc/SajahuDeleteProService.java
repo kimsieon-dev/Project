@@ -2,18 +2,18 @@ package svc;
 
 import java.sql.Connection;
 
-import dao.LineupDAO;
+import dao.SajahuDAO;
 
 import static db.JdbcUtil.*;
 
-public class LineupDeleteProService {
+public class SajahuDeleteProService {
 
-	public boolean removeArticle(int lineup_no) {
+	public boolean removeArticle(int sajahu_no) {
 		boolean isRemoveSuccess = false;
 		Connection conn = getConnection();
-		LineupDAO lineupDAO = LineupDAO.getInstance();
-		lineupDAO.setConnection(conn);
-		int deleteCount = lineupDAO.deleteArticle(lineup_no);
+		SajahuDAO sajahuDAO = SajahuDAO.getInstance();
+		sajahuDAO.setConnection(conn);
+		int deleteCount = sajahuDAO.deleteArticle(sajahu_no);
 		
 		if(deleteCount > 0){
 			commit(conn);

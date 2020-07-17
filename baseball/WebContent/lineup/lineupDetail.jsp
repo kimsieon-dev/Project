@@ -1,15 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="vo.LineupBean" %>
+<%@ page import="java.io.PrintWriter"%>
 <%
+	LineupBean article = (LineupBean) request.getAttribute("article");
+	String nowPage = (String) request.getAttribute("page");
+
 	request.setCharacterEncoding("UTF-8");
 	String id = "";
 	if (session.getAttribute("id") != null) {
 	id = (String) session.getAttribute("id");
 	}
-	
-	LineupBean article = (LineupBean) request.getAttribute("article");
-	String nowPage = (String) request.getAttribute("page");
+
 %>
 <!DOCTYPE html>
 <html>
@@ -123,10 +125,17 @@
 	</section>
 	
 	<section id="commandList">
+	<%
+		if(article.getLineup_id() != null && article.getLineup_id().equals(session.getAttribute("id"))) {
+	%>
 		<a href="lineupModifyForm.bd?lineup_no=<%=article.getLineup_no() %>&page=<%=nowPage %>">[수정] </a>
-		<a href="lineupDeleteForm.bd?lineup_no=<%=article.getLineup_no() %>&page=<%=nowPage %>">[삭제] </a>
-		<a href="lineupList.bd?page=<%=nowPage %>">[목록] </a>
+		<a href="lineupDelete.bd?lineup_no=<%=article.getLineup_no() %>&page=<%=nowPage %>">[삭제] </a>
 		&nbsp;&nbsp;
+	<%
+		}
+	%>
+	<a href="lineupList.bd?page=<%=nowPage %>">[목록] </a> 
+	
 	</section>
 </body>
 </html>

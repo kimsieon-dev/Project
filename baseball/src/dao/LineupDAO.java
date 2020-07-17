@@ -190,7 +190,7 @@ public class LineupDAO {
 	public int updateArticle(LineupBean article) {
 		int updateCount = 0;
 		PreparedStatement pstmt = null;
-		String sql = "update lineup set lineup_title=?,lineup_pit=?,lineup_bat1=?,lineup_bat2=?,lineup_bat3=?,lineup_bat4=?,lineup_bat5=?,lineup_bat6=?,lineup_bat7=?,lineup_bat8=?,lineup_bat9=?, where lineup_no=?";
+		String sql = "update lineup set lineup_title=?,lineup_pit=?,lineup_bat1=?,lineup_bat2=?,lineup_bat3=?,lineup_bat4=?,lineup_bat5=?,lineup_bat6=?,lineup_bat7=?,lineup_bat8=?,lineup_bat9=? where lineup_no=?";
 
 		try{
 			pstmt = conn.prepareStatement(sql);
@@ -225,6 +225,7 @@ public class LineupDAO {
 			pstmt = conn.prepareStatement(lineupDelete);
 			pstmt.setInt(1, lineup_no);
 			deleteCount = pstmt.executeUpdate();
+			
 		}catch(Exception ex){
 			System.out.println("lineupDelete 에러 : "+ex);
 		}	finally{
@@ -253,38 +254,7 @@ public class LineupDAO {
 
 		return updateCount;
 	}
-
-
-
-	public boolean isArticleLineupWriter(int lineup_no) {
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		String lineup_sql = "select * from lineup where lineup_no=?";
-		boolean isWriter = false;
-		
-		try{
-			pstmt = conn.prepareStatement(lineup_sql);
-			pstmt.setInt(1, lineup_no);
-			rs=pstmt.executeQuery();
-			
-		}catch(SQLException ex){
-			System.out.println("isLineupWriter 에러 : "+ex);
-		}
-		finally{
-			close(rs);
-			close(pstmt);
-		}
-
-		return isWriter;
-	}
-
-
-
-
 	
-
-
-
 }
 
 

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="vo.PageInfo"%>
-<%@page import="vo.LineupBean"%>
+<%@page import="vo.SajahuBean"%>
 <%@page import="java.util.*" %>
 <%@ page import="java.io.PrintWriter"%>
 
@@ -12,7 +12,7 @@
 		id = (String)session.getAttribute("id");
 	}
 	
-	ArrayList<LineupBean> lineupList = (ArrayList<LineupBean>) request.getAttribute("articleList");
+	ArrayList<SajahuBean> sajahuList = (ArrayList<SajahuBean>) request.getAttribute("articleList");
 	PageInfo pageInfo = (PageInfo) request.getAttribute("pageInfo");
 	int listCount = pageInfo.getListCount();
 	int nowPage = pageInfo.getPage();
@@ -29,6 +29,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/main.css" />
+
 <script src="js/jquery-3.5.1.min.js"></script>
 
 </head>
@@ -82,11 +83,11 @@
 	<section>
 		<h2>
 			글 목록<input type="button" value="게시판글쓰기"
-				onclick="location.href='lineupWrite.bd'" />
+				onclick="location.href='sajahuWrite.bd'" />
 		</h2>
 		
 		<%
-			if(lineupList != null && listCount > 0) {
+			if(sajahuList != null && listCount > 0) {
 		%>
 
 		<table>
@@ -99,15 +100,15 @@
 			</tr>
 			
 			<%
-				for(int i = 0; i < lineupList.size(); i++) {
+				for(int i = 0; i < sajahuList.size(); i++) {
 			%>
 			
 			<tr>
-				<td><%=lineupList.get(i).getLineup_no() %></td>
-				<td><a href="lineupDetail.bd?lineup_no=<%=lineupList.get(i).getLineup_no() %>&page=<%=nowPage %>"><%=lineupList.get(i).getLineup_title() %></a></td>
-				<td><%=lineupList.get(i).getLineup_id() %>
-				<td><%=lineupList.get(i).getLineup_readcount() %></td>
-				<td><%=lineupList.get(i).getLineup_date() %></td>
+				<td><%=sajahuList.get(i).getSajahu_no() %></td>
+				<td><a href="sajahuDetail.bd?sajahu_no=<%=sajahuList.get(i).getSajahu_no() %>&page=<%=nowPage %>"><%=sajahuList.get(i).getSajahu_title() %></a></td>
+				<td><%=sajahuList.get(i).getSajahu_id() %>
+				<td><%=sajahuList.get(i).getSajahu_readcount() %></td>
+				<td><%=sajahuList.get(i).getSajahu_date() %></td>
 			</tr>
 			<% 
 				}
@@ -121,28 +122,28 @@
 	</section>
 	
 	<%
-	if(lineupList != null && listCount > 0) {
+	if(sajahuList != null && listCount > 0) {
 	%>
 	<section id="pageList">
 		<%
 		if(nowPage<=1) { 
 			out.println("[이전]&nbsp;");
 		} else {
-			out.println("lineupList.bd?page=" + (nowPage-1) + "'>[이전]</a>&nbsp;");
+			out.println("sajahuList.bd?page=" + (nowPage-1) + "'>[이전]</a>&nbsp;");
 		}
 		
 		for(int a=startPage; a<=endPage; a++) {
 			if(a==nowPage) {	
 				out.println("["+a+"]");
 			} else {
-				out.println("<a href='lineupList.bd?page=" + a + "'>[" + a + "]</a>&nbsp;");
+				out.println("<a href='sajahuList.bd?page=" + a + "'>[" + a + "]</a>&nbsp;");
 			}
 		}
 		
 		if(nowPage>=maxPage) {
 			out.println("[다음]");		
 		} else {
-			out.println("<a href=lineupList.bd?page=" + (nowPage+1) + "'>[다음]</a>");
+			out.println("<a href=sajahuList.bd?page=" + (nowPage+1) + "'>[다음]</a>");
 		}
 		%>
 	</section>

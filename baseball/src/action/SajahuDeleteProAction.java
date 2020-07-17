@@ -5,21 +5,21 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import svc.LineupDeleteProService;
+import svc.SajahuDeleteProService;
 import vo.ActionForward;
 
-public class LineupDeleteProAction implements Action {
+public class SajahuDeleteProAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = null;
 		boolean isDeleteSuccess = false;
-		int lineup_no =Integer.parseInt(request.getParameter("lineup_no"));
+		int sajahu_no =Integer.parseInt(request.getParameter("sajahu_no"));
 		String nowPage = request.getParameter("page");
-		LineupDeleteProService lineupDeleteProService = new LineupDeleteProService();
+		SajahuDeleteProService sajahuDeleteProService = new SajahuDeleteProService();
 
 			
-			isDeleteSuccess = lineupDeleteProService.removeArticle(lineup_no);
+			isDeleteSuccess = sajahuDeleteProService.removeArticle(sajahu_no);
 
 			if(!isDeleteSuccess){
 				response.setContentType("text/html;charset=UTF-8");
@@ -33,7 +33,7 @@ public class LineupDeleteProAction implements Action {
 			else{
 				forward = new ActionForward();
 				forward.setRedirect(true);
-				forward.setPath("lineupList.bd?page=" + nowPage);
+				forward.setPath("sajahuList.bd?page=" + nowPage);
 			}
 
 

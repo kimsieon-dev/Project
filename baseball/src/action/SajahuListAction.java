@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import svc.LineupListService;
+import svc.SajahuListService;
 import vo.ActionForward;
-import vo.LineupBean;
 import vo.PageInfo;
+import vo.SajahuBean;
 
-public class LineupListAction implements Action {
+public class SajahuListAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ArrayList<LineupBean> lineupList = new ArrayList<LineupBean>();
+		ArrayList<SajahuBean> sajahuList = new ArrayList<SajahuBean>();
 	  	int page = 1;
 		int limit = 10;
 		
@@ -22,9 +22,9 @@ public class LineupListAction implements Action {
 			page = Integer.parseInt(request.getParameter("page"));
 		}
 		
-		LineupListService lineupListService = new LineupListService();
-		int listCount = lineupListService.getListCount(); //총 리스트 수를 받아옴.
-		lineupList = lineupListService.getlineupList(page, limit); //리스트를 받아옴.
+		SajahuListService sajahuListService = new SajahuListService();
+		int listCount = sajahuListService.getListCount(); //총 리스트 수를 받아옴.
+		sajahuList = sajahuListService.getsajahuList(page, limit); //리스트를 받아옴.
 		//총 페이지 수.
    		int maxPage=(int)((double)listCount / limit + 0.95); //0.95를 더해서 올림 처리.
    		//현재 페이지에 보여줄 시작 페이지 수(1, 11, 21 등...)
@@ -41,9 +41,9 @@ public class LineupListAction implements Action {
 		pageInfo.setPage(page);
 		pageInfo.setStartPage(startPage);	
 		request.setAttribute("pageInfo", pageInfo);
-		request.setAttribute("articleList", lineupList);
+		request.setAttribute("articleList", sajahuList);
 		ActionForward forward= new ActionForward();
-   		forward.setPath("/lineup/lineupList.jsp");
+   		forward.setPath("/sajahu/sajahuList.jsp");
    		return forward;
    		
    		
