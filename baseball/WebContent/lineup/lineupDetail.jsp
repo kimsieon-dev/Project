@@ -19,6 +19,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/lineupDetail.css" />
 </head>
 <body>
 	<header>
@@ -68,60 +69,71 @@
 	
 	<section>
 		<h2>글 내용 상세보기</h2>
-		<article>
-			제목 : 
-			<%=article.getLineup_title() %>
-		</article>
+
+		<div class="view">
 		
-		<article>
-			선발투수 :
-			<%=article.getLineup_pit() %>
-		</article>
-		
-		<article>
-			1번 타자 :
-			<%=article.getLineup_bat1() %>
-		</article>
-		
-		<article>
-			2번 타자 :
-			<%=article.getLineup_bat2() %>
-		</article>
-		
-		<article>
-			3번 타자 :
-			<%=article.getLineup_bat3() %>
-		</article>
-		
-		<article>
-			4번 타자 : 
-			<%=article.getLineup_bat4() %>
-		</article>
-		
-		<article>
-			5번 타자 : 
-			<%=article.getLineup_bat5() %>
-		</article>
-		
-		<article>
-			6번 타자 : 
-			<%=article.getLineup_bat6() %>
-		</article>
-		
-		<article>
-			7번 타자 : 
-			<%=article.getLineup_bat7() %>
-		</article>
-		
-		<article>
-			8번 타자 : 
-			<%=article.getLineup_bat8() %>
-		</article>
-		
-		<article>
-			9번 타자 : 
-			<%=article.getLineup_bat9() %>
-		</article>
+			<div class="first">
+				<%=article.getLineup_vs() %>
+			</div>
+
+			<div class="second">
+				<article>
+					<%=article.getLineup_title()%>
+				</article>
+			</div>
+
+			<div class="third">
+				<article>
+					
+					<%=article.getLineup_pit()%>
+				</article>
+
+				<article>
+					
+					<%=article.getLineup_bat1()%>
+				</article>
+
+				<article>
+					
+					<%=article.getLineup_bat2()%>
+				</article>
+
+				<article>
+				
+					<%=article.getLineup_bat3()%>
+				</article>
+
+				<article>
+					
+					<%=article.getLineup_bat4()%>
+				</article>
+
+				<article>
+					
+					<%=article.getLineup_bat5()%>
+				</article>
+
+				<article>
+					
+					<%=article.getLineup_bat6()%>
+				</article>
+
+				<article>
+					
+					<%=article.getLineup_bat7()%>
+				</article>
+
+				<article>
+					
+					<%=article.getLineup_bat8()%>
+				</article>
+
+				<article>
+					
+					<%=article.getLineup_bat9()%>
+				</article>
+			</div>
+		</div>
 	</section>
 	
 	<section id="commandList">

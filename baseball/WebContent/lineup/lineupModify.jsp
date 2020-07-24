@@ -26,6 +26,15 @@
             </td>        
         </tr>
         
+         <td id="title">
+            vs
+            </td>
+            <td>
+                <input id="lineup_vs" name="lineup_vs" type="text" size="70" maxlength="100" value=""/>
+            	
+            </td>        
+        </tr>
+        
         <tr>
             <td id="title">
               투수

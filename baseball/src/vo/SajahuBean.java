@@ -9,7 +9,14 @@ public class SajahuBean {
 	private String sajahu_content;
 	private int sajahu_readcount;
 	private Date sajahu_date;
+	private long commentCount;
 	
+	public long getCommentCount() {
+		return commentCount;
+	}
+	public void setCommentCount(long commentCount) {
+		this.commentCount = commentCount;
+	}
 	public int getSajahu_no() {
 		return sajahu_no;
 	}

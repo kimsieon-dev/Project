@@ -6,6 +6,7 @@ public class LineupBean {
 	private int lineup_no;
 	private String lineup_id;
 	private String lineup_title;
+	private String lineup_vs;
 	private String lineup_pit;
 	private String lineup_bat1;
 	private String lineup_bat2;
@@ -36,6 +37,12 @@ public class LineupBean {
 	}
 	public void setLineup_title(String lineup_title) {
 		this.lineup_title = lineup_title;
+	}
+	public String getLineup_vs() {
+		return lineup_vs;
+	}
+	public void setLineup_vs(String lineup_vs) {
+		this.lineup_vs = lineup_vs;
 	}
 	public String getLineup_pit() {
 		return lineup_pit;

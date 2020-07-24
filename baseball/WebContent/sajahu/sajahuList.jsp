@@ -29,6 +29,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/sajahu.css" />
 
 <script src="js/jquery-3.5.1.min.js"></script>
 
@@ -89,8 +90,9 @@
 		<%
 			if(sajahuList != null && listCount > 0) {
 		%>
-
-		<table>
+		
+		<table class="type09">
+		<thead>
 			<tr>
 				<th>번호</th>
 				<th>제목</th>
@@ -98,11 +100,13 @@
 				<th>조회수</th>
 				<th>날짜</th>
 			</tr>
+		</thead>
 			
 			<%
 				for(int i = 0; i < sajahuList.size(); i++) {
 			%>
 			
+			<tbody>
 			<tr>
 				<td><%=sajahuList.get(i).getSajahu_no() %></td>
 				<td><a href="sajahuDetail.bd?sajahu_no=<%=sajahuList.get(i).getSajahu_no() %>&page=<%=nowPage %>"><%=sajahuList.get(i).getSajahu_title() %></a></td>
@@ -110,6 +114,7 @@
 				<td><%=sajahuList.get(i).getSajahu_readcount() %></td>
 				<td><%=sajahuList.get(i).getSajahu_date() %></td>
 			</tr>
+			</tbody>
 			<% 
 				}
 			%>

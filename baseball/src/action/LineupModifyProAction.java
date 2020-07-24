@@ -22,6 +22,7 @@ public class LineupModifyProAction implements Action {
 
 		article.setLineup_no(lineup_no);
 		article.setLineup_title(request.getParameter("lineup_title"));
+		article.setLineup_vs(request.getParameter("lineup_vs"));
 		article.setLineup_pit(request.getParameter("lineup_pit"));
 		article.setLineup_bat1(request.getParameter("lineup_bat1"));
 		article.setLineup_bat2(request.getParameter("lineup_bat2"));

@@ -101,6 +101,7 @@ public class LineupDAO {
 				lineupBean.setLineup_no(rs.getInt("lineup_no"));
 				lineupBean.setLineup_id(rs.getString("lineup_id"));
 				lineupBean.setLineup_title(rs.getString("lineup_title"));
+				lineupBean.setLineup_vs(rs.getString("lineup_vs"));
 				lineupBean.setLineup_pit(rs.getString("lineup_pit"));
 				lineupBean.setLineup_bat1(rs.getString("lineup_bat1"));
 				lineupBean.setLineup_bat2(rs.getString("lineup_bat2"));
@@ -157,23 +158,24 @@ public class LineupDAO {
 			else
 				num=1;
 
-			sql = "insert into lineup values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,now())";
+			sql = "insert into lineup values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,now())";
 			
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, num);
 			pstmt.setString(2, article.getLineup_id());
 			pstmt.setString(3, article.getLineup_title());
-			pstmt.setString(4, article.getLineup_pit());
-			pstmt.setString(5, article.getLineup_bat1());
-			pstmt.setString(6, article.getLineup_bat2());
-			pstmt.setString(7, article.getLineup_bat3());
-			pstmt.setString(8, article.getLineup_bat4());
-			pstmt.setString(9, article.getLineup_bat5());
-			pstmt.setString(10, article.getLineup_bat6());
-			pstmt.setString(11, article.getLineup_bat7());
-			pstmt.setString(12, article.getLineup_bat8());
-			pstmt.setString(13, article.getLineup_bat9());
-			pstmt.setInt(14, 0);
+			pstmt.setString(4, article.getLineup_vs());
+			pstmt.setString(5, article.getLineup_pit());
+			pstmt.setString(6, article.getLineup_bat1());
+			pstmt.setString(7, article.getLineup_bat2());
+			pstmt.setString(8, article.getLineup_bat3());
+			pstmt.setString(9, article.getLineup_bat4());
+			pstmt.setString(10, article.getLineup_bat5());
+			pstmt.setString(11, article.getLineup_bat6());
+			pstmt.setString(12, article.getLineup_bat7());
+			pstmt.setString(13, article.getLineup_bat8());
+			pstmt.setString(14, article.getLineup_bat9());
+			pstmt.setInt(15, 0);
 			
 			insertCount = pstmt.executeUpdate();
 
@@ -190,11 +192,12 @@ public class LineupDAO {
 	public int updateArticle(LineupBean article) {
 		int updateCount = 0;
 		PreparedStatement pstmt = null;
-		String sql = "update lineup set lineup_title=?,lineup_pit=?,lineup_bat1=?,lineup_bat2=?,lineup_bat3=?,lineup_bat4=?,lineup_bat5=?,lineup_bat6=?,lineup_bat7=?,lineup_bat8=?,lineup_bat9=? where lineup_no=?";
+		String sql = "update lineup set lineup_title=?,lineup_vs=?,lineup_pit=?,lineup_bat1=?,lineup_bat2=?,lineup_bat3=?,lineup_bat4=?,lineup_bat5=?,lineup_bat6=?,lineup_bat7=?,lineup_bat8=?,lineup_bat9=? where lineup_no=?";
 
 		try{
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, article.getLineup_title());
+			pstmt.setString(1, article.getLineup_vs());
 			pstmt.setString(2, article.getLineup_pit());
 			pstmt.setString(3, article.getLineup_bat1());
 			pstmt.setString(4, article.getLineup_bat2());

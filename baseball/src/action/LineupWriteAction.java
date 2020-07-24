@@ -23,6 +23,7 @@ public class LineupWriteAction implements Action {
 		
 		lineupBean.setLineup_id((String)session.getAttribute("id"));
 		lineupBean.setLineup_title(request.getParameter("lineup_title"));
+		lineupBean.setLineup_vs(request.getParameter("lineup_vs"));
 		lineupBean.setLineup_pit(request.getParameter("lineup_pit"));
 		lineupBean.setLineup_bat1(request.getParameter("lineup_bat1"));
 		lineupBean.setLineup_bat2(request.getParameter("lineup_bat2"));

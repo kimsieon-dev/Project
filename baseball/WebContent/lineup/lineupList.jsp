@@ -29,6 +29,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/lineup.css" />
 <script src="js/jquery-3.5.1.min.js"></script>
 
 </head>
@@ -89,26 +90,30 @@
 			if(lineupList != null && listCount > 0) {
 		%>
 
-		<table>
+		<table class="type09">
+			<thead>
 			<tr>
-				<th>번호</th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>조회수</th>
-				<th>날짜</th>
+				<th scope="cols">번호</th>
+				<th scope="cols">제목</th>
+				<th scope="cols">작성자</th>
+				<th scope="cols">조회수</th>
+				<th scope="cols">날짜</th>
 			</tr>
+			</thead>
 			
 			<%
 				for(int i = 0; i < lineupList.size(); i++) {
 			%>
 			
+			<tbody>
 			<tr>
-				<td><%=lineupList.get(i).getLineup_no() %></td>
-				<td><a href="lineupDetail.bd?lineup_no=<%=lineupList.get(i).getLineup_no() %>&page=<%=nowPage %>"><%=lineupList.get(i).getLineup_title() %></a></td>
-				<td><%=lineupList.get(i).getLineup_id() %>
-				<td><%=lineupList.get(i).getLineup_readcount() %></td>
-				<td><%=lineupList.get(i).getLineup_date() %></td>
+				<th scope="row"><%=lineupList.get(i).getLineup_no() %></td>
+				<td scope="row"><a href="lineupDetail.bd?lineup_no=<%=lineupList.get(i).getLineup_no() %>&page=<%=nowPage %>"><%=lineupList.get(i).getLineup_title() %></a></td>
+				<td scope="row"><%=lineupList.get(i).getLineup_id() %>
+				<td scope="row"><%=lineupList.get(i).getLineup_readcount() %></td>
+				<td scope="row"><%=lineupList.get(i).getLineup_date() %></td>
 			</tr>
+			</tbody>
 			<% 
 				}
 			%>

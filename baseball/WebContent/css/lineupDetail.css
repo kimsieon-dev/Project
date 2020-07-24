@@ -1,0 +1,71 @@
+
+@font-face { 
+	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+@font-face { 
+	font-family: 'NEXON Lv1 Gothic OTF Light'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+section > .view  {
+	margin: 0px auto;
+	width: 1000px;
+	height: 750px;
+	background-image: url('../image/lineupLi3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+section > .view > .first {
+	position: relative;
+	top: 620px;
+	left: 30px;
+	font-weight: bold;
+	color: white;
+	font-size: 2.5rem;
+	font-family: 'NEXON Lv1 Gothic OTF Light'; 
+}
+
+section > .view > .second {
+	position: relative;
+	left: 30px;
+	top: 630px;
+	color: white;
+	font-size:1.5rem;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+	opacity: 0.9;
+}
+
+section > .view > .third {
+	position: relative;
+	float: right;
+	left: -45px;
+	top: 190px;
+	color: white;
+}
+
+section > .view > .third > article {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 1.25rem;
+	font-family: 'NEXON Lv1 Gothic OTF Light'; 
+	font-weight: normal;
+	text-align: right;
+	width: 150px;
+}
+
+section > .view > .third > article:nth-child(1) {
+	width: 122px;
+	margin-left: 28px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 2rem;
+	font-family: 'NEXON Lv1 Gothic OTF Bold';  
+}
