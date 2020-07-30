@@ -197,18 +197,18 @@ public class LineupDAO {
 		try{
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, article.getLineup_title());
-			pstmt.setString(1, article.getLineup_vs());
-			pstmt.setString(2, article.getLineup_pit());
-			pstmt.setString(3, article.getLineup_bat1());
-			pstmt.setString(4, article.getLineup_bat2());
-			pstmt.setString(5, article.getLineup_bat3());
-			pstmt.setString(6, article.getLineup_bat4());
-			pstmt.setString(7, article.getLineup_bat5());
-			pstmt.setString(8, article.getLineup_bat6());
-			pstmt.setString(9, article.getLineup_bat7());
-			pstmt.setString(10, article.getLineup_bat8());
-			pstmt.setString(11, article.getLineup_bat9());
-			pstmt.setInt(12, article.getLineup_no());
+			pstmt.setString(2, article.getLineup_vs());
+			pstmt.setString(3, article.getLineup_pit());
+			pstmt.setString(4, article.getLineup_bat1());
+			pstmt.setString(5, article.getLineup_bat2());
+			pstmt.setString(6, article.getLineup_bat3());
+			pstmt.setString(7, article.getLineup_bat4());
+			pstmt.setString(8, article.getLineup_bat5());
+			pstmt.setString(9, article.getLineup_bat6());
+			pstmt.setString(10, article.getLineup_bat7());
+			pstmt.setString(11, article.getLineup_bat8());
+			pstmt.setString(12, article.getLineup_bat9());
+			pstmt.setInt(13, article.getLineup_no());
 			updateCount = pstmt.executeUpdate();
 		}catch(Exception ex){
 			System.out.println("boardModify 에러 : " + ex);

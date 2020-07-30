@@ -17,8 +17,17 @@ import action.LineupListAction;
 import action.LineupModifyFormAction;
 import action.LineupModifyProAction;
 import action.LineupWriteAction;
+import action.MemberDetailAction;
 import action.MemberJoinAction;
 import action.MemberLoginAction;
+import action.MemberModifyFormAction;
+import action.MemberModifyProAction;
+import action.NoticeDeleteProAction;
+import action.NoticeDetailAction;
+import action.NoticeListAction;
+import action.NoticeModifyFormAction;
+import action.NoticeModifyProAction;
+import action.NoticeWriteAction;
 import action.SajahuDeleteProAction;
 import action.SajahuDetailAction;
 import action.SajahuListAction;
@@ -66,6 +75,9 @@ public class BaseballController extends HttpServlet {
 		} else if (command.equals("/sajahuWrite.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/sajahu/sajahuWrite.jsp");
+		} else if (command.equals("/noticeWrite.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/notice/noticeWrite.jsp");
 		} else if (command.equals("/memberLogin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/loginForm.jsp");
@@ -89,6 +101,27 @@ public class BaseballController extends HttpServlet {
 		} else if (command.equals("/memberJoin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/joinForm.jsp");
+		} else if (command.equals("/memberDetail.bd")) {
+			action = new MemberDetailAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if (command.equals("/memberModifyForm.bd")) {
+			action = new MemberModifyFormAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if (command.equals("/memberModifyPro.bd")) {
+			action = new MemberModifyProAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
 			// 라인업 게시판
 		} else if (command.equals("/lineupWriteAction.bd")) {
@@ -191,7 +224,57 @@ public class BaseballController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+	 // 공지 게시판
+	} else if (command.equals("/noticeWriteAction.bd")) {
+		action = new NoticeWriteAction();
+		try {
+			forward = action.execute(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+	} else if (command.equals("/noticeList.bd")) {
+		action = new NoticeListAction();
+		try {
+			forward = action.execute(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	} else if (command.equals("/noticeDetail.bd")) {
+		action = new NoticeDetailAction();
+		try {
+			forward = action.execute(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	} else if (command.equals("/noticeModifyForm.bd")) {
+		action = new NoticeModifyFormAction();
+		try {
+			forward = action.execute(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	} else if (command.equals("/noticeModifyPro.bd")) {
+		action = new NoticeModifyProAction();
+		try {
+			forward = action.execute(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	} else if (command.equals("/noticeDelete.bd")) {
+		String nowPage = request.getParameter("page");
+		request.setAttribute("page", nowPage);
+		int notice_no = Integer.parseInt(request.getParameter("notice_no"));
+		request.setAttribute("notice_no", notice_no);
+		forward = new ActionForward();
+		forward.setPath("/notice/noticeDelete.jsp");
+	} else if (command.equals("/noticeDeletePro.bd")) {
+		action = new NoticeDeleteProAction();
+		try {
+			forward = action.execute(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 		
 		

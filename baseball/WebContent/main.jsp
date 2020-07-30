@@ -56,7 +56,7 @@ $(document).ready(function(){
 </head>
 <body>
 	<header>
-		<h5><%=id.equals("") ? "" : id + "님 반갑습니다." %><span><%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='logoutAction.jsp'>로그아웃</a>" %></span><span><%=id.equals("") ? "<a href='joinForm.jsp'>회원 가입</a>" : "<a href='logoutAction.jsp'>회원 정보 변경</a>" %></span></h5>
+		<h5><%=id.equals("") ? "" : id + "님 반갑습니다." %><span><%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='logoutAction.bd'>로그아웃</a>" %></span><span><%=id.equals("") ? "<a href='joinForm.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %></span></h5>
 	</header>
 	<nav>
 		<div class="dropmenu">			
@@ -93,7 +93,7 @@ $(document).ready(function(){
 					<ul>
 						<li><a href="sajahuList.bd">사자후</a></li>
 						<li><a href="#">SNS</a></li>
-						<li><a href="#">공지사항</a></li>
+						<li><a href="noticeList.bd">공지사항</a></li>
 					</ul>
 				</li>
 			</ul>

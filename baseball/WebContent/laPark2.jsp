@@ -47,9 +47,9 @@
 				
 				<li><a href="#">소통</a>
 					<ul>
-						<li><a href="#">사자후</a></li>
+						<li><a href="sajahuList.bd">사자후</a></li>
 						<li><a href="#">SNS</a></li>
-						<li><a href="#">공지사항</a></li>
+						<li><a href="noticeList.bd">공지사항</a></li>
 					</ul>
 				</li>
 			</ul>

@@ -4,9 +4,12 @@
 <%@ page import="dao.BaseballDAO" %>
 
  <%
-	String id = (String)session.getAttribute("members_id");
-  	BaseballDAO baseballdao = BaseballDAO.getInstance();
-  	MembersBean membersBean = 
+ request.setCharacterEncoding("UTF-8");
+	String id = "";
+	if(session.getAttribute("id") != null) {
+		id = (String)session.getAttribute("id");
+	}
+  	BaseballDAO baseballdao = BaseballDAO.getInstance(); 
  %>
 <!DOCTYPE html>
 <html>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="vo.PageInfo"%>
-<%@page import="vo.LineupBean"%>
+<%@page import="vo.NoticeBean"%>
 <%@page import="java.util.*" %>
 <%@ page import="java.io.PrintWriter"%>
 
@@ -12,7 +12,7 @@
 		id = (String)session.getAttribute("id");
 	}
 	
-	ArrayList<LineupBean> lineupList = (ArrayList<LineupBean>) request.getAttribute("articleList");
+	ArrayList<NoticeBean> noticeList = (ArrayList<NoticeBean>) request.getAttribute("articleList");
 	PageInfo pageInfo = (PageInfo) request.getAttribute("pageInfo");
 	int listCount = pageInfo.getListCount();
 	int nowPage = pageInfo.getPage();
@@ -29,7 +29,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/main.css" />
-<link rel="stylesheet" href="css/lineup.css" />
+<link rel="stylesheet" href="css/sajahu.css" />
+
 <script src="js/jquery-3.5.1.min.js"></script>
 
 </head>
@@ -72,7 +73,7 @@
 					<ul>
 						<li><a href="sajahuList.bd">사자후</a></li>
 						<li><a href="#">SNS</a></li>
-						<li><a href="#">공지사항</a></li>
+						<li><a href="noticeList.bd">공지사항</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -83,35 +84,35 @@
 	<section>
 		<h2>
 			글 목록<input type="button" value="게시판글쓰기"
-				onclick="location.href='lineupWrite.bd'" />
+				onclick="location.href='noticeWrite.bd'" />
 		</h2>
 		
 		<%
-			if(lineupList != null && listCount > 0) {
+			if(noticeList != null && listCount > 0) {
 		%>
-
+		
 		<table class="type09">
-			<thead>
+		<thead>
 			<tr>
-				<th scope="cols">번호</th>
-				<th scope="cols">제목</th>
-				<th scope="cols">작성자</th>
-				<th scope="cols">조회수</th>
-				<th scope="cols">날짜</th>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>조회수</th>
+				<th>날짜</th>
 			</tr>
-			</thead>
+		</thead>
 			
 			<%
-				for(int i = 0; i < lineupList.size(); i++) {
+				for(int i = 0; i < noticeList.size(); i++) {
 			%>
 			
 			<tbody>
 			<tr>
-				<th scope="row"><%=lineupList.get(i).getLineup_no() %></td>
-				<td scope="row"><a href="lineupDetail.bd?lineup_no=<%=lineupList.get(i).getLineup_no() %>&page=<%=nowPage %>"><%=lineupList.get(i).getLineup_title() %></a></td>
-				<td scope="row"><%=lineupList.get(i).getLineup_id() %>
-				<td scope="row"><%=lineupList.get(i).getLineup_readcount() %></td>
-				<td scope="row"><%=lineupList.get(i).getLineup_date() %></td>
+				<td><%=noticeList.get(i).getNotice_no() %></td>
+				<td><a href="noticeDetail.bd?notice_no=<%=noticeList.get(i).getNotice_no() %>&page=<%=nowPage %>"><%=noticeList.get(i).getNotice_title() %></a></td>
+				<td><%=noticeList.get(i).getNotice_id() %>
+				<td><%=noticeList.get(i).getNotice_readcount() %></td>
+				<td><%=noticeList.get(i).getNotice_date() %></td>
 			</tr>
 			</tbody>
 			<% 
@@ -126,28 +127,28 @@
 	</section>
 	
 	<%
-	if(lineupList != null && listCount > 0) {
+	if(noticeList != null && listCount > 0) {
 	%>
 	<section id="pageList">
 		<%
 		if(nowPage<=1) { 
 			out.println("[이전]&nbsp;");
 		} else {
-			out.println("<a href='lineupList.bd?page=" + (nowPage-1) + "'>[이전]</a>&nbsp;");
+			out.println("noitceList.bd?page=" + (nowPage-1) + "'>[이전]</a>&nbsp;");
 		}
 		
 		for(int a=startPage; a<=endPage; a++) {
 			if(a==nowPage) {	
 				out.println("["+a+"]");
 			} else {
-				out.println("<a href='lineupList.bd?page=" + a + "'>[" + a + "]</a>&nbsp;");
+				out.println("<a href='noitceList.bd?page=" + a + "'>[" + a + "]</a>&nbsp;");
 			}
 		}
 		
 		if(nowPage>=maxPage) {
 			out.println("[다음]");		
 		} else {
-			out.println("<a href='lineupList.bd?page=" + (nowPage+1) + "'>[다음]</a>");
+			out.println("<a href=noitceList.bd?page=" + (nowPage+1) + "'>[다음]</a>");
 		}
 		%>
 	</section>

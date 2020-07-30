@@ -11,7 +11,7 @@ import vo.MembersBean;
 
 public class BaseballDAO {
 	private static BaseballDAO baseballDAO;
-	Connection conn;
+	static Connection conn;
 	PreparedStatement pstmt;
 	ResultSet rs;
 	
@@ -71,5 +71,33 @@ public class BaseballDAO {
 			close(pstmt);
 		}
 		return loginId;
+	}
+
+	public static MembersBean selectMember(String id) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		MembersBean membersBean = null;
+		
+		try {
+			pstmt = conn.prepareStatement("select * from members where members_id = ?");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				membersBean = new MembersBean();
+				membersBean.setMembers_id(rs.getString("members_id"));
+				membersBean.setMembers_password(rs.getString("members_password"));
+				membersBean.setMembers_name(rs.getString("members_name"));
+				membersBean.setMembers_email(rs.getString("members_email"));
+				membersBean.setMembers_birthday(rs.getString("members_birthday"));
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return membersBean;
 	}
 }
