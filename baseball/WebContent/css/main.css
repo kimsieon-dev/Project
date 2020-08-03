@@ -9,7 +9,13 @@
 @font-face { 
 	font-family: 'GmarketSansBold'; 
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal; }
-
+	
+@font-face { 
+	font-family: 'NEXON Lv1 Gothic OTF Light'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -18,49 +24,29 @@
 }
 
 #logo1 {
-	width: 500px;
-	height: 100px;
-	margin-right: 100px;
+	width: 125px;
+	height: 50px;
+	
 }
 
 #logo1 > img {
 	float: left;
+	width: 40px;
+	height: 40px;
 }
 
-#logo1 h1 > a {
-	 font-family: Recipekorea;
-	font-size: 1rem;
-	width: 400px;
-	color: #1976D2;
-	line-height: 100px;
-	font-size: 2.5rem;
-	float: left;
-	cursor: pointer;
-}
-
-header {
-	width: 1200px;
-	height: 30px;
-	margin: 0 auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
 
 h5 {
 	float: right;
 	cursor: pointer;
 }
 
-
-.dropmenu > img {
-	float: left
-}
-
 nav {
-	width: 1200px;
+	width: 100%;
+	min-width: 1342px;
 	margin: 0 auto;
-	height: 100px;
-	border-bottom: 1px solid black;
+	height: 420px;
+	background: linear-gradient(45deg, #0068b3, #B0D2EB);
 }
 
 section {
@@ -70,49 +56,81 @@ section {
 }
 
 footer {
-	width: 1200px;
+	width: 100%;
 	margin: 0 auto;
 	background: black;
-	height: 100px;
+	height: 300px;
 }
 
 .dropmenu {
 	border: none;
 	border: 0px;
-	margin: 0px;
+	margin: 0px auto;
 	padding: 0px;
 	font: "sans-serif";
-	font-size: 18px;
-	
+	font-size: 17px;
+	text-align: center;
+	vertical-align: text-bottom;
 }
 
 .dropmenu ul {
-	height: 100px;
+	width: 100%;
+	height: 50px;
 	list-style: none;
 	margin: 0 auto;
 	padding: 0;
-	float: right;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	text-align: center;
 }
 
-.dropmenu li {
+.dropmenu ul li {
 	padding: 0px;
-	float: left;
+	float:left;
+	margin-top: 2px;
 }
 
 .dropmenu li a {
-	color: black;
-	width: 150px;
 	display: block;
-	line-height: 100px;
-	margin: 0px;
+	color: white;
+	width: 125px;
+	height: 50px;
+	display: block;
+	line-height: 50px;
+	margin: 0px auto;
 	padding: 0px;
 	text-align: center;
 	text-decoration: none;
-	font-weight: bolder;
+	font-weight: bold;
+	font-size: 17px;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+
+#login {
+	width: 130px;
+	margin-left: 700px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	color: white;
+	font-weight: bold;
+}
+
+#login > a {
+	color: white;
+	margin-top: 2px;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+
+
+.mainlogo > img {
+	width: 500px;
+	height: 266px;
+	margin: 0 auto;
+	margin-top: 60px;
+	display: block;
 }
 
 .dropmenu li a:hover, .dropmenu ul li:hover a {
-	color: black;
 	text-decoration: none;
 }
 
@@ -121,7 +139,7 @@ footer {
 	height: auto;
 	border: 0px;
 	position: absolute;
-	width: 150px;
+	width: 125px;
 	z-index: 200;
 	/*top:1em;
 /*left:0;*/
@@ -136,8 +154,9 @@ footer {
 	float: none;
 	margin: 0px;
 	padding: 0px;
-	width: 150px;
-	 background-color: rgba( 255, 255, 255, 0.8 );
+	width: 125px;
+	background-color: white;
+	 
 }
 
 .dropmenu li:hover li a {
@@ -146,17 +165,19 @@ footer {
 
 .dropmenu li ul a {
 	display: block;
-	height: 80px;
+	height: 50px;
 	font-size: 14px;
 	margin: 0px;
 	text-align: center;
-	line-height: 80px;
+	line-height: 50px;
+	color: gray;
 }
 
 .dropmenu li ul a:hover, .dropmenu li ul li:hover a {
 	border: 0px;
 	color: #ffffff;
 	text-decoration: none;
+	color: #0068b3;
 }
 
 .dropmenu p {

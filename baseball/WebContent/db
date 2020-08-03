@@ -1,0 +1,59 @@
+ create table members (
+	members_id varchar(15) not null,
+    members_password varchar(20) not null,
+    members_name varchar(15) not null,
+    members_email varchar(50) not null,
+	members_birthday date not null, 
+    primary key(members_id)
+);
+
+create table lineup (
+	lineup_no int not null,
+    lineup_id varchar(15) not null,
+    lineup_title varchar(50) not null,
+    lineup_vs varchar(20) not null,
+    lineup_pit varchar(20) not null,
+    lineup_bat1 varchar(20) not null,
+    lineup_bat2 varchar(20) not null,
+    lineup_bat3 varchar(20) not null,
+    lineup_bat4 varchar(20) not null,
+    lineup_bat5 varchar(20) not null,
+    lineup_bat6 varchar(20) not null,
+    lineup_bat7 varchar(20) not null,
+    lineup_bat8 varchar(20) not null,
+    lineup_bat9 varchar(20) not null,
+    lineup_readcount int default 0,
+	lineup_date date,
+    primary key(lineup_no)
+);
+
+create table sajahu (
+	sajahu_no int not null,
+    sajahu_id varchar(15) not null,
+    sajahu_title varchar(50) not null,
+    sajahu_content text not null,
+    sajahu_readcount int default 0,
+    sajahu_date date,
+    primary key(sajahu_no)
+);
+
+create table notice (
+	notice_no int not null,
+    notice_id varchar(15) not null,
+    notice_title varchar(50) not null,
+    notice_content text not null,
+    notice_readcount int default 0,
+    notice_date date,
+    primary key(notice_no)
+);
+
+create table comments(
+	comment_no int,
+    comment_id varchar(15) not null,
+    comment_content text not null,
+    comment_date date,
+    sajahu_no int not null,
+    primary key(comment_no),
+    foreign key (sajahu_no) references sajahu (sajahu_no) on delete cascade
+);
+

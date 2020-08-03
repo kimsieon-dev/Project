@@ -20,6 +20,7 @@ import action.LineupWriteAction;
 import action.MemberDetailAction;
 import action.MemberJoinAction;
 import action.MemberLoginAction;
+import action.MemberLogoutAction;
 import action.MemberModifyFormAction;
 import action.MemberModifyProAction;
 import action.NoticeDeleteProAction;
@@ -86,6 +87,13 @@ public class BaseballController extends HttpServlet {
 			forward.setPath("/joinForm.jsp");
 		} else if (command.equals("/memberLoginAction.bd")) {
 			action = new MemberLoginAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if (command.equals("/memberLogoutAction.bd")) { 
+			action = new MemberLogoutAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

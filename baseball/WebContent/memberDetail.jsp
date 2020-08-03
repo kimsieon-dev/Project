@@ -29,7 +29,7 @@
 		</div>
 		
 		
-              	아아디 : <%=article.getMembers_id() %>
+              	아이디 : <%=article.getMembers_id() %>
               	비밀번호 : <%=article.getMembers_password() %>
               	이름 : <%=article.getMembers_name() %>
               	이메일 : <%=article.getMembers_email() %>

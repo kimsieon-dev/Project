@@ -55,15 +55,11 @@ $(document).ready(function(){
 
 </head>
 <body>
-	<header>
-		<h5><%=id.equals("") ? "" : id + "님 반갑습니다." %><span><%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='logoutAction.bd'>로그아웃</a>" %></span><span><%=id.equals("") ? "<a href='joinForm.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %></span></h5>
-	</header>
 	<nav>
 		<div class="dropmenu">			
 			<ul>
 				<li id="logo1">
-					<img src="image/logo1.jpg">
-					<h1><a href="main.bd">SAMSUNG LIONS</a></h1>
+					<img src="image/insignia1.svg.png">
 				</li>
 				
 			
@@ -96,7 +92,15 @@ $(document).ready(function(){
 						<li><a href="noticeList.bd">공지사항</a></li>
 					</ul>
 				</li>
-			</ul>
+				
+		<div id="login">
+		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>&nbsp;&nbsp;|&nbsp;&nbsp;<%=id.equals("") ? "<a href='joinForm.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
+		<div>
+		</ul>
+		</div>
+		
+		<div class="mainlogo">
+			<img src="image/sllogo.png" />
 		</div>
 	</nav>
 
@@ -108,6 +112,10 @@ $(document).ready(function(){
 			</ul>
 	</section>
 
-	<footer></footer>
+	<footer>
+	<div>
+		<img src="image/insta1.png">
+	</div>
+	</footer>
 </body>
 </html>

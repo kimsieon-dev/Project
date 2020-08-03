@@ -15,7 +15,7 @@ public class MemberDetailAction implements Action {
 		ActionForward forward = new ActionForward();
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("id");
-		id = request.getParameter("id");
+		id = request.getParameter("members_id");
 		MemberDetailService memberDetailService = new MemberDetailService();
 		MembersBean article = MemberDetailService.getArticle(id);
 	   	request.setAttribute("article", article);
