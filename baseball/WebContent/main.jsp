@@ -113,9 +113,39 @@ $(document).ready(function(){
 	</section>
 
 	<footer>
-	<div>
-		<img src="image/insta1.png">
-	</div>
+		<div class="footer">
+			<div class="foot">
+				<div class="footlogo">
+					<img src="image/footlogo1.png">
+				</div>
+
+				<div class="footsns">
+					<img src="image/facebook.png"> 
+					<img src="image/instagram.png">
+					<img src="image/twitter1.png">
+					<img src="image/youtube.png">
+				</div>
+			</div>
+			
+			<div class="ex">
+				<p>
+				<span>개인정보처리방침</span>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<span>이용약관</span>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<span>이메일주소무단수집거부</span>
+				</p>
+			</div>
+			
+			<div class="ex2">
+				<p>
+				<span>삼성 라이온즈 구단주 겸 대표이사 : 원기찬&nbsp;&nbsp;|&nbsp;&nbsp;주소 : 대구 수성구 야구전설로 1 대구삼성라이온즈파크</span><br>
+				<span>사업자번호 : 504-81-03755&nbsp;&nbsp;|&nbsp;&nbsp;개인정보취급방침관리자 : 삼성 라이온즈(lionscareers@samsung.com)&nbsp;&nbsp;|&nbsp;&nbsp;고객센터 전화번호 : 053-780-3300</span><br>
+				<span>Copyright©Samsung Lions. All Right Reserved.</span>
+				</p>
+			</div>
+			
+		</div>
 	</footer>
 </body>
 </html>
