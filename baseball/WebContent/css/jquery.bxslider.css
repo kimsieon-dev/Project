@@ -3,22 +3,24 @@
 /** RESET AND LAYOUT
 ===================================*/
 .bx-wrapper {
-	width: 1190px;
+	width: 1280px;
 	height: 500px;
   position: relative;
   margin-bottom: 60px;
+  text-align: center;
+  margin: 0 auto;
   padding: 0;
   *zoom: 1;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
 .bx-wrapper img {
-  width: 1190px;
+  width: 1280px;
   height: 500px;
   display: block;
 }
 .bxslider {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 ul.bxslider {

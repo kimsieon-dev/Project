@@ -59,7 +59,7 @@ $(document).ready(function(){
 		<div class="dropmenu">			
 			<ul>
 				<li id="logo1">
-					<img src="image/insignia1.svg.png">
+					<a href="main.bd"><img src="image/insignia1.svg.png"></a>
 				</li>
 				
 			
@@ -93,8 +93,10 @@ $(document).ready(function(){
 					</ul>
 				</li>
 				
+				<li><a href="#">쇼핑몰</a></li>
+				
 		<div id="login">
-		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>&nbsp;&nbsp;|&nbsp;&nbsp;<%=id.equals("") ? "<a href='joinForm.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
+		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>&nbsp;&nbsp;|&nbsp;&nbsp;<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
 		<div>
 		</ul>
 		</div>
@@ -111,7 +113,88 @@ $(document).ready(function(){
 				<li><img src="image/slider4.jpg" /></li>
 			</ul>
 	</section>
+	
+	
+	<section>
+		<div class="m1">
+			<img src="image/catch.jpg">
+		</div>
+	</section>
+	
+	<section>
+		<div class="m2">
+			<div class="m2c">
+				<p>라이온즈tv</p>
+				<a href="https://www.youtube.com/channel/UCMWAku3a3h65QpLm63Jf2pw/videos" target="_blank">
+				<img src="image/ba1.jpg"></a>
+					<div class="m2cc">
+						<p>2020시즌, 라이온즈tv와 함께</p>
+						<p>덕아웃에서 관중석으로 카메라를 옮겼지만 생생함은 그대로, 2020시즌 삼성 라이온즈 선수단을 더 가까이 만나보세요!</p>
+					</div>
+			</div>
+			
+			<div class="m2c">
+				<p>어린이 회원</p>
+				<img src="image/ba2.jpg">
+					<div class="m2cc">
+						<p>2020시즌 어린이회원 모집 마감 안내</p>
+						<p>2020시즌 어린이회원 모집이 팬 여러분들의 뜨거운 관심으로 선착순 마감되었습니다.</p>
+					</div>
+			</div>
 
+			<div class="m2c">
+				<p>시즌권</p>
+				<img src="image/ba3.jpg">
+				<div class="m2cc">
+					<p>2020시즌 시즌권</p>
+					<p>거리두기 좌석제가 운영될 예정인 가운데, 삼성 라이온즈는 팬 여러분을 위해 시즌권을 운영하기로 결정했습니다.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		<div class="mall">
+			<p>Lions Online Mall</p>
+			<img src="image/mall.jpg">
+		</div>
+	</section>
+	
+	<section>
+		<div class="sns">
+			<p>라이온즈와 매일 만나세요!</p>
+			<div class="sns1">
+				<a href="https://play.google.com/store/apps/details?id=com.samsunglions.FRM&hl=ko" target="_blank">
+				<img src="image/sam_icon.jpg" /></a>
+				<p>PLAY With</p>
+			</div>
+			
+			<div class="sns1">
+				<a href="https://www.facebook.com/snssamsunglions" target="_blank">
+				<img src="image/facebook_icon.png" /></a>
+				<p>Facebook</p>
+			</div>
+			
+			<div class="sns1">
+				<a href="https://www.instagram.com/samsunglions_baseballclub/" target="_blank">
+				<img src="image/instagram_icon.png" /></a>
+				<p>Instagram</p>
+			</div>
+			
+			<div class="sns1">
+				<a href="https://twitter.com/twittlions" target="_blank">
+				<img src="image/twitter_icon.png" /></a>
+				<p>Twitter</p>
+			</div>
+			
+			<div class="sns1">
+				<a href="https://www.youtube.com/channel/UCMWAku3a3h65QpLm63Jf2pw" target="_blank">
+				<img src="image/youtube_icon.png" /></a>
+				<p>YouTube</p>
+			</div>
+		</div>
+	</section>
+	
 	<footer>
 		<div class="footer">
 			<div class="foot">
@@ -120,10 +203,21 @@ $(document).ready(function(){
 				</div>
 
 				<div class="footsns">
+					<a href="https://www.facebook.com/snssamsunglions" target="_blank">
 					<img src="image/facebook.png"> 
+					</a>
+					
+					<a href="https://www.instagram.com/samsunglions_baseballclub/" target="_blank">
 					<img src="image/instagram.png">
+					</a>
+					
+					<a href="https://twitter.com/twittlions" target="_blank">
 					<img src="image/twitter1.png">
+					</a>
+					
+					<a href="https://www.youtube.com/channel/UCMWAku3a3h65QpLm63Jf2pw" target="_blank">
 					<img src="image/youtube.png">
+					</a>
 				</div>
 			</div>
 			
