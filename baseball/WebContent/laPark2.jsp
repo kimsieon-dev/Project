@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%
+	request.setCharacterEncoding("UTF-8");
+	String id = "";
+	if(session.getAttribute("id") != null) {
+		id = (String)session.getAttribute("id");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,15 +19,11 @@
 
 </head>
 <body>
-	<header>
-		<h5><a href="loginForm.jsp">로그인</a></h5>
-	</header>
 	<nav>
 		<div class="dropmenu">			
 			<ul>
 				<li id="logo1">
-					<img src="image/logo1.jpg">
-					<h1><a href="main.bd">SAMSUNG LIONS</a></h1>
+					<a href="main.bd"><img src="image/insignia1.svg.png"></a>
 				</li>
 				
 			
@@ -52,9 +56,36 @@
 						<li><a href="noticeList.bd">공지사항</a></li>
 					</ul>
 				</li>
-			</ul>
+				
+				<li><a href="#">쇼핑몰</a></li>
+				
+		<div id="login">
+		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>&nbsp;&nbsp;|&nbsp;&nbsp;<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
+		<div>
+		</ul>
+		</div>
+		
+		<div class="mainlogo">
+			<img src="image/sllogo.png" />
 		</div>
 	</nav>
+
+	<section class="topsection">
+		<div class="page">
+			<div class="page1">
+				<img src="image/home_icon.png">
+				<span>></span>
+				<a href="#">구단</a>
+				<span>></span>
+				<a href="#">GO 라팍!</a>
+			</div>
+
+			<div class="page2">
+				<p>New Blue! New Lions! 삼성 라이온즈를 소개합니다.</p>
+			</div>
+		</div>
+	</section>
+	<br />
 
 	<section>
 		<h4>GO 라팍!</h4>
@@ -75,7 +106,7 @@
 							new daum.roughmap.Lander({
 								"timestamp" : "1592962832062",
 								"key" : "ywij",
-								"mapWidth" : "1000",
+								"mapWidth" : "1280",
 								"mapHeight" : "432"
 							}).render();
 						</script>
@@ -182,6 +213,51 @@
 		</div>
 	</section>
 	
+	<footer>
+		<div class="footer">
+			<div class="foot">
+				<div class="footlogo">
+					<img src="image/footlogo1.png">
+				</div>
 
+				<div class="footsns">
+					<a href="https://www.facebook.com/snssamsunglions" target="_blank">
+					<img src="image/facebook.png"> 
+					</a>
+					
+					<a href="https://www.instagram.com/samsunglions_baseballclub/" target="_blank">
+					<img src="image/instagram.png">
+					</a>
+					
+					<a href="https://twitter.com/twittlions" target="_blank">
+					<img src="image/twitter1.png">
+					</a>
+					
+					<a href="https://www.youtube.com/channel/UCMWAku3a3h65QpLm63Jf2pw" target="_blank">
+					<img src="image/youtube.png">
+					</a>
+				</div>
+			</div>
+			
+			<div class="ex">
+				<p>
+				<span>개인정보처리방침</span>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<span>이용약관</span>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<span>이메일주소무단수집거부</span>
+				</p>
+			</div>
+			
+			<div class="ex2">
+				<p>
+				<span>삼성 라이온즈 구단주 겸 대표이사 : 원기찬&nbsp;&nbsp;|&nbsp;&nbsp;주소 : 대구 수성구 야구전설로 1 대구삼성라이온즈파크</span><br>
+				<span>사업자번호 : 504-81-03755&nbsp;&nbsp;|&nbsp;&nbsp;개인정보취급방침관리자 : 삼성 라이온즈(lionscareers@samsung.com)&nbsp;&nbsp;|&nbsp;&nbsp;고객센터 전화번호 : 053-780-3300</span><br>
+				<span>Copyright©Samsung Lions. All Right Reserved.</span>
+				</p>
+			</div>
+			
+		</div>
+	</footer>
 </body>
 </html>
