@@ -131,11 +131,11 @@ footer {
 }
 
 #login {
-	width: 130px;
+	width: 200px;
 	margin-left: 1100px;
 	height: 50px;
 	line-height: 50px;
-	font-size: 14px;
+	font-size: 12px;
 	color: white;
 	font-weight: bold;
 }
@@ -157,18 +157,17 @@ footer {
 
 .page {
 	width: 1280px;
-	height: 24px;
+	height: 30px;
+	display: block;
+	position: relative;
 }
 
 .page > .page1 {
 	float: left;
-	height: 24px;
-}
-
-.page > .page1 > p {
-	font-size: 14px;
-	height: 24px;
-	float: left;
+	height: 30px;
+	vertical-align: bottom;
+	position: absolute;
+	transform: translateY(-50%);
 }
 
 .page > .page1 > img {
@@ -176,19 +175,26 @@ footer {
 	height: 24px;
 }
 
-.page > .page1 > img:nth-child(2) {
-	width: 12px;
-	height: 20px;
+.page > .page1 > span {
+	height: 14px;
 }
 
-.page > .page1 > img:nth-last-child {
-	width: 12px;
-	height: 20px;
+.page > .page1 > a {
+	font-size: 14px;
+	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
+	line-height: 30px;
 }
+
 
 .page > .page2 {
 	float: right;
 	vertical-align: bottom;
+}
+
+.page > .page2 > p {
+	font-size: 12px;
+	font-family: 'NEXON Lv1 Gothic OTF Light'; 
+	line-height: 50px;
 }
 
 .dropmenu li a:hover, .dropmenu ul li:hover a {

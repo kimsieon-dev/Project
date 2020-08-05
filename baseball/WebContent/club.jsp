@@ -73,10 +73,10 @@
 		<div class="page">
 			<div class="page1">
 				<img src="image/home_icon.png">
-				<img src="image/pngegg.png">
-				<p>구단</p>
-				<img src="image/pngegg.png">
-				<p>구단소개</p>
+				<span>></span>
+				<a href="#">구단</a>
+				<span>></span>
+				<a href="#">구단소개</a>
 			</div>
 
 			<div class="page2">

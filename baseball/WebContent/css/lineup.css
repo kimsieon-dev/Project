@@ -32,3 +32,14 @@ table.type09 td:nth-child(2) {
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }
+
+#pageList {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+#write {
+	text-align: right;
+}
