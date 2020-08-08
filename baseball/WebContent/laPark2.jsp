@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< HEAD
     
+=======
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id = "";
@@ -19,6 +22,10 @@
 
 </head>
 <body>
+<<<<<<< HEAD
+=======
+	<div id="wrap">
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 	<nav>
 		<div class="dropmenu">			
 			<ul>
@@ -259,5 +266,9 @@
 			
 		</div>
 	</footer>
+<<<<<<< HEAD
+=======
+	</div>
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 </body>
 </html>

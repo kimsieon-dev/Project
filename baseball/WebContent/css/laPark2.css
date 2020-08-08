@@ -44,6 +44,11 @@
 	text-decoration: none;
 }
 
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
 #logo1 {
 	width: 125px;
 	height: 50px;
@@ -57,10 +62,20 @@
 	height: 40px;
 }
 
+<<<<<<< HEAD
 
 h5 {
 	float: right;
 	cursor: pointer;
+=======
+#wrap {
+	display: block;
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	position: relative;
+	width: 100%;
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 }
 
 nav {
@@ -72,17 +87,30 @@ nav {
 	background: linear-gradient(45deg, #0068b3, #B0D2EB);
 }
 
+<<<<<<< HEAD
 .topsection {
+=======
+section {
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 	width: 1280px;
 	margin: 0 auto;
 	margin-top: 60px;
 }
 
 footer {
+<<<<<<< HEAD
 	width: 100%;
+=======
+	width: 100%; 
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 	margin: 0 auto;
 	background: #262626;
 	height: 250px;
+<<<<<<< HEAD
+=======
+	bottom: 0px;
+	position: absolute;
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 }
 
 .dropmenu {
@@ -152,6 +180,7 @@ footer {
 	margin: 0 auto;
 	margin-top: 60px;
 	display: block;
+<<<<<<< HEAD
 }
 
 .page {
@@ -187,6 +216,8 @@ footer {
 	font-size: 12px;
 	font-family: 'NEXON Lv1 Gothic OTF Light';
 	line-height: 40px;
+=======
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 }
 
 .dropmenu li a:hover, .dropmenu ul li:hover a {
@@ -243,11 +274,14 @@ footer {
 	clear: left;
 }
 
+<<<<<<< HEAD
 section {
 	width: 1280px;
 	margin-top: 20px;
 	margin: 0px auto;
 }
+=======
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 
 h4 {
 	font-family: 'yg-jalnan';
@@ -357,6 +391,7 @@ table.tra td {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
+<<<<<<< HEAD
 	margin-top: 1500px;
 }
 
@@ -436,4 +471,85 @@ table.tra td {
 .ex2 > p > span {
 	margin-top: 10px;
 }
+=======
+}
+
+.foot {
+	width: 800px;
+	height: 70px;
+	text-align: left;
+}
+
+.footlogo {
+	display: inline-block;
+	margin-top: 30px;
+}
+
+.footlogo > img {
+	width: 110px;
+	height: 70px;
+}
+
+.footsns {
+	display: inline-block;
+	margin: 40px;
+}
+
+.footsns > a > img {
+	width: 45px;
+	height: 45px;
+	margin-left: 10px;
+}
+
+.ex {
+	width: 800px;
+	height: 25px;
+	display: inline-block;
+	color: white;
+	margin-top: 50px;	
+	text-align: left;
+}
+
+.ex > p {
+	color: white;
+	float: left;
+}
+
+.ex > p > span:nth-child(1) {
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+
+.ex > p > span:nth-child(2) {
+	font-size: 11px;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+ 
+.ex > p > span:nth-child(3) {
+	font-size: 11px;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+
+.ex2 {
+	width: 800px;
+	height: 70px;
+	color: white;
+	margin-top: 20px;	
+	text-align: left;
+}
+
+.ex2 > p {
+	color: white;
+	font-size: 11px;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+	height: 70px;
+	display: inline;
+}
+
+.ex2 > p > span {
+	margin-top: 10px;
+}
+
+>>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 
