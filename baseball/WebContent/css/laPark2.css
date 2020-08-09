@@ -62,55 +62,49 @@ html, body {
 	height: 40px;
 }
 
-<<<<<<< HEAD
 
 h5 {
 	float: right;
 	cursor: pointer;
-=======
-#wrap {
-	display: block;
-	margin: 0;
-	padding: 0;
-	min-height: 100%;
-	position: relative;
-	width: 100%;
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 }
 
 nav {
 	width: 100%;
+	z-index: 1;
 	min-width: 1342px;
 	margin: 0 auto;
 	height: 420px;
 	text-align: center;
 	background: linear-gradient(45deg, #0068b3, #B0D2EB);
+	position: relative;
 }
 
-<<<<<<< HEAD
-.topsection {
-=======
 section {
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 	width: 1280px;
+	z-index: 20;
+	height: 100%;
+	min-height: 100%;
+	margin: -420px 0 -250px 0;
 	margin: 0 auto;
 	margin-top: 60px;
 }
 
+.page {
+	 padding:420px 0 250px;
+}
+
+.tabmenu {
+	 padding:420px 0 250px;
+}
+
 footer {
-<<<<<<< HEAD
-	width: 100%;
-=======
 	width: 100%; 
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
+	z-index: 1;
+	margin-top: auto;
 	margin: 0 auto;
 	background: #262626;
 	height: 250px;
-<<<<<<< HEAD
-=======
-	bottom: 0px;
-	position: absolute;
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
+	position: relative;
 }
 
 .dropmenu {
@@ -180,7 +174,6 @@ footer {
 	margin: 0 auto;
 	margin-top: 60px;
 	display: block;
-<<<<<<< HEAD
 }
 
 .page {
@@ -216,8 +209,6 @@ footer {
 	font-size: 12px;
 	font-family: 'NEXON Lv1 Gothic OTF Light';
 	line-height: 40px;
-=======
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 }
 
 .dropmenu li a:hover, .dropmenu ul li:hover a {
@@ -274,15 +265,6 @@ footer {
 	clear: left;
 }
 
-<<<<<<< HEAD
-section {
-	width: 1280px;
-	margin-top: 20px;
-	margin: 0px auto;
-}
-=======
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
-
 h4 {
 	font-family: 'yg-jalnan';
 	font-size: 1.25rem;
@@ -336,7 +318,7 @@ ul{
 }
 .tabCon{
 	width: 100%;
-  display:none; l
+  display:none;
   text-align:left; 
   position:absolute; 
   left:0; top:40px; 
@@ -391,7 +373,6 @@ table.tra td {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
-<<<<<<< HEAD
 	margin-top: 1500px;
 }
 
@@ -471,7 +452,13 @@ table.tra td {
 .ex2 > p > span {
 	margin-top: 10px;
 }
-=======
+
+.footer {
+	width: 800px;
+	height: 250px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
 }
 
 .foot {
@@ -550,6 +537,4 @@ table.tra td {
 .ex2 > p > span {
 	margin-top: 10px;
 }
-
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 

@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<<<<<<< HEAD
-    
-=======
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
+
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id = "";
@@ -22,10 +19,6 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-=======
-	<div id="wrap">
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 	<nav>
 		<div class="dropmenu">			
 			<ul>
@@ -77,7 +70,8 @@
 		</div>
 	</nav>
 
-	<section class="topsection">
+
+	<section>
 		<div class="page">
 			<div class="page1">
 				<img src="image/home_icon.png">
@@ -91,10 +85,7 @@
 				<p>New Blue! New Lions! 삼성 라이온즈를 소개합니다.</p>
 			</div>
 		</div>
-	</section>
-	<br />
-
-	<section>
+		
 		<h4>GO 라팍!</h4>
 
 		<div class="tabmenu">
@@ -266,9 +257,5 @@
 			
 		</div>
 	</footer>
-<<<<<<< HEAD
-=======
-	</div>
->>>>>>> branch 'master' of https://github.com/kimsieon-dev/Project.git
 </body>
 </html>
