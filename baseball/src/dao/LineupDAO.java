@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 
 import vo.LineupBean;
+import vo.PageInfo;
 
 public class LineupDAO {
 	private static LineupDAO lineupDAO;
@@ -257,6 +258,112 @@ public class LineupDAO {
 
 		return updateCount;
 	}
+	
+	// 검색
+	public int selectSearchCount(LineupBean search) {
+		String sql = "select count(*) from lineup where lineup_title like ?";
+		String sql2 = "select count(*) from lineup where lineup_id like ?";
+		int searchCount = 0;
+
+		try {
+			if(search.getLineup_option().equals("lineup_title")) {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, "%" + search.getLineup_search() + "%");
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {
+					searchCount = rs.getInt(1);
+				}
+			} else {
+				pstmt = conn.prepareStatement(sql2);
+				pstmt.setString(1, "%" + search.getLineup_search() + "%");
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {
+					searchCount = rs.getInt(1);
+				}
+			}
+		} catch(Exception ex) {
+			System.out.println("searchCount 에러: " + ex);			
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return searchCount;
+	}
+	
+	public int totalBlock() {	// 전체 블록의 수
+		if(selectListCount() % (pageinfo.getWidthBlock() * pageinfo.getPageRows()) > 0) {
+			return selectListCount() / (pageinfo.getWidthBlock() * pageinfo.getPageRows()) + 1;
+		}
+		return selectListCount() / (pageinfo.getWidthBlock() * pageinfo.getPageRows());
+	}
+	
+	public int currentBlock(int nowpage) {		// 현재 블럭의 수
+		if(nowpage % pageinfo.getWidthBlock() > 0) {
+			return nowpage / pageinfo.getWidthBlock() + 1;
+		}
+		return nowpage / pageinfo.getWidthBlock();
+	}
+	
+	public int totalPage() {		// 전체 페이지 수를 계산하는 메소드
+		if(selectListCount() % pageinfo.getPageRows() > 0) {
+			return selectListCount() / pageinfo.getPageRows() + 1;
+		}
+		return selectListCount() / pageinfo.getPageRows();
+	}
+
+	public ArrayList<LineupBean> lineupSearch(int page, int limit, LineupBean search) {
+		String sql = "select * from lineup where lineup_title like ? order by lineup_title desc limit ?, 10";
+		String sql2 = "select * from lineup where lineup_id like ? order by lineup_id desc limit ?, 10";
+		ArrayList<LineupBean> lineupSearch = new ArrayList<LineupBean>();
+		LineupBean searchboard = null;
+		
+		int startrow = (page - 1) * 10; //읽기 시작할 row 번호..	
+
+		try {
+			if(search.getLineup_option().equals("lineup_title")) {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, "%" + search.getLineup_search() + "%");
+				pstmt.setInt(2, startrow);
+				rs = pstmt.executeQuery();
+
+				while(rs.next()) {
+					searchboard = new LineupBean();
+					searchboard.setLineup_no(rs.getInt("lineup_no"));
+					searchboard.setLineup_title(rs.getString("lineup_title"));
+					searchboard.setLineup_id(rs.getString("lienup_id"));
+					searchboard.setLineup_readcount(rs.getInt("lineup_readcount"));	
+					searchboard.setLineup_date(rs.getDate("lineup_date"));
+					lineupSearch.add(searchboard);
+				}
+			} else {
+				pstmt = conn.prepareStatement(sql2);
+				pstmt.setString(1, "%" + search.getLineup_search() + "%");
+				pstmt.setInt(2, startrow);
+				rs = pstmt.executeQuery();
+
+				while(rs.next()) {
+					searchboard = new LineupBean();
+					searchboard.setLineup_no(rs.getInt("lineup_no"));
+					searchboard.setLineup_title(rs.getString("lineup_title"));
+					searchboard.setLineup_id(rs.getString("lienup_id"));
+					searchboard.setLineup_readcount(rs.getInt("lineup_readcount"));	
+					searchboard.setLineup_date(rs.getDate("lineup_date"));
+					lineupSearch.add(searchboard);
+				}
+			}
+			
+		} catch(Exception ex) {
+			System.out.println("lineupSearch 에러 : " + ex);
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return lineupSearch;
+	}
+
+	
 	
 }
 

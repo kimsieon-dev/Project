@@ -88,12 +88,12 @@ $(document).ready(function(){
 				<li><a href="#">소통</a>
 					<ul>
 						<li><a href="sajahuList.bd">사자후</a></li>
-						<li><a href="#">SNS</a></li>
+						<li><a href="sns.bd">SNS</a></li>
 						<li><a href="noticeList.bd">공지사항</a></li>
 					</ul>
 				</li>
 				
-				<li><a href="#">쇼핑몰</a></li>
+				<li><a href="shop.bd">쇼핑몰</a></li>
 				
 		<div id="login">
 		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>&nbsp;&nbsp;|&nbsp;&nbsp;<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>

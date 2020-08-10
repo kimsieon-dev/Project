@@ -19,6 +19,8 @@ public class LineupBean {
 	private String lineup_bat9;
 	private int lineup_readcount;
 	private Date lineup_date;
+	private String lineup_option;
+	private String lineup_search;
 	
 	public int getLineup_no() {
 		return lineup_no;
@@ -116,8 +118,17 @@ public class LineupBean {
 	public void setLineup_date(Date lineup_date) {
 		this.lineup_date = lineup_date;
 	}
-	
-
-	
+	public String getLineup_option() {
+		return lineup_option;
+	}
+	public void setLineup_option(String lineup_option) {
+		this.lineup_option = lineup_option;
+	}
+	public String getLineup_search() {
+		return lineup_search;
+	}
+	public void setLineup_search(String lineup_search) {
+		this.lineup_search = lineup_search;
+	}
 	
 }

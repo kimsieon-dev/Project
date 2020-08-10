@@ -16,6 +16,7 @@ import action.LineupDetailAction;
 import action.LineupListAction;
 import action.LineupModifyFormAction;
 import action.LineupModifyProAction;
+import action.LineupSearchAction;
 import action.LineupWriteAction;
 import action.MemberDetailAction;
 import action.MemberJoinAction;
@@ -70,6 +71,12 @@ public class BaseballController extends HttpServlet {
 		} else if (command.equals("/laPark2.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/laPark2.jsp");
+		} else if (command.equals("/sns.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/sns.jsp");
+		} else if (command.equals("/shop.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/shop.jsp");
 		} else if (command.equals("/lineupWrite.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/lineup/lineupWrite.jsp");
@@ -167,6 +174,13 @@ public class BaseballController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		} else if(command.equals("/lineupSearch.bd")) {	// 게시판 글 검색 Action
+				action = new LineupSearchAction();
+				try { 
+					forward = action.execute(request, response);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 		} else if (command.equals("/lineupDelete.bd")) {
 			String nowPage = request.getParameter("page");
 			request.setAttribute("page", nowPage);
