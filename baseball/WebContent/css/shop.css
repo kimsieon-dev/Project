@@ -74,17 +74,6 @@ footer {
 	text-align: center;
 }
 
-.dropmenu {
-	border: none;
-	border: 0px;
-	margin: 0px auto;
-	padding: 0px;
-	font: "sans-serif";
-	font-size: 17px;
-	text-align: center;
-	vertical-align: text-bottom;
-}
-
 .page {
 	width: 1280px;
 	height: 35px;
@@ -158,8 +147,19 @@ footer {
 	width: 1280px;
 }
 
-.dropmenu ul {
+.dropmenu {
 	width: 100%;
+	border: none;
+	border: 0px;
+	margin: 0px auto;
+	padding: 0px;
+	font: "sans-serif";
+	font-size: 17px;
+	text-align: center;
+	vertical-align: text-bottom;
+}
+
+.dropmenu ul {
 	height: 50px;
 	list-style: none;
 	margin: 0 auto;
@@ -192,17 +192,34 @@ footer {
 }
 
 #login {
-	width: 200px;
-	margin-left: 1100px;
+	width: 80px;
 	height: 50px;
 	line-height: 50px;
-	font-size: 12px;
+	color: white;
+	font-weight: bold;
+	margin-left: 50px;
+}
+
+#login > a {
+	width: 80px;
+	color: white;
+	margin-top: 2px;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+	font-size: 14px;
+}
+
+#login2 {
+	width: 90px;
+	height: 50px;
+	line-height: 50px;
 	color: white;
 	font-weight: bold;
 }
 
-#login > a {
+#login2 > a {
+	width: 90px;
 	color: white;
+	font-size: 14px;
 	margin-top: 2px;
 	font-family: 'NEXON Lv1 Gothic OTF Light';
 }

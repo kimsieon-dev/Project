@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import vo.MembersBean;
+import vo.MemberbbBean;
 
 public class BaseballDAO {
 	private static BaseballDAO baseballDAO;
@@ -31,17 +31,17 @@ public class BaseballDAO {
 
 	}
 
-	public int insertMembers(MembersBean members) {
-		String sql = "insert into members values(?, ?, ?, ?, ?)";
+	public int insertMembers(MemberbbBean members) {
+		String sql = "insert into memberbb values(?, ?, ?, ?, ?)";
 		int insertCount = 0;
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, members.getMembers_id());
-			pstmt.setString(2, members.getMembers_password());
-			pstmt.setString(3, members.getMembers_name());
-			pstmt.setString(4, members.getMembers_email());
-			pstmt.setString(5, members.getMembers_birthday());
+			pstmt.setString(1, members.getMemberbb_id());
+			pstmt.setString(2, members.getMemberbb_password());
+			pstmt.setString(3, members.getMemberbb_name());
+			pstmt.setString(4, members.getMemberbb_email());
+			pstmt.setString(5, members.getMemberbb_birthday());
 			insertCount = pstmt.executeUpdate();
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -51,18 +51,18 @@ public class BaseballDAO {
 		return insertCount;
 	}
 
-	public String selectLoginId(MembersBean members) {
+	public String selectLoginId(MemberbbBean members) {
 		String loginId = null;
-		String sql = "select members_id from members where members_id = ? and members_password = ?";
+		String sql = "select memberbb_id from memberbb where memberbb_id = ? and memberbb_password = ?";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, members.getMembers_id());
-			pstmt.setString(2, members.getMembers_password());
+			pstmt.setString(1, members.getMemberbb_id());
+			pstmt.setString(2, members.getMemberbb_password());
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				loginId = rs.getString("members_id");
+				loginId = rs.getString("memberbb_id");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -73,23 +73,23 @@ public class BaseballDAO {
 		return loginId;
 	}
 
-	public static MembersBean selectMember(String id) {
+	public static MemberbbBean selectMember(String id) {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		MembersBean membersBean = null;
+		MemberbbBean memberbbBean = null;
 		
 		try {
-			pstmt = conn.prepareStatement("select * from members where members_id = ?");
+			pstmt = conn.prepareStatement("select * from memberbb where memberbb_id = ?");
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				membersBean = new MembersBean();
-				membersBean.setMembers_id(rs.getString("members_id"));
-				membersBean.setMembers_password(rs.getString("members_password"));
-				membersBean.setMembers_name(rs.getString("members_name"));
-				membersBean.setMembers_email(rs.getString("members_email"));
-				membersBean.setMembers_birthday(rs.getString("members_birthday"));
+				memberbbBean = new MemberbbBean();
+				memberbbBean.setMemberbb_id(rs.getString("memberbb_id"));
+				memberbbBean.setMemberbb_password(rs.getString("memberbb_password"));
+				memberbbBean.setMemberbb_name(rs.getString("memberbb_name"));
+				memberbbBean.setMemberbb_email(rs.getString("memberbb_email"));
+				memberbbBean.setMemberbb_birthday(rs.getString("memberbb_birthday"));
 
 			}
 		} catch (SQLException e) {
@@ -98,6 +98,6 @@ public class BaseballDAO {
 			close(rs);
 			close(pstmt);
 		}
-		return membersBean;
+		return memberbbBean;
 	}
 }

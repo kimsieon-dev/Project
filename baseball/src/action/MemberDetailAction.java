@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import svc.MemberDetailService;
 import vo.ActionForward;
-import vo.MembersBean;
+import vo.MemberbbBean;
 
 public class MemberDetailAction implements Action {
 
@@ -15,9 +15,9 @@ public class MemberDetailAction implements Action {
 		ActionForward forward = new ActionForward();
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("id");
-		id = request.getParameter("members_id");
+		id = request.getParameter("memberbb_id");
 		MemberDetailService memberDetailService = new MemberDetailService();
-		MembersBean article = MemberDetailService.getArticle(id);
+		MemberbbBean article = MemberDetailService.getArticle(id);
 	   	request.setAttribute("article", article);
    		forward.setPath("/memberDetail.jsp");
    		return forward;

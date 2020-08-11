@@ -7,20 +7,20 @@ import javax.servlet.http.HttpServletResponse;
 
 import svc.MemberJoinService;
 import vo.ActionForward;
-import vo.MembersBean;
+import vo.MemberbbBean;
 
 public class MemberJoinAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		MembersBean members = new MembersBean();
+		MemberbbBean members = new MemberbbBean();
 		boolean joinResult = false;
 		
-		members.setMembers_id(request.getParameter("members_id"));
-		members.setMembers_password(request.getParameter("members_password"));
-		members.setMembers_name(request.getParameter("members_name"));
-		members.setMembers_email(request.getParameter("members_email"));
-		members.setMembers_birthday(request.getParameter("members_yy") + request.getParameter("members_mm") + request.getParameter("members_dd"));
+		members.setMemberbb_id(request.getParameter("memberbb_id"));
+		members.setMemberbb_password(request.getParameter("memberbb_password"));
+		members.setMemberbb_name(request.getParameter("memberbb_name"));
+		members.setMemberbb_email(request.getParameter("memberbb_email"));
+		members.setMemberbb_birthday(request.getParameter("memberbb_yy") + request.getParameter("memberbb_mm") + request.getParameter("memberbb_dd"));
 		MemberJoinService memberJoinService = new MemberJoinService();
 		joinResult = memberJoinService.joinMember(members);
 		

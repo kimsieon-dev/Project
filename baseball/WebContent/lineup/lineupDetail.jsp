@@ -47,7 +47,7 @@
 				</li>
 				<li><a href="#">경기 정보</a>
 					<ul>
-						<li><a href="#">일정</a></li>
+						<li><a href="view.bd">일정</a></li>
 						<li><a href="lineupList.bd">라인업</a></li>
 					</ul>
 				</li>
@@ -62,9 +62,13 @@
 				
 				<li><a href="shop.bd">쇼핑몰</a></li>
 				
-		<div id="login">
-		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>&nbsp;&nbsp;|&nbsp;&nbsp;<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
-		</div>
+		<li id="login">
+		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>
+		</li>
+		
+		<li id="login2">
+		<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
+		</li>
 		</ul>
 		</div>
 		
@@ -88,12 +92,20 @@
 			</div>
 		</div>
 		
-		<h2>라인업</h2>
+		<div class="toptitle">
+			<p>라인업</p>
+		</div>
 		
 		<div class="topview">
-			<p>작성자 <%=article.getLineup_id() %></p>
-			<p>조회수 <%=article.getLineup_readcount() %></p>
-			<p>날자 <%=article.getLineup_date() %></p>
+			<div class="topview_1">
+				<p><%=article.getLineup_title() %></p>
+			</div>
+			
+			<div class="topview_2">
+				<p>작성자 <span><%=article.getLineup_id() %></span></p>
+				<p>조회수 <span><%=article.getLineup_readcount() %></span></p>
+				<p>날자 <span><%=article.getLineup_date() %></span></p>
+			</div>
 		</div>
 
 		<div class="view">
@@ -163,16 +175,15 @@
 	</section>
 	
 	<section id="commandList">
+	<a href="lineupList.bd?page=<%=nowPage %>">[목록] </a> 
 	<%
 		if(article.getLineup_id() != null && article.getLineup_id().equals(session.getAttribute("id"))) {
 	%>
-		<a href="lineupModifyForm.bd?lineup_no=<%=article.getLineup_no() %>&page=<%=nowPage %>">[수정] </a>
 		<a href="lineupDelete.bd?lineup_no=<%=article.getLineup_no() %>&page=<%=nowPage %>">[삭제] </a>
-		&nbsp;&nbsp;
+		<a href="lineupModifyForm.bd?lineup_no=<%=article.getLineup_no() %>&page=<%=nowPage %>">[수정] </a>
 	<%
 		}
 	%>
-	<a href="lineupList.bd?page=<%=nowPage %>">[목록] </a> 
 	
 	</section>
 	

@@ -8,16 +8,16 @@ import static db.JdbcUtil.rollback;
 import java.sql.Connection;
 
 import dao.BaseballDAO;
-import vo.MembersBean;
+import vo.MemberbbBean;
 
 public class MemberJoinService {
 
-	public boolean joinMember(MembersBean members) {
+	public boolean joinMember(MemberbbBean memberbb) {
 		boolean joinSuccess = false;
 		BaseballDAO baseballDAO = BaseballDAO.getInstance();
 		Connection conn = getConnection();
 		baseballDAO.setConnection(conn);
-		int insertCount = baseballDAO.insertMembers(members);
+		int insertCount = baseballDAO.insertMembers(memberbb);
 		if(insertCount > 0) {
 			joinSuccess = true;
 			commit(conn);

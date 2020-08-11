@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="vo.MembersBean" %>
+<%@ page import="vo.MemberbbBean" %>
 <%@ page import="dao.BaseballDAO" %>
 
  <%
@@ -35,11 +35,11 @@
                 <!-- ID -->
                 <div>
                     <h3 class="join_title">
-                        <label for="members_id">아이디</label>
+                        <label for="memberbb_id">아이디</label>
                     </h3>
                     <span class="box int_id">
-                        <input type="text" id="members_id" name="members_id" class="int" maxlength="20">
-                        <%=membersBean.getMembers_id() %>
+                        <input type="text" id="memberbb_id" name="memberbb_id" class="int" maxlength="20">
+                        <%=memberbbBean.getMemberbb_id() %>
                   
                     </span>
                     	<div class="check_font" id="id_check"></div>

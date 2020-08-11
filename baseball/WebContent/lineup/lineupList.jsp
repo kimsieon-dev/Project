@@ -59,7 +59,7 @@
 				</li>
 				<li><a href="#">경기 정보</a>
 					<ul>
-						<li><a href="#">일정</a></li>
+						<li><a href="view.bd">일정</a></li>
 						<li><a href="lineupList.bd">라인업</a></li>
 					</ul>
 				</li>
@@ -74,9 +74,13 @@
 				
 				<li><a href="#">쇼핑몰</a></li>
 				
-		<div id="login">
-		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>&nbsp;&nbsp;|&nbsp;&nbsp;<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
-		<div>
+		<li id="login">
+		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>
+		</li>
+		
+		<li id="login2">
+		<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
+		</li>
 		</ul>
 		</div>
 		
@@ -92,16 +96,17 @@
 				<span>></span>
 				<a href="#">경기 정보</a>
 				<span>></span>
-				<a href="#">GO 라팍!</a>
+				<a href="lineupList.bd">라인업</a>
 			</div>
 
 			<div class="page2">
-				<p>New Blue! New Lions! 삼성 라이온즈를 소개합니다.</p>
+				<p>New Blue! New Lions! 삼성 라이온즈의 라인업을 알려드립니다.</p>
 			</div>
 		</div>
-		<h2>
-			글 목록
-		</h2>
+		
+		<div class="toptitle">
+			<p>라인업</p>
+		</div>
 		
 		<%
 			if(lineupList != null && listCount > 0) {

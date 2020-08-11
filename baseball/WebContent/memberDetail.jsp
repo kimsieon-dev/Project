@@ -1,11 +1,11 @@
 <%@page import="vo.LineupBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="vo.MembersBean" %>
+<%@ page import="vo.MemberbbBean" %>
 <%@ page import="dao.BaseballDAO" %>
 
  <%
- 	MembersBean article = (MembersBean) request.getAttribute("article");
+ 	MemberbbBean article = (MemberbbBean) request.getAttribute("article");
  
 	request.setCharacterEncoding("UTF-8");
 	String id = "";
@@ -29,11 +29,11 @@
 		</div>
 		
 		
-              	아이디 : <%=article.getMembers_id() %>
-              	비밀번호 : <%=article.getMembers_password() %>
-              	이름 : <%=article.getMembers_name() %>
-              	이메일 : <%=article.getMembers_email() %>
-              	생년월일 : <%=article.getMembers_birthday() %>
+              	아이디 : <%=article.getMemberbb_id() %>
+              	비밀번호 : <%=article.getMemberbb_password() %>
+              	이름 : <%=article.getMemberbb_name() %>
+              	이메일 : <%=article.getMemberbb_email() %>
+              	생년월일 : <%=article.getMemberbb_birthday() %>
                
                
 </body>

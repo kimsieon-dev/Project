@@ -41,7 +41,7 @@ if (session.getAttribute("id") != null) {
 					</ul></li>
 				<li><a href="#">경기 정보</a>
 					<ul>
-						<li><a href="#">일정</a></li>
+						<li><a href="view.bd">일정</a></li>
 						<li><a href="lineupList.bd">라인업</a></li>
 					</ul></li>
 
@@ -54,9 +54,13 @@ if (session.getAttribute("id") != null) {
 
 				<li><a href="shop.bd">쇼핑몰</a></li>
 
-				<div id="login">
-					<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>"%>&nbsp;&nbsp;|&nbsp;&nbsp;<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>"%>
-					<div>
+				<li id="login">
+		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>
+		</li>
+		
+		<li id="login2">
+		<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
+		</li>
 			</ul>
 		</div>
 

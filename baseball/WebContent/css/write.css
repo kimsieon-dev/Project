@@ -1,0 +1,141 @@
+@font-face { 
+	font-family: 'NEXON Lv1 Gothic OTF Light'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+@font-face { 
+	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+#wrapper {
+	display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#content {
+	width: 800px;
+	display: block;
+    margin: 0 auto;
+}
+
+
+h3 {
+	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
+    margin: 20px 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.box {
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+}
+
+.box2 {
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+}
+
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+}
+
+input {
+    font-family: Dotum,'돋움',Helvetica,sans-serif;    
+}
+
+.box.int_id {
+    padding-right: 40px;
+}
+
+/* 버튼 */
+
+.btn_area {
+    margin: 30px 0 91px;
+    text-align: center;
+}
+
+#btnJoin {
+    width: 200px;
+    padding: 21px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1976D2;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+
+.page {
+	width: 1280px;
+	height: 35px;
+	border-bottom: 1px solid black;
+}
+
+.page > .page1 {
+	float: left;
+	height: 24px;
+}
+
+.page > .page1 > a {
+	font-size: 14px;
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+
+.page > .page1 > span {
+	font-weight: bold;
+}
+
+.page > .page1 > img {
+	width: 24px;
+	height: 24px;
+}
+
+.page > .page2 {
+	float: right;
+}
+
+.page > .page2 > p {
+	font-size: 12px;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+	line-height: 40px;
+}
+
+.toptitle {
+	width: 800px;
+	text-align: left;
+	margin: 0 auto;
+}
+.toptitle > p {
+	font-size: 50px;
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	margin: 60px 0 30px 0;
+}

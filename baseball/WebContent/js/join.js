@@ -1,23 +1,23 @@
 /*변수 선언*/
 
 
-var id = document.querySelector('#members_id');
+var id = document.querySelector('#memberbb_id');
 
-var pw1 = document.querySelector('#members_password');
+var pw1 = document.querySelector('#memberbb_password');
 var pwMsg = document.querySelector('#alertTxt');
-var pwImg1 = document.querySelector('#members_password_img1');
+var pwImg1 = document.querySelector('#memberbb_password_img1');
 
 var pw2 = document.querySelector('#pswd2');
 var pwImg2 = document.querySelector('#pswd2_img1');
 var pwMsgArea = document.querySelector('.int_pass');
 
-var userName = document.querySelector('#members_name');
+var userName = document.querySelector('#memberbb_name');
 
-var email = document.querySelector('#members_email');
+var email = document.querySelector('#memberbb_email');
 
-var yy = document.querySelector('#members_yy');
-var mm = document.querySelector('#members_mm');
-var dd = document.querySelector('#members_dd');
+var yy = document.querySelector('#memberbb_yy');
+var mm = document.querySelector('#memberbb_mm');
+var dd = document.querySelector('#memberbb_dd');
 
 var error = document.querySelectorAll('.error_next_box');
 

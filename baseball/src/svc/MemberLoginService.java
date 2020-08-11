@@ -6,16 +6,16 @@ import static db.JdbcUtil.getConnection;
 import java.sql.Connection;
 
 import dao.BaseballDAO;
-import vo.MembersBean;
+import vo.MemberbbBean;
 
 public class MemberLoginService {
 
-	public boolean login(MembersBean members) {
+	public boolean login(MemberbbBean memberbb) {
 		Connection conn = getConnection();
 		BaseballDAO baseballDAO = BaseballDAO.getInstance();
 		baseballDAO.setConnection(conn);
 		boolean loginResult = false;
-		String loginId = baseballDAO.selectLoginId(members);
+		String loginId = baseballDAO.selectLoginId(memberbb);
 		if(loginId != null) {
 			loginResult = true;
 		}

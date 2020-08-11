@@ -6,8 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.BaseballDAO;
 import vo.ActionForward;
-import vo.LineupBean;
-import vo.MembersBean;
+import vo.MemberbbBean;
 
 public class MemberModifyFormAction implements Action {
 
@@ -17,8 +16,8 @@ public class MemberModifyFormAction implements Action {
 		HttpSession session =request.getSession();
 		String id = (String)session.getAttribute("id"); 
 		
-		MembersBean membersBean = null;
-		membersBean = new MembersBean();
+		MemberbbBean memberbbBean = null;
+		memberbbBean = new MemberbbBean();
 		
 		id = request.getParameter("id");
   

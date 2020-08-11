@@ -6,10 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import svc.NoticeModifyProService;
-import svc.SajahuModifyProService;
 import vo.ActionForward;
 import vo.NoticeBean;
-import vo.SajahuBean;
 
 public class NoticeModifyProAction implements Action {
 
@@ -17,6 +15,7 @@ public class NoticeModifyProAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = null;
 		boolean isModifySuccess = false;
+		String nowPage = request.getParameter("page");
 		int notice_no = Integer.parseInt(request.getParameter("notice_no"));
 		NoticeBean article = new NoticeBean();
 		NoticeModifyProService noticeModifyProService = new NoticeModifyProService();

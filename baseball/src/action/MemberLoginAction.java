@@ -8,25 +8,25 @@ import javax.servlet.http.HttpSession;
 
 import svc.MemberLoginService;
 import vo.ActionForward;
-import vo.MembersBean;
+import vo.MemberbbBean;
 
 public class MemberLoginAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HttpSession session = request.getSession();
-		MembersBean members = new MembersBean();
+		MemberbbBean memberbb = new MemberbbBean();
 		
-		members.setMembers_id(request.getParameter("members_id"));
-		members.setMembers_password(request.getParameter("members_password"));
+		memberbb.setMemberbb_id(request.getParameter("memberbb_id"));
+		memberbb.setMemberbb_password(request.getParameter("memberbb_password"));
 		
 		MemberLoginService memberLoginService = new MemberLoginService();
-		boolean loginResult = memberLoginService.login(members);
+		boolean loginResult = memberLoginService.login(memberbb);
 		ActionForward forward = null;
 		
 		if(loginResult) {
 			forward = new ActionForward();
-			session.setAttribute("id", members.getMembers_id());
+			session.setAttribute("id", memberbb.getMemberbb_id());
 			forward.setRedirect(true);
 			forward.setPath("main.bd");
 		} else {
