@@ -34,8 +34,6 @@
 #logo1 {
 	width: 125px;
 	height: 50px;
-	margin-left: 280px;
-	
 }
 
 #logo1 > img {
@@ -157,14 +155,15 @@ footer {
 	font-size: 17px;
 	text-align: center;
 	vertical-align: text-bottom;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .dropmenu ul {
+	display: inline-block;
 	height: 50px;
 	list-style: none;
 	margin: 0 auto;
 	padding: 0;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 	text-align: center;
 	
 }
