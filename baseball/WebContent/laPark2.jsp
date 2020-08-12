@@ -16,7 +16,26 @@ if (session.getAttribute("id") != null) {
 <link rel="stylesheet" href="css/laPark2.css" />
 
 <script src="js/jquery-3.5.1.min.js"></script>
-
+<script>
+	$(function(){
+		var tab = $('#tabb');
+		var tab1500 = $('#tabmenu')
+		var tab2000 = $('#tabmenu2');
+		var tab1000 = $('#tabmenu3');
+		
+		tab1500.click(function(){
+			tab.css('height','1500px');
+		});
+		
+		tab2000.click(function(){
+			tab.css('height','2000px');
+		});
+		
+		tab1000.click(function(){
+			tab.css('height','1000px');
+		});
+	});
+</script>
 </head>
 <body>
 	<nav>
@@ -71,19 +90,26 @@ if (session.getAttribute("id") != null) {
 
 
 	<section>
+		<div id="contents">
 		<div class="page">
 			<div class="page1">
-				<img src="image/home_icon.png"> <span>></span> <a href="#">경기정보</a>
-				<span>></span> <a href="lineupList.bd">라인업</a>
+				<img src="image/home_icon.png">
+				 <span>></span> 
+				 <a href="#">구단</a>
+				<span>></span> 
+				<a href="laPark2.bd">GO 라팍!</a>
 			</div>
 
 			<div class="page2">
-				<p>New Blue! New Lions! 삼성 라이온즈를 소개합니다.</p>
+				<p>New Blue! New Lions! 라이온즈 파크를 소개합니다.</p>
 			</div>
 		</div>
 
-		<h4>GO 라팍!</h4>
-
+		<div class="toptitle">
+			<p>라인업</p>
+		</div>
+	
+		<div id="tabb">
 		<div class="tabmenu">
 			<ul>
 				<li id="tab1" class="btnCon"><input type="radio" checked
@@ -198,8 +224,8 @@ if (session.getAttribute("id") != null) {
 					</div></li>
 
 				<li id="tab2" class="btnCon"><input type="radio" name="tabmenu"
-					id="tabmenu2"> <label for="tabmenu2">라팍 안내</label>
-					<div class="tabCon">
+					id="tabmenu2"> <label for="tabmenu2">라팍 안내</label> 
+							<div class="tabCon">
 						<img src="image/laparkinfo.jpg" style="margin-top: 40px;" />
 					</div></li>
 
@@ -210,8 +236,10 @@ if (session.getAttribute("id") != null) {
 					</div></li>
 			</ul>
 		</div>
+		</div>
+		</div>
 	</section>
-
+	
 	<footer>
 		<div class="footer">
 			<div class="foot">
