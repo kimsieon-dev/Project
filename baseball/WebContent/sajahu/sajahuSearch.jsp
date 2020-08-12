@@ -1,25 +1,41 @@
+<%@page import="vo.PageInfo2"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="vo.NoticeBean" %>
+<%@page import="vo.PageInfo"%>
+<%@page import="vo.SajahuBean"%>
+<%@page import="java.util.*" %>
 <%@ page import="java.io.PrintWriter"%>
-<%
-	NoticeBean article = (NoticeBean) request.getAttribute("article");
-	String nowPage = (String) request.getAttribute("page");
 
+<%
 	request.setCharacterEncoding("UTF-8");
 	String id = "";
-	if (session.getAttribute("id") != null) {
-	id = (String) session.getAttribute("id");
+	if(session.getAttribute("id") != null) {
+		id = (String)session.getAttribute("id");
 	}
-
+	
+	ArrayList<SajahuBean> sajahuSearch = (ArrayList<SajahuBean>)request.getAttribute("sajahuSearch");
+	PageInfo2 pageInfo2 = (PageInfo2)request.getAttribute("pageInfo");
+	String lineup_option = (String)session.getAttribute("option");
+	String lineup_search = (String)session.getAttribute("search");
+	int listCount = pageInfo2.getListCount();
+	int nowPage = pageInfo2.getPage();
+	int maxPage = pageInfo2.getMaxPage();
+	int startPage = pageInfo2.getStartPage();
+	int endPage = pageInfo2.getEndPage();
+	int widthBlock = pageInfo2.getWidthBlock();
 %>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/main.css" />
-<link rel="stylesheet" href="css/noticeDetail.css" />
+<link rel="stylesheet" href="css/sajahu.css" />
+<script src="js/jquery-3.5.1.min.js"></script>
+
 </head>
 <body>
 	<nav>
@@ -60,7 +76,7 @@
 					</ul>
 				</li>
 				
-				<li><a href="shop.bd">쇼핑몰</a></li>
+				<li><a href="#">쇼핑몰</a></li>
 				
 		<li id="login">
 		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>
@@ -76,65 +92,110 @@
 			<img src="image/sllogo.png" />
 		</div>
 	</nav>
-	
+
 	<section>
 		<div class="page">
 			<div class="page1">
 				<img src="image/home_icon.png">
-			 	<span>></span> 
-			 	<a href="#">소통</a>
-				<span>></span> 
-				<a href="noticeList.bd">공지사항</a>
+				<span>></span>
+				<a href="#">소통</a>
+				<span>></span>
+				<a href="sajahuList.bd">사자후</a>
 			</div>
 
 			<div class="page2">
-				<p>New Blue! New Lions! 삼성 라이온즈의 공지사항을 알려드립니다.</p>
+				<p>New Blue! New Lions! 팬 여러분과 함께하는 즐거운 소통의 공간입니다.</p>
 			</div>
 		</div>
 		
 		<div class="toptitle">
-			<p>공지사항</p>
+			<p>사자후</p>
 		</div>
 		
+		<%
+			if(sajahuSearch != null && listCount > 0) {
+		%>
+
 		<table class="type09">
-		<thead>
+			<thead>
 			<tr>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>조회수</th>
-				<th>날짜</th>
+				<th scope="cols">번호</th>
+				<th scope="cols">제목</th>
+				<th scope="cols">작성자</th>
+				<th scope="cols">조회수</th>
+				<th scope="cols">날짜</th>
 			</tr>
-		</thead>
-		
-		<tbody>
+			</thead>
+			
+			<%
+				for(int i = 0; i < sajahuSearch.size(); i++) {
+			%>
+			
+			<tbody>
 			<tr>
-				<td><%=article.getNotice_title() %></td>
-				<td><%=article.getNotice_id() %></td>
-				<td><%=article.getNotice_readcount() %></td>
-				<td><%=article.getNotice_date() %></td>
-				
+				<th scope="row"><%=sajahuSearch.get(i).getSajahu_no() %></td>
+				<td scope="row"><a href="sajahuDetail.bd?sajahu_no=<%=sajahuSearch.get(i).getSajahu_no() %>&page=<%=nowPage %>"><%=sajahuSearch.get(i).getSajahu_title() %></a></td>
+				<td scope="row"><%=sajahuSearch.get(i).getSajahu_id() %>
+				<td scope="row"><%=sajahuSearch.get(i).getSajahu_readcount() %></td>
+				<td scope="row"><%=sajahuSearch.get(i).getSajahu_date() %></td>
 			</tr>
 			</tbody>
+			<% 
+				}
+			%>
 		</table>
-		
-		<article>
-			<pre><%=article.getNotice_content() %></pre>
-		</article>
-		
+		<%
+			} else {
+				out.println("<article id='emptyArea'>등록된 글이 없습니다.</article>");
+			}
+		%>
 	</section>
 	
-	<section id="commandList">
-	<a href="noticeList.bd?page=<%=nowPage %>">[목록] </a> 
+	<section id="search">
+	<form method="post" action="lineupSearchAction.bd">
+			<div class="search1">
+				<select name="lineup_option">
+					<option selected value="lineup_title">제목</option>
+					<option value="lineup_id">글쓴이</option>
+				</select>
+			
+				<input type="text" placeholder="검색어를 입력하세요."
+					aria-label="검색어를 입력하세요." name="lineup_search" id="search">
+				<button type="submit" onclick="return check();">검색</button>
+			</div>
+	</form>
+	</section>
+	
+	
 	<%
-		if(article.getNotice_id() != null && article.getNotice_id().equals(session.getAttribute("id"))) {
+	if(sajahuSearch != null && listCount > 0) {
 	%>
-		<a href="noticeDelete.bd?notice_no=<%=article.getNotice_no() %>&page=<%=nowPage %>">[삭제] </a>
-		<a href="noticeModifyForm.bd?notice_no=<%=article.getNotice_no() %>&page=<%=nowPage %>">[수정] </a>
-	<%
+	<section id="pageList">
+		<%
+		if(nowPage<=1) { 
+			out.println("[이전]&nbsp;");
+		} else {
+			out.println("<a href='sajahuSearch.bd?page=" + (nowPage-1) + "'>[이전]</a>&nbsp;");
 		}
-	%>
-	
+		
+		for(int a=startPage; a<=endPage; a++) {
+			if(a==nowPage) {	
+				out.println("["+a+"]");
+			} else {
+				out.println("<a href='sajahuSearch.bd?page=" + a + "'>[" + a + "]</a>&nbsp;");
+			}
+		}
+		
+		if(nowPage>=maxPage) {
+			out.println("[다음]");		
+		} else {
+			out.println("<a href='sajahuSearch.bd?page=" + (nowPage+1) + "'>[다음]</a>");
+		}
+		%>
 	</section>
+	<%
+	}
+	%>
 	
 	<footer>
 		<div class="footer">

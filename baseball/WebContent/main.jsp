@@ -100,7 +100,7 @@ $(document).ready(function(){
 		</li>
 		
 		<li id="login2">
-		<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetail.bd'>회원 정보 변경</a>" %>
+		<%=id.equals("") ? "<a href='memberJoin.bd'>회원 가입</a>" : "<a href='memberDetailAction.bd'>회원 정보 변경</a>" %>
 		</li>
 		</ul>
 		</div>

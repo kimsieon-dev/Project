@@ -140,7 +140,7 @@
 							<label for="lineup_bat1">1번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat1" class="int">
+							id="lineup_bat1" name="lineup_bat1" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>
@@ -151,7 +151,7 @@
 							<label for="lineup_bat2">2번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat2" class="int">
+							id="lineup_bat2" name="lineup_bat2" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>
@@ -162,7 +162,7 @@
 							<label for="lineup_bat3">3번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat3" class="int">
+							id="lineup_bat3" name="lineup_bat3" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>
@@ -173,7 +173,7 @@
 							<label for="lineup_bat4">4번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat4" class="int">
+							id="lineup_bat4" name="lineup_bat4" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>
@@ -184,7 +184,7 @@
 							<label for="lineup_bat5">5번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat5" class="int">
+							id="lineup_bat5" name="lineup_bat5" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>
@@ -195,7 +195,7 @@
 							<label for="lineup_bat6">6번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat6" class="int">
+							id="lineup_bat6" name="lineup_bat6" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>
@@ -206,7 +206,7 @@
 							<label for="lineup_bat7">7번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat7" class="int">
+							id="lineup_bat7" name="lineup_bat7" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>
@@ -217,7 +217,7 @@
 							<label for="lineup_bat8">8번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat8" class="int">
+							id="lineup_bat8" name="lineup_bat8" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>
@@ -228,7 +228,7 @@
 							<label for="lineup_bat9">9번 타자</label>
 						</h3>
 						<span class="box int_id"> <input type="text"
-							id="notice_title" name="lineup_bat9" class="int">
+							id="lineup_bat9" name="lineup_bat9" class="int">
 						</span>
 						<div class="check_font" id="id_check"></div>
 						<span class="error_next_box"></span>

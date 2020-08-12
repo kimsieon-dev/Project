@@ -147,9 +147,23 @@
 		%>
 	</section>
 	
-	<section id="write">
-		<input type="button" value="게시판글쓰기"
-				onclick="location.href='lineupWrite.bd'" />
+	<section id="btn_group">
+		<button id="btn1" onclick="location.href='lineupWrite.bd'">글쓰기</button>
+	</section>
+	
+	<section id="search">
+	<form method="post" action="lineupSearchAction.bd">
+			<div class="search1">
+				<select name="lineup_option">
+					<option selected value="lineup_title">제목</option>
+					<option value="lineup_id">글쓴이</option>
+				</select>
+			
+				<input type="text" placeholder="검색어를 입력하세요."
+					aria-label="검색어를 입력하세요." name="lineup_search" id="search">
+				<button type="submit" onclick="return check();">검색</button>
+			</div>
+	</form>
 	</section>
 	
 	<%

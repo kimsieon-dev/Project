@@ -16,7 +16,7 @@ table.type09 {
     border-collapse: collapse;
     text-align: left;
     line-height: 1.5;
-
+	margin-bottom: 40px;
 }
 table.type09 thead th {
 	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
@@ -24,7 +24,7 @@ table.type09 thead th {
     font-weight: bold;
     vertical-align: top;
     color: #369;
-    border-bottom: 3px solid #036;
+    border-bottom: 3px solid #0068b3;
 }
 table.type09 tbody th {
 	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
@@ -59,9 +59,36 @@ table.type09 td:nth-child(2) {
 	font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
 
-#write {
-	text-align: right;
+#btn_group {
+	height: 50px;
+	margin: 0 auto;
 }
+
+#btn1 { 
+	float: right;
+	width: 80px;
+	height: 30px;
+	border-top-left-radius: 5px; 
+	border-bottom-left-radius: 5px; 
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+	margin-right:-4px; 
+} 
+
+#btn_group button { 
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	border: 1px solid #0068b3; 
+	background-color: rgba(0,0,0,0); 
+	color: #0068b3; padding: 5px; 
+} 
+
+#btn_group button:hover { 
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	color:white; 
+	background-color: #0068b3; 
+}
+
+
 
 .page {
 	width: 1280px;
@@ -103,4 +130,51 @@ table.type09 td:nth-child(2) {
 	font-family: 'NEXON Lv1 Gothic OTF Bold';
 	margin-top: 60px;
 	margin-bottom: 30px;
+}
+
+#search {
+	margin: 0 auto;
+}
+
+.search1 {
+	text-algin: center;
+	margin: 0 auto;
+}
+
+.search1 > select {
+	width: 60px;
+	height: 100%;
+	border: 0px;
+	background: #0068b3;
+	outline: none;
+	float: left;
+	color: #ffffff;
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+
+.search1 {
+	height: 40px;
+	width: 455px;
+	border: 1px solid #0068b3;
+}
+
+.search1 > input {
+	font-size: 16px;
+	line-height: 20px;
+	width: 325px;
+	padding: 10px;
+	border: 0px;
+	outline: none;
+	float: left;
+}
+
+.search1 > button {
+	width: 50px;
+	height: 100%;
+	border: 0px;
+	background: #0068b3;
+	outline: none;
+	float: right;
+	color: #ffffff;
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
 }

@@ -1,0 +1,235 @@
+@font-face { 
+	font-family: 'NEXON Lv1 Gothic OTF Light'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+@font-face { 
+	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; 
+}
+
+#wrapper {
+	display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#content {
+	width: 400px;
+	display: block;
+    margin: 0 auto;
+}
+
+
+h3 {
+    margin: 19px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.box {
+    display: block;
+    width: 100%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+}
+
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+}
+
+input {
+    font-family: Dotum,'돋움',Helvetica,sans-serif;    
+}
+
+.box.int_id {
+    padding-right: 40px;
+    line-height: 29px;
+    font-family: 'NEXON Lv1 Gothic OTF Light'; 
+}
+
+.box.int_pass {
+    padding-right: 40px;
+}
+
+.box.int_pass_check {
+    padding-right: 40px;
+}
+
+.step_url {
+    /*@naver.com*/
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    font-size: 15px;
+    color: #8e8e8e;
+}
+
+.pswdImg {
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+#bir_wrap {
+    display: table;
+    width: 100%;
+}
+
+#bir_yy {
+    display: table-cell;
+    width: 147px;
+    
+}
+
+#bir_mm {
+    display: table-cell;
+    width: 147px;
+    vertical-align: middle;
+}
+
+#bir_dd {
+    display: table-cell;
+    width: 147px;
+}
+
+#bir_mm, #bir_dd {
+    padding-left: 10px;
+}
+
+select {
+    width: 100%;
+    height: 29px;
+    font-size: 15px;
+    background: #fff url(https://static.nid.naver.com/images/join/pc/sel_arr_2x.gif) 100% 50% no-repeat;
+    background-size: 20px 8px;
+    -webkit-appearance: none;
+    display: inline-block;
+    text-align: start;
+    border: none;
+    cursor: default;
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+}
+
+/* 에러메세지 */
+
+.error_next_box {
+    margin-top: 9px;
+    font-size: 12px;
+    color: red;    
+    display: none;
+}
+
+#alertTxt {
+    position: absolute;
+    top: 19px;
+    right: 38px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+/* 버튼 */
+#btn_group {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+#btn1 { 
+	width: 150px;
+	height: 50px;
+	border-top-left-radius: 5px; 
+	border-bottom-left-radius: 5px; 
+	margin-right:-4px; 
+	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
+	cursor: pointer;
+} 
+
+#btn2 { 
+	width: 150px;
+	height: 50px;
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+	margin-left:-3px; 
+	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
+	cursor: pointer;
+} 
+	
+#btn_group button { 
+	border: 1px solid #0068b3; 
+	background-color: rgba(0,0,0,0); 
+	color: #0068b3; padding: 5px; 
+} 
+
+#btn_group button:hover { 
+	color:white; 
+	background-color: #0068b3; 
+}
+
+
+
+.page {
+	width: 1280px;
+	height: 35px;
+	border-bottom: 1px solid black;
+}
+
+.page > .page1 {
+	float: left;
+	height: 24px;
+}
+
+.page > .page1 > a {
+	font-size: 14px;
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+
+.page > .page1 > span {
+	font-weight: bold;
+}
+
+.page > .page1 > img {
+	width: 24px;
+	height: 24px;
+}
+
+.page > .page2 {
+	float: right;
+}
+
+.page > .page2 > p {
+	font-size: 12px;
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+	line-height: 40px;
+}
+
+.toptitle {
+	width: 800px;
+	text-align: left;
+	margin: 0 auto;
+}
+.toptitle > p {
+	font-size: 50px;
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	margin: 60px 0 30px 0;
+}

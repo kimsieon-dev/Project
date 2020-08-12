@@ -9,6 +9,8 @@ public class NoticeBean {
 	private String notice_content;
 	private int notice_readcount;
 	private Date notice_date;
+	private String notice_option;
+	private String notice_search;
 	
 	public int getNotice_no() {
 		return notice_no;
@@ -45,6 +47,18 @@ public class NoticeBean {
 	}
 	public void setNotice_date(Date notice_date) {
 		this.notice_date = notice_date;
+	}
+	public String getNotice_option() {
+		return notice_option;
+	}
+	public void setNotice_option(String notice_option) {
+		this.notice_option = notice_option;
+	}
+	public String getNotice_search() {
+		return notice_search;
+	}
+	public void setNotice_search(String notice_search) {
+		this.notice_search = notice_search;
 	}
 	
 	

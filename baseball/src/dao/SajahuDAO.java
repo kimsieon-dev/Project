@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 
 import vo.LineupBean;
+import vo.PageInfo;
 import vo.SajahuBean;
 
 public class SajahuDAO {
@@ -17,7 +18,7 @@ public class SajahuDAO {
 	Connection conn;
 	PreparedStatement pstmt;
 	ResultSet rs;
-	
+	PageInfo pageinfo = new PageInfo();
 	
 	private SajahuDAO() {
 		
@@ -229,6 +230,110 @@ public class SajahuDAO {
 
 		return updateCount;
 	}
+	
+	// 검색
+		public int selectSearchCount(SajahuBean search) {
+			String sql = "select count(*) from sajahu where sajahu_title like ?";
+			String sql2 = "select count(*) from sajahu where sajahu_id like ?";
+			int searchCount = 0;
+
+			try {
+				if(search.getSajahu_option().equals("sajahu_title")) {
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, "%" + search.getSajahu_search() + "%");
+					rs = pstmt.executeQuery();
+					
+					if(rs.next()) {
+						searchCount = rs.getInt(1);
+					}
+				} else {
+					pstmt = conn.prepareStatement(sql2);
+					pstmt.setString(1, "%" + search.getSajahu_search() + "%");
+					rs = pstmt.executeQuery();
+					
+					if(rs.next()) {
+						searchCount = rs.getInt(1);
+					}
+				}
+			} catch(Exception ex) {
+				System.out.println("searchCount 에러: " + ex);			
+			} finally {
+				close(rs);
+				close(pstmt);
+			}
+			return searchCount;
+		}
+		
+		public int totalBlock() {	// 전체 블록의 수
+			if(selectListCount() % (pageinfo.getWidthBlock() * pageinfo.getPageRows()) > 0) {
+				return selectListCount() / (pageinfo.getWidthBlock() * pageinfo.getPageRows()) + 1;
+			}
+			return selectListCount() / (pageinfo.getWidthBlock() * pageinfo.getPageRows());
+		}
+		
+		public int currentBlock(int nowpage) {		// 현재 블럭의 수
+			if(nowpage % pageinfo.getWidthBlock() > 0) {
+				return nowpage / pageinfo.getWidthBlock() + 1;
+			}
+			return nowpage / pageinfo.getWidthBlock();
+		}
+		
+		public int totalPage() {		// 전체 페이지 수를 계산하는 메소드
+			if(selectListCount() % pageinfo.getPageRows() > 0) {
+				return selectListCount() / pageinfo.getPageRows() + 1;
+			}
+			return selectListCount() / pageinfo.getPageRows();
+		}
+
+		public ArrayList<SajahuBean> sajahuSearch(int page, int limit, SajahuBean search) {
+			String sql = "select * from sajahu where sajahu_title like ? order by sajahu_no desc limit ?, 10";
+			String sql2 = "select * from sajahu where sajahu_id like ? order by sajahu_no desc limit ?, 10";
+			ArrayList<SajahuBean> sajahuSearch = new ArrayList<SajahuBean>();
+			SajahuBean searchboard = null;
+			
+			int startrow = (page - 1) * 10; //읽기 시작할 row 번호..	
+
+			try {
+				if(search.getSajahu_option().equals("sajahu_title")) {
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, "%" + search.getSajahu_search() + "%");
+					pstmt.setInt(2, startrow);
+					rs = pstmt.executeQuery();
+
+					while(rs.next()) {
+						searchboard = new SajahuBean();
+						searchboard.setSajahu_no(rs.getInt("sajahu_no"));
+						searchboard.setSajahu_title(rs.getString("sajahu_title"));
+						searchboard.setSajahu_id(rs.getString("sajahu_id"));
+						searchboard.setSajahu_readcount(rs.getInt("sajahu_readcount"));	
+						searchboard.setSajahu_date(rs.getDate("sajahu_date"));
+						sajahuSearch.add(searchboard);
+					}
+				} else {
+					pstmt = conn.prepareStatement(sql2);
+					pstmt.setString(1, "%" + search.getSajahu_search() + "%");
+					pstmt.setInt(2, startrow);
+					rs = pstmt.executeQuery();
+
+					while(rs.next()) {
+						searchboard = new SajahuBean();
+						searchboard.setSajahu_no(rs.getInt("sajahu_no"));
+						searchboard.setSajahu_title(rs.getString("sajahu_title"));
+						searchboard.setSajahu_id(rs.getString("sajahu_id"));
+						searchboard.setSajahu_readcount(rs.getInt("sajahu_readcount"));	
+						searchboard.setSajahu_date(rs.getDate("sajahu_date"));
+						sajahuSearch.add(searchboard);
+					}
+				}
+				
+			} catch(Exception ex) {
+				System.out.println("sajahuSearch 에러 : " + ex);
+			} finally {
+				close(rs);
+				close(pstmt);
+			}
+			return sajahuSearch;
+		}
 	
 }
 

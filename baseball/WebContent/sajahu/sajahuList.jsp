@@ -148,8 +148,23 @@
 		%>
 	</section>
 	
-	<section id=write>
-		<input type="button" value="게시판글쓰기" onclick="location.href='sajahuWrite.bd'" />
+	<section id="btn_group">
+		<button id="btn1" onclick="location.href='sajahuWrite.bd'">글쓰기</button>
+	</section>
+	
+	<section id="search">
+	<form method="post" action="sajahuSearchAction.bd">
+			<div class="search1">
+				<select name="sajahu_option">
+					<option selected value="sajahu_title">제목</option>
+					<option value="sajahu_id">글쓴이</option>
+				</select>
+			
+				<input type="text" placeholder="검색어를 입력하세요."
+					aria-label="검색어를 입력하세요." name="sajahu_search" id="search">
+				<button type="submit" onclick="return check();">검색</button>
+			</div>
+	</form>
 	</section>
 	
 	<%

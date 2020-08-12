@@ -9,15 +9,15 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpSession;
 
-import vo.LineupBean;
 import vo.NoticeBean;
-import vo.SajahuBean;
+import vo.PageInfo;
 
 public class NoticeDAO {
 	private static NoticeDAO noticeDAO;
 	Connection conn;
 	PreparedStatement pstmt;
 	ResultSet rs;
+	PageInfo pageinfo = new PageInfo();
 	
 	
 	private NoticeDAO() {
@@ -80,7 +80,7 @@ public class NoticeDAO {
 			}
 
 		}catch(Exception ex){
-			System.out.println("getLineupList 에러 : " + ex);
+			System.out.println("getNoticeupList 에러 : " + ex);
 		}finally{
 			close(rs);
 			close(pstmt);
@@ -230,6 +230,110 @@ public class NoticeDAO {
 
 		return updateCount;
 	}
+	
+	// 검색
+		public int selectSearchCount(NoticeBean search) {
+			String sql = "select count(*) from notice where notice_title like ?";
+			String sql2 = "select count(*) from notice where notice_id like ?";
+			int searchCount = 0;
+
+			try {
+				if(search.getNotice_option().equals("notice_title")) {
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, "%" + search.getNotice_search() + "%");
+					rs = pstmt.executeQuery();
+					
+					if(rs.next()) {
+						searchCount = rs.getInt(1);
+					}
+				} else {
+					pstmt = conn.prepareStatement(sql2);
+					pstmt.setString(1, "%" + search.getNotice_search() + "%");
+					rs = pstmt.executeQuery();
+					
+					if(rs.next()) {
+						searchCount = rs.getInt(1);
+					}
+				}
+			} catch(Exception ex) {
+				System.out.println("searchCount 에러: " + ex);			
+			} finally {
+				close(rs);
+				close(pstmt);
+			}
+			return searchCount;
+		}
+		
+		public int totalBlock() {	// 전체 블록의 수
+			if(selectListCount() % (pageinfo.getWidthBlock() * pageinfo.getPageRows()) > 0) {
+				return selectListCount() / (pageinfo.getWidthBlock() * pageinfo.getPageRows()) + 1;
+			}
+			return selectListCount() / (pageinfo.getWidthBlock() * pageinfo.getPageRows());
+		}
+		
+		public int currentBlock(int nowpage) {		// 현재 블럭의 수
+			if(nowpage % pageinfo.getWidthBlock() > 0) {
+				return nowpage / pageinfo.getWidthBlock() + 1;
+			}
+			return nowpage / pageinfo.getWidthBlock();
+		}
+		
+		public int totalPage() {		// 전체 페이지 수를 계산하는 메소드
+			if(selectListCount() % pageinfo.getPageRows() > 0) {
+				return selectListCount() / pageinfo.getPageRows() + 1;
+			}
+			return selectListCount() / pageinfo.getPageRows();
+		}
+
+		public ArrayList<NoticeBean> noticeSearch(int page, int limit, NoticeBean search) {
+			String sql = "select * from notice where notice_title like ? order by notice_no desc limit ?, 10";
+			String sql2 = "select * from notice where notice_id like ? order by notice_no desc limit ?, 10";
+			ArrayList<NoticeBean> noticeSearch = new ArrayList<NoticeBean>();
+			NoticeBean searchboard = null;
+			
+			int startrow = (page - 1) * 10; //읽기 시작할 row 번호..	
+
+			try {
+				if(search.getNotice_option().equals("notice_title")) {
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, "%" + search.getNotice_search() + "%");
+					pstmt.setInt(2, startrow);
+					rs = pstmt.executeQuery();
+
+					while(rs.next()) {
+						searchboard = new NoticeBean();
+						searchboard.setNotice_no(rs.getInt("notice_no"));
+						searchboard.setNotice_title(rs.getString("notice_title"));
+						searchboard.setNotice_id(rs.getString("notice_id"));
+						searchboard.setNotice_readcount(rs.getInt("notice_readcount"));	
+						searchboard.setNotice_date(rs.getDate("notice_date"));
+						noticeSearch.add(searchboard);
+					}
+				} else {
+					pstmt = conn.prepareStatement(sql2);
+					pstmt.setString(1, "%" + search.getNotice_search() + "%");
+					pstmt.setInt(2, startrow);
+					rs = pstmt.executeQuery();
+
+					while(rs.next()) {
+						searchboard = new NoticeBean();
+						searchboard.setNotice_no(rs.getInt("notice_no"));
+						searchboard.setNotice_title(rs.getString("notice_title"));
+						searchboard.setNotice_id(rs.getString("notice_id"));
+						searchboard.setNotice_readcount(rs.getInt("notice_readcount"));	
+						searchboard.setNotice_date(rs.getDate("notice_date"));
+						noticeSearch.add(searchboard);
+					}
+				}
+				
+			} catch(Exception ex) {
+				System.out.println("noticeupSearch 에러 : " + ex);
+			} finally {
+				close(rs);
+				close(pstmt);
+			}
+			return noticeSearch;
+		}
 	
 }
 

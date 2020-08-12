@@ -17,6 +17,7 @@ public class LineupDAO {
 	Connection conn;
 	PreparedStatement pstmt;
 	ResultSet rs;
+	PageInfo pageinfo = new PageInfo();
 	
 	private LineupDAO() {
 		
@@ -212,7 +213,7 @@ public class LineupDAO {
 			pstmt.setInt(13, article.getLineup_no());
 			updateCount = pstmt.executeUpdate();
 		}catch(Exception ex){
-			System.out.println("boardModify 에러 : " + ex);
+			System.out.println("lineupModify 에러 : " + ex);
 		}finally{
 			close(pstmt);
 		}
@@ -314,8 +315,8 @@ public class LineupDAO {
 	}
 
 	public ArrayList<LineupBean> lineupSearch(int page, int limit, LineupBean search) {
-		String sql = "select * from lineup where lineup_title like ? order by lineup_title desc limit ?, 10";
-		String sql2 = "select * from lineup where lineup_id like ? order by lineup_id desc limit ?, 10";
+		String sql = "select * from lineup where lineup_title like ? order by lineup_no desc limit ?, 10";
+		String sql2 = "select * from lineup where lineup_id like ? order by lineup_no desc limit ?, 10";
 		ArrayList<LineupBean> lineupSearch = new ArrayList<LineupBean>();
 		LineupBean searchboard = null;
 		
@@ -332,7 +333,7 @@ public class LineupDAO {
 					searchboard = new LineupBean();
 					searchboard.setLineup_no(rs.getInt("lineup_no"));
 					searchboard.setLineup_title(rs.getString("lineup_title"));
-					searchboard.setLineup_id(rs.getString("lienup_id"));
+					searchboard.setLineup_id(rs.getString("lineup_id"));
 					searchboard.setLineup_readcount(rs.getInt("lineup_readcount"));	
 					searchboard.setLineup_date(rs.getDate("lineup_date"));
 					lineupSearch.add(searchboard);
@@ -347,7 +348,7 @@ public class LineupDAO {
 					searchboard = new LineupBean();
 					searchboard.setLineup_no(rs.getInt("lineup_no"));
 					searchboard.setLineup_title(rs.getString("lineup_title"));
-					searchboard.setLineup_id(rs.getString("lienup_id"));
+					searchboard.setLineup_id(rs.getString("lineup_id"));
 					searchboard.setLineup_readcount(rs.getInt("lineup_readcount"));	
 					searchboard.setLineup_date(rs.getDate("lineup_date"));
 					lineupSearch.add(searchboard);

@@ -131,34 +131,85 @@ a:visited {
 	margin-bottom: 30px;
 }
 
-.topview {
-	width: 1280px;
-	height: 100px;
-	border-top: 1px solid #0068b3;
-	border-bottom: 0.5px solid gray;
-	margin-bottom: 60px;
+table.type09 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 40px;
+
+}
+table.type09 thead th {
+    padding: 10px;
+    font-weight: bold;
+    color: #369;
+    border-bottom: 3px solid #036;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
 
-.topview > .topview_1 > p {
+.type09 > tbody > tr > td:first-child {
 	font-family: 'NEXON Lv1 Gothic OTF Bold';
 	font-size: 20px;
-	line-height: 60px;
 }
 
-.topview > .topview_2 > p {
-	font-size: 16px;
+table.type09 tbody th {
+    width: 100px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+table.type09 td {
+    width: 200px;
+    padding: 10px;
+    line-height: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+table.type09 td:first-child {
+	width: 600px;
+	height: 50px;
+}
+
+article > pre {
 	font-family: 'NEXON Lv1 Gothic OTF Light';
+}table.type09 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 40px;
+
+}
+table.type09 thead th {
+    padding: 10px;
+    font-weight: bold;
+    color: #369;
+    border-bottom: 3px solid #036;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
 
-.topview > .topview_2 > p:nth-child(1) {
-	float: left;
+.type09 > tbody > tr > td:first-child {
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	font-size: 20px;
 }
 
-.topview > .topview_2 > p:nth-child(2) {
-	float: right;
-	margin-left: 20px;
+table.type09 tbody th {
+    width: 100px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+table.type09 td {
+    width: 200px;
+    padding: 10px;
+    line-height: 25px;
+    border-bottom: 1px solid #ccc;
 }
 
-.topview > .topview_2 > p:nth-child(3) {
-	float: right;
+table.type09 td:first-child {
+	width: 600px;
+	height: 50px;
 }
+

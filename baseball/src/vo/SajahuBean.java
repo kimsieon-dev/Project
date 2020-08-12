@@ -10,6 +10,8 @@ public class SajahuBean {
 	private int sajahu_readcount;
 	private Date sajahu_date;
 	private long commentCount;
+	private String sajahu_option;
+	private String sajahu_search;
 	
 	public long getCommentCount() {
 		return commentCount;
@@ -52,6 +54,18 @@ public class SajahuBean {
 	}
 	public void setSajahu_date(Date sajahu_date) {
 		this.sajahu_date = sajahu_date;
+	}
+	public String getSajahu_option() {
+		return sajahu_option;
+	}
+	public void setSajahu_option(String sajahu_option) {
+		this.sajahu_option = sajahu_option;
+	}
+	public String getSajahu_search() {
+		return sajahu_search;
+	}
+	public void setSajahu_search(String sajahu_search) {
+		this.sajahu_search = sajahu_search;
 	}
 	
 	

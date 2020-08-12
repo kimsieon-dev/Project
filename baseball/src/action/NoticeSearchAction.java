@@ -6,17 +6,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import svc.LineupSearchService;
+import svc.NoticeSearchService;
 import vo.ActionForward;
-import vo.LineupBean;
+import vo.NoticeBean;
 import vo.PageInfo2;
 
-public class LineupSearchAction implements Action {
+public class NoticeSearchAction implements Action {
 
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		 
-		ArrayList<LineupBean> lineupSearch = new ArrayList<LineupBean>();
-		LineupBean search = new LineupBean();
+		ArrayList<NoticeBean> noticeSearch = new ArrayList<NoticeBean>();
+		NoticeBean search = new NoticeBean();
 		HttpSession session = request.getSession();
 		
 	  	int page = 1;
@@ -25,15 +25,15 @@ public class LineupSearchAction implements Action {
 		if(request.getParameter("page") != null) {
 			page = Integer.parseInt(request.getParameter("page"));
 		}
-		session.setAttribute("option", request.getParameter("lineup_option"));
-		session.setAttribute("search", request.getParameter("lineup_search"));
-		search.setLineup_option(request.getParameter("lineup_option"));
-		search.setLineup_search(request.getParameter("lineup_search"));
-		System.out.println(search.getLineup_option());
-		System.out.println(search.getLineup_search());
-		LineupSearchService lineupSearchService = new LineupSearchService();
-		int searchlistCount = lineupSearchService.getSearchCount(search); //총 리스트 수를 받아옴.
-		lineupSearch = lineupSearchService.lineupSearch(page, limit, search); //리스트를 받아옴.
+		session.setAttribute("option", request.getParameter("notice_option"));
+		session.setAttribute("search", request.getParameter("notice_search"));
+		search.setNotice_option(request.getParameter("notice_option"));
+		search.setNotice_search(request.getParameter("notice_search"));
+		System.out.println(search.getNotice_option());
+		System.out.println(search.getNotice_search());
+		NoticeSearchService noticeSearchService = new NoticeSearchService();
+		int searchlistCount = noticeSearchService.getSearchCount(search); //총 리스트 수를 받아옴.
+		noticeSearch = noticeSearchService.noticeSearch(page, limit, search); //리스트를 받아옴.
 		//총 페이지 수.
    		int maxPage=(int)((double)searchlistCount / limit + 0.95); //0.95를 더해서 올림 처리.
    		//현재 페이지에 보여줄 시작 페이지 수(1, 11, 21 등...)
@@ -50,9 +50,9 @@ public class LineupSearchAction implements Action {
 		pageInfo2.setPage(page);
 		pageInfo2.setStartPage(startPage);	
 		request.setAttribute("pageInfo", pageInfo2);
-		request.setAttribute("lineupSearch", lineupSearch);
+		request.setAttribute("noticeSearch", noticeSearch);
 		ActionForward forward= new ActionForward();
-   		forward.setPath("lineupSearch.bd");
+   		forward.setPath("noticeSearch.bd");
    		return forward;
    		
 	 }

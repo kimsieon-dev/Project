@@ -120,7 +120,7 @@
                         <label for="notice_content">내용</label>
                     </h3>
                     <span class="box2 int_id">
-                        <textarea id="notice_content" name="notice_content" class="int" style="height: 379px; resize: none;"></textarea>
+                        <textarea id="notice_content" name="notice_content" class="int" style="height: 379px; resize: none;" wrap="hard"></textarea>
                     </span>
                     	<div class="check_font" id="id_check"></div>
                     <span class="error_next_box"></span>

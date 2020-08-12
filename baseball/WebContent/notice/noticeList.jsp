@@ -29,7 +29,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/main.css" />
-<link rel="stylesheet" href="css/sajahu.css" />
+<link rel="stylesheet" href="css/notice.css" />
 
 <script src="js/jquery-3.5.1.min.js"></script>
 
@@ -148,8 +148,23 @@
 		%>
 	</section>
 	
-	<section id="write">
-		<input type="button" value="게시판글쓰기" onclick="location.href='noticeWrite.bd'" />
+	<section id="btn_group">
+		<button id="btn1" onclick="location.href='noticeWrite.bd'">글쓰기</button>
+	</section>
+	
+	<section id="search">
+	<form method="post" action="noticeSearchAction.bd">
+			<div class="search1">
+				<select name="notice_option">
+					<option selected value="notice_title">제목</option>
+					<option value="notice_id">글쓴이</option>
+				</select>
+			
+				<input type="text" placeholder="검색어를 입력하세요."
+					aria-label="검색어를 입력하세요." name="notice_search" id="search">
+				<button type="submit" onclick="return check();">검색</button>
+			</div>
+	</form>
 	</section>
 	
 	<%

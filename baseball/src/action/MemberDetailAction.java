@@ -15,11 +15,10 @@ public class MemberDetailAction implements Action {
 		ActionForward forward = new ActionForward();
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("id");
-		id = request.getParameter("memberbb_id");
 		MemberDetailService memberDetailService = new MemberDetailService();
 		MemberbbBean article = MemberDetailService.getArticle(id);
 	   	request.setAttribute("article", article);
-   		forward.setPath("/memberDetail.jsp");
+   		forward.setPath("memberDetail.jsp");
    		return forward;
 	}
 

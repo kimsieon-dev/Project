@@ -13,16 +13,16 @@ public class MemberJoinAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		MemberbbBean members = new MemberbbBean();
+		MemberbbBean memberbb = new MemberbbBean();
 		boolean joinResult = false;
 		
-		members.setMemberbb_id(request.getParameter("memberbb_id"));
-		members.setMemberbb_password(request.getParameter("memberbb_password"));
-		members.setMemberbb_name(request.getParameter("memberbb_name"));
-		members.setMemberbb_email(request.getParameter("memberbb_email"));
-		members.setMemberbb_birthday(request.getParameter("memberbb_yy") + request.getParameter("memberbb_mm") + request.getParameter("memberbb_dd"));
+		memberbb.setMemberbb_id(request.getParameter("memberbb_id"));
+		memberbb.setMemberbb_password(request.getParameter("memberbb_password"));
+		memberbb.setMemberbb_name(request.getParameter("memberbb_name"));
+		memberbb.setMemberbb_email(request.getParameter("memberbb_email"));
+		memberbb.setMemberbb_birthday(request.getParameter("memberbb_yy") + request.getParameter("memberbb_mm") + request.getParameter("memberbb_dd"));
 		MemberJoinService memberJoinService = new MemberJoinService();
-		joinResult = memberJoinService.joinMember(members);
+		joinResult = memberJoinService.joinMember(memberbb);
 		
 		ActionForward forward = null;
 		if(joinResult == false) {

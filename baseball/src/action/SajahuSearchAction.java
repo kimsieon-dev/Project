@@ -6,17 +6,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import svc.LineupSearchService;
+import svc.SajahuSearchService;
 import vo.ActionForward;
-import vo.LineupBean;
 import vo.PageInfo2;
+import vo.SajahuBean;
 
-public class LineupSearchAction implements Action {
+public class SajahuSearchAction implements Action {
 
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		 
-		ArrayList<LineupBean> lineupSearch = new ArrayList<LineupBean>();
-		LineupBean search = new LineupBean();
+		ArrayList<SajahuBean> sajahuSearch = new ArrayList<SajahuBean>();
+		SajahuBean search = new SajahuBean();
 		HttpSession session = request.getSession();
 		
 	  	int page = 1;
@@ -25,15 +25,15 @@ public class LineupSearchAction implements Action {
 		if(request.getParameter("page") != null) {
 			page = Integer.parseInt(request.getParameter("page"));
 		}
-		session.setAttribute("option", request.getParameter("lineup_option"));
-		session.setAttribute("search", request.getParameter("lineup_search"));
-		search.setLineup_option(request.getParameter("lineup_option"));
-		search.setLineup_search(request.getParameter("lineup_search"));
-		System.out.println(search.getLineup_option());
-		System.out.println(search.getLineup_search());
-		LineupSearchService lineupSearchService = new LineupSearchService();
-		int searchlistCount = lineupSearchService.getSearchCount(search); //총 리스트 수를 받아옴.
-		lineupSearch = lineupSearchService.lineupSearch(page, limit, search); //리스트를 받아옴.
+		session.setAttribute("option", request.getParameter("sajahu_option"));
+		session.setAttribute("search", request.getParameter("sajahu_search"));
+		search.setSajahu_option(request.getParameter("sajahu_option"));
+		search.setSajahu_search(request.getParameter("sajahu_search"));
+		System.out.println(search.getSajahu_option());
+		System.out.println(search.getSajahu_search());
+		SajahuSearchService sajahuSearchService = new SajahuSearchService();
+		int searchlistCount = sajahuSearchService.getSearchCount(search); //총 리스트 수를 받아옴.
+		sajahuSearch = sajahuSearchService.noticeSearch(page, limit, search); //리스트를 받아옴.
 		//총 페이지 수.
    		int maxPage=(int)((double)searchlistCount / limit + 0.95); //0.95를 더해서 올림 처리.
    		//현재 페이지에 보여줄 시작 페이지 수(1, 11, 21 등...)
@@ -50,9 +50,9 @@ public class LineupSearchAction implements Action {
 		pageInfo2.setPage(page);
 		pageInfo2.setStartPage(startPage);	
 		request.setAttribute("pageInfo", pageInfo2);
-		request.setAttribute("lineupSearch", lineupSearch);
+		request.setAttribute("sajahuSearch", sajahuSearch);
 		ActionForward forward= new ActionForward();
-   		forward.setPath("lineupSearch.bd");
+   		forward.setPath("sajahuSearch.bd");
    		return forward;
    		
 	 }

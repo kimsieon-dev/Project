@@ -6,9 +6,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/join.css" />
-
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/join.js"></script>
 </head>
 <body>
 	<form name="joinForm" action="memberJoinAction.bd" method="post">
@@ -134,4 +131,6 @@
 		 
 	</form>
 </body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/join.js"></script>
 </html>

@@ -96,17 +96,26 @@
 			<p>라인업</p>
 		</div>
 		
-		<div class="topview">
-			<div class="topview_1">
-				<p><%=article.getLineup_title() %></p>
-			</div>
-			
-			<div class="topview_2">
-				<p>작성자 <span><%=article.getLineup_id() %></span></p>
-				<p>조회수 <span><%=article.getLineup_readcount() %></span></p>
-				<p>날자 <span><%=article.getLineup_date() %></span></p>
-			</div>
-		</div>
+		<table class="type09">
+		<thead>
+			<tr>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>조회수</th>
+				<th>날짜</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td><%=article.getLineup_title() %></td>
+				<td><%=article.getLineup_id() %></td>
+				<td><%=article.getLineup_readcount() %></td>
+				<td><%=article.getLineup_date() %></td>
+				
+			</tr>
+			</tbody>
+		</table>
 
 		<div class="view">
 		

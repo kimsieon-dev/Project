@@ -31,17 +31,17 @@ public class BaseballDAO {
 
 	}
 
-	public int insertMembers(MemberbbBean members) {
+	public int insertMembers(MemberbbBean memberbb) {
 		String sql = "insert into memberbb values(?, ?, ?, ?, ?)";
 		int insertCount = 0;
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, members.getMemberbb_id());
-			pstmt.setString(2, members.getMemberbb_password());
-			pstmt.setString(3, members.getMemberbb_name());
-			pstmt.setString(4, members.getMemberbb_email());
-			pstmt.setString(5, members.getMemberbb_birthday());
+			pstmt.setString(1, memberbb.getMemberbb_id());
+			pstmt.setString(2, memberbb.getMemberbb_password());
+			pstmt.setString(3, memberbb.getMemberbb_name());
+			pstmt.setString(4, memberbb.getMemberbb_email());
+			pstmt.setString(5, memberbb.getMemberbb_birthday());
 			insertCount = pstmt.executeUpdate();
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -51,14 +51,14 @@ public class BaseballDAO {
 		return insertCount;
 	}
 
-	public String selectLoginId(MemberbbBean members) {
+	public String selectLoginId(MemberbbBean memberbb) {
 		String loginId = null;
 		String sql = "select memberbb_id from memberbb where memberbb_id = ? and memberbb_password = ?";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, members.getMemberbb_id());
-			pstmt.setString(2, members.getMemberbb_password());
+			pstmt.setString(1, memberbb.getMemberbb_id());
+			pstmt.setString(2, memberbb.getMemberbb_password());
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -99,5 +99,26 @@ public class BaseballDAO {
 			close(pstmt);
 		}
 		return memberbbBean;
+	}
+
+	public int updateArticle(MemberbbBean article) {
+		int updateCount = 0;
+		PreparedStatement pstmt = null;
+		String sql = "update memberbb set memberbb_password = ?, memberbb_email = ? where memberbb_id = ?";
+
+		try{
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, article.getMemberbb_password());
+			pstmt.setString(2, article.getMemberbb_email());
+			pstmt.setString(3, article.getMemberbb_id());
+			
+			updateCount = pstmt.executeUpdate();
+		}catch(Exception ex){
+			System.out.println("memberModify 에러 : " + ex);
+		}finally{
+			close(pstmt);
+		}
+
+		return updateCount;
 	}
 }
