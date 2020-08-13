@@ -35,8 +35,7 @@ public class MemberModifyProAction implements Action {
 				out.println("history.back()");
 				out.println("</script>");
 				out.close();
-			}
-			else{
+			} else{
 				forward = new ActionForward();
 				forward.setRedirect(true);
 				forward.setPath("main.bd");

@@ -235,9 +235,8 @@
 						<span class="error_next_box"></span>
 					</div>
 
-					<div class="btn_area">
-						<input type="submit" value="수정" id="btnJoin" />
-
+					<div id="btn_group">
+						<button id="btn">수정</button>
 					</div>
 				</div>
 				<!-- content-->

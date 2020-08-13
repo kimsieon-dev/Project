@@ -18,12 +18,14 @@ import action.LineupModifyFormAction;
 import action.LineupModifyProAction;
 import action.LineupSearchAction;
 import action.LineupWriteAction;
+import action.MemberDeleteAction;
 import action.MemberDetailAction;
 import action.MemberJoinAction;
 import action.MemberLoginAction;
 import action.MemberLogoutAction;
 import action.MemberModifyFormAction;
 import action.MemberModifyProAction;
+import action.MemberOverLapAction;
 import action.NoticeDeleteProAction;
 import action.NoticeDetailAction;
 import action.NoticeListAction;
@@ -106,6 +108,9 @@ public class BaseballController extends HttpServlet {
 		} else if (command.equals("/memberJoin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/joinForm.jsp");
+		} else if(command.equals("/memberoverlap.bd")) {	// 실시간 확인 jsp
+				forward = new ActionForward();
+				forward.setPath("/Memberoverlap.jsp");
 		} else if (command.equals("/memberLoginAction.bd")) {
 			action = new MemberLoginAction();
 			try {
@@ -127,6 +132,13 @@ public class BaseballController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		} else if(command.equals("/memberoverlapaction.bd")) {	// 실시간 아이디 중복 Action
+				action = new MemberOverLapAction();
+				try {
+					forward = action.execute(request, response);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 		} else if (command.equals("/memberJoin.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/joinForm.jsp");
@@ -146,6 +158,13 @@ public class BaseballController extends HttpServlet {
 			}
 		} else if (command.equals("/memberModifyPro.bd")) {
 			action = new MemberModifyProAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if (command.equals("/memberDelete.bd")) {
+			action = new MemberDeleteAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

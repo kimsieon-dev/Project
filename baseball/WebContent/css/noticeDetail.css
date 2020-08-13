@@ -76,7 +76,7 @@ section > .view > .third > article:nth-child(1) {
 }
 
 #commandList > a {
-	font-family: 'NEXON Lv1 Gothic OTF Bold';  
+	font-family: 'NEXON Lv1 Gothic OTF Light';  
 	float: right;
 	margin: 5px;
 }
@@ -141,7 +141,7 @@ table.type09 thead th {
     padding: 10px;
     font-weight: bold;
     color: #369;
-    border-bottom: 3px solid #036;
+    border-bottom: 3px solid #0068b3;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
 
@@ -163,6 +163,7 @@ table.type09 td {
     padding: 10px;
     line-height: 25px;
     border-bottom: 1px solid #ccc;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
 }
 
 table.type09 td:first-child {

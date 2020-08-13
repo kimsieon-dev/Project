@@ -116,11 +116,11 @@
 		<table class="type09">
 		<thead>
 			<tr>
-				<th>번호</th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>조회수</th>
-				<th>날짜</th>
+				<th scope="cols">번호</th>
+				<th scope="cols">제목</th>
+				<th scope="cols">작성자</th>
+				<th scope="cols">조회수</th>
+				<th scope="cols">날짜</th>
 			</tr>
 		</thead>
 			
@@ -130,11 +130,11 @@
 			
 			<tbody>
 			<tr>
-				<td><%=sajahuList.get(i).getSajahu_no() %></td>
-				<td><a href="sajahuDetail.bd?sajahu_no=<%=sajahuList.get(i).getSajahu_no() %>&page=<%=nowPage %>"><%=sajahuList.get(i).getSajahu_title() %></a></td>
-				<td><%=sajahuList.get(i).getSajahu_id() %>
-				<td><%=sajahuList.get(i).getSajahu_readcount() %></td>
-				<td><%=sajahuList.get(i).getSajahu_date() %></td>
+				<th scope="row"><%=sajahuList.get(i).getSajahu_no() %></td>
+				<td scope="row"><a href="sajahuDetail.bd?sajahu_no=<%=sajahuList.get(i).getSajahu_no() %>&page=<%=nowPage %>"><%=sajahuList.get(i).getSajahu_title() %></a></td>
+				<td scope="row"><%=sajahuList.get(i).getSajahu_id() %>
+				<td scope="row"><%=sajahuList.get(i).getSajahu_readcount() %></td>
+				<td scope="row"><%=sajahuList.get(i).getSajahu_date() %></td>
 			</tr>
 			</tbody>
 			<% 

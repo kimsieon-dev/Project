@@ -121,4 +121,44 @@ public class BaseballDAO {
 
 		return updateCount;
 	}
+
+	public int deleteMember(String id) {
+		String sql = "DELETE FROM memberbb WHERE memberbb_id=?";
+		int deleteCount = 0;
+
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			deleteCount = pstmt.executeUpdate();
+		} catch(Exception ex) {
+			System.out.println("deleteMember 에러: " + ex);	
+		} finally {
+			close(pstmt);
+		}
+		
+		return deleteCount;
+	}
+
+	public int OverLapId(MemberbbBean memberbb) {
+String sql = "SELECT memberbb_id FROM memberbb WHERE memberbb_id=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memberbb.getMemberbb_id());
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				return 0;		// 아이디 있음
+			} else {
+				return 1;		// 가입 가능
+			}
+		} catch (Exception ex) {
+			System.out.println(" 에러: " + ex);			
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		
+		return -1;	// 디비 에러
+	}
 }

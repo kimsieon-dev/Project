@@ -76,7 +76,7 @@
 					</ul>
 				</li>
 				
-				<li><a href="#">쇼핑몰</a></li>
+				<li><a href="sns.bd">쇼핑몰</a></li>
 				
 		<li id="login">
 		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>

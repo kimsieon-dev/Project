@@ -156,7 +156,7 @@
                 
                 <div id="btn_group">
                     <button id="btn1" onclick="location.href='memberModifyForm.bd'">수정</button>
-                    <button id="btn2" onclick="location.href='noticeWrite.bd'">탈퇴</button>
+                    <button id="btn2" onclick="location.href='memberDelete.bd'">탈퇴</button>
                 </div>
              
 

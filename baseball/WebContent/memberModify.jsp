@@ -99,7 +99,7 @@
 	
 	
 	<section>
-			<form method="post" action="memberModifyPro.bd" name="memberModifyForm">
+			<form method="post" action="memberModifyPro.bd" name="memberModifyForm"  onsubmit="return checkValue()" >
 			<div id="wrapper">
 
             <!-- content-->
@@ -118,7 +118,7 @@
                 <div>
                     <h3 class="join_title"><label for="memberbb_password">비밀번호</label></h3>
                     <span class="box int_pass">
-                        <input type="password" id="memberbb_password" name="memberbb_password" class="int" maxlength="20">
+                        <input type="password" id="memberbb_password" name="memberbb_password" class="int" maxlength="20" />
                         <span id="alertTxt">사용불가</span>
                         <img src="image/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
                     </span>
@@ -146,7 +146,7 @@
                  <div>
                     <h3 class="join_title"><label for="memberbb_email">이메일</label></h3>
                     <span class="box int_email">
-                        <input type="text" id="memberbb_email" name="memberbb_email" class="int" maxlength="100">
+                        <input type="text" id="memberbb_email" name="memberbb_email" class="int"  maxlength="100">
                     </span>
                     <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>    
                 </div>
@@ -164,7 +164,7 @@
                 <!-- JOIN BTN-->
                 
                 <div id="btn_group">
-                   <button id="btn" >수정</button>
+                   <button id="btn">수정</button>
                 </div>
              
 
@@ -225,5 +225,5 @@
                
 </body>
 <script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/modify.js"></script>
+<script src="js/memberModify.js"></script>
 </html>

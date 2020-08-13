@@ -160,7 +160,8 @@ $(document).ready(function(){
 	<section>
 		<div class="mall">
 			<p>Lions Online Mall</p>
-			<img src="image/mall.jpg">
+			<a href="http://samsunglionsmall.com/">
+			<img src="image/mall.jpg"></a>
 		</div>
 	</section>
 	

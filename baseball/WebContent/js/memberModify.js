@@ -71,17 +71,28 @@ function isEmailCorrect() {
     }
 }
 
-function check_onclick() {
-	var checkp = document.memberModifyForm.memberbb_password.value;
-	if(checkp == "") {
+function checkValue(){
+	var memberbb_password = document.memberModifyForm.memberbb_password;
+	
+	if(memberbb_password.value == '') {
 		alert("비밀번호를 입력해주세요.");
 		document.memberModifyForm.memberbb_password.focus();
+		return false;
 	}
 	
-	var checke = document.memberModifyForm.memberbb_email.value;
-	if(checkm == "") {
-		alert("이메일를 입력해주세요.");
+	var pswd2 = document.memberModifyForm.pswd2;
+	
+	if(pswd2.value == '') {
+		alert("비밀번호 재확인을 입력해주세요.")
+		document.memberModifyForm.pswd2.focus();
+		return false;
+	}
+	
+var memberbb_email = document.memberModifyForm.memberbb_email;
+	
+	if(memberbb_email.value == '') {
+		alert("이메일을 입력해주세요.")
 		document.memberModifyForm.memberbb_email.focus();
+		return false;
 	}
 }
-

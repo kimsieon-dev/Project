@@ -22,11 +22,16 @@ var dd = document.querySelector('#memberbb_dd');
 var error = document.querySelectorAll('.error_next_box');
 
 
+var check_id = false;
+
 
 /*이벤트 핸들러 연결*/
 
 
 id.addEventListener("change", checkId);
+
+/* 아이디 중복 확인 */
+id.addEventListener("blur", checkId)
 pw1.addEventListener("change", checkPw);
 pw2.addEventListener("change", comparePw);
 userName.addEventListener("change", checkName);
@@ -47,14 +52,44 @@ function checkId() {
     if(id.value === "") {
         error[0].innerHTML = "필수 정보입니다.";
         error[0].style.display = "block";
+        check_id = false;
     } else if(!idPattern.test(id.value)) {
         error[0].innerHTML = "5~15자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.";
         error[0].style.display = "block";
+        check_id = false;
     } else {
-        error[0].innerHTML = "멋진 아이디네요!";
-        error[0].style.color = "#08A600";
-        error[0].style.display = "block";
+    	error[0].innerHTML = "";
     }
+    console.log("아이디 : ", check_id);
+}
+function overlap() {		// 아이디 중복 확인
+	var check = id.value;
+//	if(id.value === "") {
+//        error[0].innerHTML = "필수 정보입니다.";
+//        error[0].style.color = "red";
+//        error[0].style.display = "block";
+//        check_id = false;
+//	} else {
+		$.ajax({
+			type : "POST",
+		    url : "memberoverlapaction.bd",
+		    data : {"check" : check},
+		    success : function(result) {
+		    	if(result.trim() == "true") {
+		    		error[0].innerHTML = "이미 사용중이거나 탈퇴한 아이디입니다.";
+		            error[0].style.color = "red";
+		            error[0].style.display = "block";
+		            check_id = false;
+		    	} else {
+		    		error[0].innerHTML = "멋진 아이디네요!";
+		            error[0].style.color = "#08A600";
+		            error[0].style.display = "block";
+		            check_id = true;
+		    	}
+		    }
+		})
+//	}
+	console.log("아이디중복 : ", check_id);
 }
 
 function checkPw() {

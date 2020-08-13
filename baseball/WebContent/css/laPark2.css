@@ -265,7 +265,9 @@ footer {
 	margin-bottom: 30px;
 }
 
-
+#tabb {
+	height: 1400px;
+}
 
 .tabmenu{ 
   max-width:1280px; 
@@ -322,28 +324,46 @@ footer {
   display:block;
 }
 
+#load {
+	text-align: left;
+	margin-top:60px;
+	margin-bottom: 40px;
+}
+
+#load > p:first-child {
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	font-size: 20px;
+}
+
+#load >p:last-child {
+	font-family: 'NEXON Lv1 Gothic OTF Light';
+	font-size: 16px;
+}
+
 .tra > th,td {
 	padding: 10px;
 }
 
 table.tra {
+	width: 100%;
 	text-align: center;
 	heigh: 100%;
 border-collapse: collapse;
     line-height: 1.5;
     border-top: 1px solid #ccc;
-    border-left: 5px solid #369;
+    border-left: 5px solid #0068b3;
 }
 
 table.tra th {
     font-weight: bold;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
 table.tra td {
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
     
 }
 

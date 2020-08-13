@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/join.css" />
+
 </head>
 <body>
 	<form name="joinForm" action="memberJoinAction.bd" method="post">
@@ -117,8 +118,8 @@
                 </div>
 
                 <!-- JOIN BTN-->
-                <div class="btn_area">
-                    <button type="button" id="btnJoin" onclick="javascript:joinForm.submit()" >
+                <div id="btn_group">
+                    <button type="button" id="btn" onclick="javascript:joinForm.submit()" >
                         <span>가입하기</span>
                     </button>
                 </div>

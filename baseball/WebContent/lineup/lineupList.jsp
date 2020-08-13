@@ -148,7 +148,13 @@
 	</section>
 	
 	<section id="btn_group">
+		<%if(id.equals("admin")) 
+		{
+		%>
 		<button id="btn1" onclick="location.href='lineupWrite.bd'">글쓰기</button>
+		<%
+		}
+		%>
 	</section>
 	
 	<section id="search">

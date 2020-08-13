@@ -43,7 +43,7 @@
 				</li>
 				<li><a href="#">경기 정보</a>
 					<ul>
-						<li><a href="#">일정</a></li>
+						<li><a href="view.bd">일정</a></li>
 						<li><a href="lineupList.bd">라인업</a></li>
 					</ul>
 				</li>
@@ -51,12 +51,12 @@
 				<li><a href="#">소통</a>
 					<ul>
 						<li><a href="sajahuList.bd">사자후</a></li>
-						<li><a href="#">SNS</a></li>
+						<li><a href="sns.bd">SNS</a></li>
 						<li><a href="noticeList.bd">공지사항</a></li>
 					</ul>
 				</li>
 				
-				<li><a href="#">쇼핑몰</a></li>
+				<li><a href="shop.bd">쇼핑몰</a></li>
 				
 		<li id="login">
 		<%=id.equals("") ? "<a href='memberLogin.bd'>로그인</a>" : "<a href='memberLogoutAction.bd'>로그아웃</a>" %>
@@ -73,26 +73,28 @@
 		</div>
 	</nav>
 
-	<section class="topsection">
+	<section>
 		<div class="page">
 			<div class="page1">
 				<img src="image/home_icon.png">
-				<span>></span>
-				<a href="#">구단</a>
-				<span>></span>
-				<a href="#">구단소개</a>
+			 	<span>></span> 
+			 	<a href="#">구단</a>
+				<span>></span> 
+				<a href="club.bd">구단 소개</a>
 			</div>
 
 			<div class="page2">
-				<p>New Blue! New Lions! 삼성 라이온즈를 소개합니다.</p>
+				<p>New Blue! New Lions! 삼성라이온즈를 소개합니다.</p>
 			</div>
 		</div>
+		
+		<div class="toptitle">
+			<p>구단 소개</p>
+		</div>
 	</section>
-	<br />
 	
 	<section>
 		<div class="intro">
-			<h4>구단 소개</h4>
 			<img src="image/club1.jpg" alt="-" />
 		</div>
 		<br />

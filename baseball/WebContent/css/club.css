@@ -73,6 +73,7 @@ nav {
 section {
 	width: 1280px;
 	margin: 0 auto;
+	margin-top: 60px;
 }
 
 .topsection {
@@ -209,6 +210,13 @@ footer {
 	font-size: 12px;
 	font-family: 'NEXON Lv1 Gothic OTF Light';
 	line-height: 40px;
+}
+
+.toptitle > p {
+	font-size: 50px;
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	margin-top: 60px;
+	margin-bottom: 30px;
 }
 
 .dropmenu li a:hover, .dropmenu ul li:hover a {

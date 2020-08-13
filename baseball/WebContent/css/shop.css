@@ -108,18 +108,19 @@ footer {
 }
 
 .online {
-	margin-top: 20px;
+	margin-top: 60px;
+	margin-bottom: 30px;
 }
 
 .online > p:first-child {
-	font-size: 20px;
+	font-size: 50px;
 	font-family: 'NEXON Lv1 Gothic OTF Bold';
 	margin-bottom: 10px;
 	
 }
 
 .online > p:last-child {
-	font-size: 16px;
+	font-size: 20px;
 	font-family: 'NEXON Lv1 Gothic OTF Light';
 }
 

@@ -116,11 +116,11 @@
 		<table class="type09">
 		<thead>
 			<tr>
-				<th>번호</th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>조회수</th>
-				<th>날짜</th>
+				<th scope="cols">번호</th>
+				<th scope="cols">제목</th>
+				<th scope="cols">작성자</th>
+				<th scope="cols">조회수</th>
+				<th scope="cols">날짜</th>
 			</tr>
 		</thead>
 			
@@ -130,11 +130,11 @@
 			
 			<tbody>
 			<tr>
-				<td><%=noticeList.get(i).getNotice_no() %></td>
-				<td><a href="noticeDetail.bd?notice_no=<%=noticeList.get(i).getNotice_no() %>&page=<%=nowPage %>"><%=noticeList.get(i).getNotice_title() %></a></td>
-				<td><%=noticeList.get(i).getNotice_id() %>
-				<td><%=noticeList.get(i).getNotice_readcount() %></td>
-				<td><%=noticeList.get(i).getNotice_date() %></td>
+				<th scope="row"><%=noticeList.get(i).getNotice_no() %></td>
+				<td scope="row"><a href="noticeDetail.bd?notice_no=<%=noticeList.get(i).getNotice_no() %>&page=<%=nowPage %>"><%=noticeList.get(i).getNotice_title() %></a></td>
+				<td scope="row"><%=noticeList.get(i).getNotice_id() %>
+				<td scope="row"><%=noticeList.get(i).getNotice_readcount() %></td>
+				<td scope="row"><%=noticeList.get(i).getNotice_date() %></td>
 			</tr>
 			</tbody>
 			<% 
@@ -149,7 +149,13 @@
 	</section>
 	
 	<section id="btn_group">
+		<%if(id.equals("admin")) 
+		{
+		%>
 		<button id="btn1" onclick="location.href='noticeWrite.bd'">글쓰기</button>
+		<%
+		}
+		%>
 	</section>
 	
 	<section id="search">
