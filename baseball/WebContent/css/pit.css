@@ -39,3 +39,32 @@
 	margin-top: 60px;
 	margin-bottom: 30px;
 }
+
+.pitt {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.ppit {
+	width: 240px;
+	display: inline-block;
+	height: 300px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.ppit > a > img {
+	border: 5px solid #0068b3;
+}
+
+.ppit1 > p {
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	font-size: 20px;
+	color: #0068b3;
+	margin-top: 10px;
+}
+
+strong {
+	color: black;
+}
+
