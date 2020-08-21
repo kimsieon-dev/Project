@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id = "";
@@ -13,15 +12,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="css/main.css" />
-<link rel="stylesheet" href="css/pit.css" />
+<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/starting.css" />
 </head>
 <body>
 	<nav>
 		<div class="dropmenu">			
 			<ul>
 				<li id="logo1">
-					<a href="main.bd"><img src="image/insignia1.svg.png"></a>
+					<a href="main.bd"><img src="../image/insignia1.svg.png"></a>
 				</li>
 				
 			
@@ -69,14 +68,14 @@
 		</div>
 		
 		<div class="mainlogo">
-			<img src="image/sllogo.png" />
+			<img src="../image/sllogo.png" />
 		</div>
 	</nav>
 	
 	<section>
 		<div class="page">
 			<div class="page1">
-				<img src="image/home_icon.png">
+				<img src="../image/home_icon.png">
 				<span>></span>
 				<a href="#">선수단</a>
 				<span>></span>
@@ -84,7 +83,7 @@
 			</div>
 
 			<div class="page2">
-				<p>New Blue! New Lions! 삼성라이온즈를 이끌어가는 선수단을 소개합니다.</p>
+				<p>New Blue! New Lions! 삼성 라이온즈를 이끌어가는 선수단을 소개합니다.</p>
 			</div>
 		</div>
 		
@@ -94,66 +93,78 @@
 	</section>
 	
 	<section>
-		<div class="pitt">
-		<div class="ppit">
-			<a href="../catcher/kangMinHo.bd"><img src="image/KangMinHo.jpg" /></a>
-			<div class="ppit1">
-				<p>NO.47&nbsp;<strong>강민호</strong></p>
-			</div>
+		<div class="main">
+			<img src=../image/ChaeSangJun1.jpg />
 		</div>
 		
-		<div class="ppit">
-			<a href="../catcher/kimMinSu.bd"><img src="image/KimMinSu.jpg" /></a>
-			<div class="ppit1">
-				<p>NO.12&nbsp;<strong>김민수</strong></p>
-			</div>
+		<div class="maintitle">
+			<p>NO.114&nbsp;<strong>채상준</strong></p>
 		</div>
 		
-		<div class="ppit">
-			<a href="../catcher/kimDoHwan.bd"><img src="image/KimDoHwan.jpg" /></a>
-			<div class="ppit1">
-				<p>NO.42&nbsp;<strong>김도환</strong></p>
-			</div>
+		<div class="main1">
+			<table>
+				<tr>
+					<th>생년월일</th>
+					<td>1994.12.03</td>
+					<th>출생지</th>
+					<td>대구광역시</td>
+				</tr>
+				
+				<tr>
+					<th>신장</th>
+					<td>172cm</td>
+					<th>체중</th>
+					<td>80kg</td>
+				</tr>
+				
+				<tr>
+					<th>삼성입단</th>
+					<td>2018년</td>
+					<th>연봉</th>
+					<td>2,700만원</td>
+				</tr>
+				
+				<tr>
+					<th>포지션</th>
+					<td>포수</td>
+					<th>투타</th>
+					<td>우투우타</td>
+				</tr>
+				
+				<tr>
+					<th>프로경력</th>
+					<td colspan="4">삼성 라이온즈(2018 ~ ) </td>
+				</tr>
+			</table>
 		</div>
 		
-		<div class="ppit">
-			<a href="../catcher/kimEungMin.bd"><img src="image/KimEungMin.jpg" /></a>
-			<div class="ppit1">
-				<p>NO.27&nbsp;<strong>김응민</strong></p>
-			</div>
+		<div id="btn_group">
+			<button id="btn" onclick="history.back();">뒤로가기</button>
 		</div>
-		
-		<div class="ppit">
-			<a href="../catcher/chaeSangJun.bd"><img src="image/ChaeSangJun.jpg" /></a>
-			<div class="ppit1">
-				<p>NO.114&nbsp;<strong>채상준</strong></p>
-			</div>
-		</div>
-	</div>
 	</section>
 	
 	<footer>
 		<div class="footer">
 			<div class="foot">
 				<div class="footlogo">
-					<img src="image/footlogo1.png">
+					<img src="../image/footlogo1.png">
 				</div>
 
 				<div class="footsns">
 					<a href="https://www.facebook.com/snssamsunglions" target="_blank">
-					<img src="image/facebook.png"> 
+					<img src="../image/facebook.png"> 
 					</a>
 					
 					<a href="https://www.instagram.com/samsunglions_baseballclub/" target="_blank">
-					<img src="image/instagram.png">
+					<img src="../image/instagram.png">
 					</a>
 					
 					<a href="https://twitter.com/twittlions" target="_blank">
-					<img src="image/twitter1.png">
+					<img src="../image/twitter1.png">
 					</a>
 					
 					<a href="https://www.youtube.com/channel/UCMWAku3a3h65QpLm63Jf2pw" target="_blank">
-					<img src="image/youtube.png">
+					<img src="../image/youtube.png">
 					</a>
 				</div>
 			</div>
@@ -178,6 +189,3 @@
 			
 		</div>
 	</footer>
-
-</body>
-</html>

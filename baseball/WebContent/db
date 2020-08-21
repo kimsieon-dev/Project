@@ -1,10 +1,10 @@
- create table members (
-	members_id varchar(15) not null,
-    members_password varchar(20) not null,
-    members_name varchar(15) not null,
-    members_email varchar(50) not null,
-	members_birthday date not null, 
-    primary key(members_id)
+create table memberbb (
+	memberbb_id varchar(15) not null,
+    memberbb_password varchar(20) not null,
+    memberbb_name varchar(15) not null,
+    memberbb_email varchar(50) not null,
+	memberbb_birthday date not null, 
+    primary key(memberbb_id)
 );
 
 create table lineup (
