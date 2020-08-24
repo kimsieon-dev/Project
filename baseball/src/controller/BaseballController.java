@@ -90,6 +90,150 @@ public class BaseballController extends HttpServlet {
 		} else if (command.equals("/lineupSearch.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/lineup/lineupSearch.jsp");
+		//
+		} else if (command.equals("/starting.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/starting.jsp");
+		} else if (command.equals("/bullpen.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpen.jsp");
+		} else if (command.equals("/catcher.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/catcher.jsp");
+		} else if (command.equals("/infielder.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder.jsp");
+		} else if (command.equals("/outfielder.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder.jsp");
+		
+		//선발
+		} else if (command.equals("/baekJungHyun.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/startingplayer/baekJungHyun.jsp");
+		} else if (command.equals("/buchanan.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/startingplayer/buchanan.jsp");
+		} else if (command.equals("/choiChaeHeung.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/startingplayer/choiChaeHeung.jsp");
+		} else if (command.equals("/lively.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/startingplayer/lively.jsp");
+		} else if (command.equals("/wonTaIn.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/startingplayer/wonTaIn.jsp");
+		} else if (command.equals("/yunSungHwan.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/startingplayer/yunSungHwan.jsp");
+		
+		// 불펜
+		} else if (command.equals("/choiJiGwang.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/choiJiGwang.jsp");
+		} else if (command.equals("/hongJoungWoo.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/hongJoungWoo.jsp");
+		} else if (command.equals("/jangJiHun.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/jangJiHun.jsp");
+		} else if (command.equals("/jangPillJoon.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/jangPillJoon.jsp");
+		} else if (command.equals("/kimDaeWoo.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/kimDaeWoo.jsp");
+		} else if (command.equals("/kimYunSu.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/kimYunSu.jsp");
+		} else if (command.equals("/kwonOhJun.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/kwonOhJun.jsp");
+		} else if (command.equals("/leeSeungHyun.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/leeSeungHyun.jsp");
+		} else if (command.equals("/limHyunJun.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/limHyunJun.jsp");
+		} else if (command.equals("/ohSeungHwan.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/ohSeungHwan.jsp");
+		} else if (command.equals("/wooKyuMin.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/bullpenplayer/wooKyuMin.jsp");
+		
+		// 포수
+		} else if (command.equals("/chaeSangJun.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/catcher/chaeSangJun.jsp");
+		} else if (command.equals("/kangMinHo.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/catcher/kangMinHo.jsp");
+		} else if (command.equals("/kimDoHwan.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/catcher/kimDoHwan.jsp");
+		} else if (command.equals("/kimEungMin.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/catcher/kimEungMin.jsp");
+		} else if (command.equals("/kimMinSu.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/catcher/kimMinSu.jsp");
+		
+		// 내야수
+		} else if (command.equals("/kimSangSu.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/kimSangSu.jsp");
+		} else if (command.equals("/kimHoJae.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/infielder.jsp");
+		} else if (command.equals("/kimJaeHyeon.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/kimJaeHyeon.jsp");
+		} else if (command.equals("/kimJiChan.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/kimJiChan.jsp");
+		} else if (command.equals("/leeHakJu.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/leeHakJu.jsp");
+		} else if (command.equals("/leeSungGyu.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/leeSungGyu.jsp");
+		} else if (command.equals("/leeWonSeok.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/leeWonSeok.jsp");
+		} else if (command.equals("/parkGyeBum.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/parkGyeBum.jsp");
+		} else if (command.equals("/yangUhYeon.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/infielder/yangUhYeon.jsp");
+		
+		// 외야수
+		} else if (command.equals("/PalKa.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder/palKa.jsp");
+		} else if (command.equals("/kimDongYub.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder/kimDongYub.jsp");
+		} else if (command.equals("/kimHunGon.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder/kimHunGon.jsp");
+		} else if (command.equals("/kooJaWook.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder/kooJaWook.jsp");
+		} else if (command.equals("/leeSungKon.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder/leeSungKon.jsp");
+		} else if (command.equals("/parkChanDo.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder/parkChanDo.jsp");
+		} else if (command.equals("/parkHaeMin.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder/parkHaeMin.jsp");
+		} else if (command.equals("/parkSeungGyu.bd")) {
+			forward = new ActionForward();
+			forward.setPath("/outfielder/parkSeungGyu.jsp");
+		
 		} else if (command.equals("/sajahuWrite.bd")) {
 			forward = new ActionForward();
 			forward.setPath("/sajahu/sajahuWrite.jsp");

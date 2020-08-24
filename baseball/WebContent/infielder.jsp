@@ -96,56 +96,63 @@
 	<section>
 		<div class="pitt">
 		<div class="ppit">
-			<a href="../infielder/kimJaeHyeon.bd"><img src="image/KimJaeHyeon.jpg" /></a>
+			<a href="kimSangSu.bd"><img src="image/kimSangSu.jpg" /></a>
+			<div class="ppit1">
+				<p>NO.7&nbsp;<strong>김상수</strong></p>
+			</div>
+		</div>
+		
+		<div class="ppit">
+			<a href="kimJaeHyeon.bd"><img src="image/KimJaeHyeon.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.0&nbsp;<strong>김재현</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../infielder/kimJiChan.bd"><img src="image/KimJiChan.jpg" /></a>
+			<a href="kimJiChan.bd"><img src="image/KimJiChan.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.58&nbsp;<strong>김지찬</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../infielder/kimHoJae.bd"><img src="image/KimHoJae.jpg" /></a>
+			<a href="kimHoJae.bd"><img src="image/KimHoJae.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.8&nbsp;<strong>김호재</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../infielder/parkGyeBum.bd"><img src="image/ParkGyeBum.jpg" /></a>
+			<a href="parkGyeBum.bd"><img src="image/ParkGyeBum.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.14&nbsp;<strong>박계범</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../infielder/yangUhYeon.bd"><img src="image/YangUhyeon.jpg" /></a>
+			<a href="yangUhYeon.bd"><img src="image/YangUhyeon.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.31&nbsp;<strong>양우현</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../infielder/leeSungGyu.bd"><img src="image/LeeSungGyu.jpg" /></a>
+			<a href="leeSungGyu.bd"><img src="image/LeeSungGyu.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.6&nbsp;<strong>이성규</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../infielder/leeWonSeok.bd"><img src="image/LeeWonSeok.jpg" /></a>
+			<a href="leeWonSeok.bd"><img src="image/LeeWonSeok.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.16&nbsp;<strong>이원석</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../infielder/leeHakJu.bd"><img src="image/LeeHakJu.jpg" /></a>
+			<a href="leeHakJu.bd"><img src="image/LeeHakJu.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.53&nbsp;<strong>이학주</strong></p>
 			</div>

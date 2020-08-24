@@ -94,46 +94,46 @@
 	
 	<section>
 		<div class="main">
-			<img src=image/KooJaWook1.jpg />
+			<img src=image/PalKa1.jpg />
 		</div>
 		
 		<div class="maintitle">
-			<p>NO.5&nbsp;<strong>구자욱</strong></p>
+			<p>NO.69&nbsp;<strong>팔카</strong></p>
 		</div>
 		
 		<div class="main1">
 			<table>
 				<tr>
 					<th>생년월일</th>
-					<td>1993.02.12</td>
+					<td>1991.10.28</td>
 					<th>출생지</th>
-					<td>대구광역시 달서구</td>
+					<td>사우스캐롤라이나 주 그린빌</td>
 				</tr>
 				
 				<tr>
 					<th>신장</th>
-					<td>189cm</td>
+					<td>188cm</td>
 					<th>체중</th>
-					<td>75kg</td>
+					<td>104kg</td>
 				</tr>
 				
 				<tr>
 					<th>삼성입단</th>
-					<td>2012년</td>
+					<td>2020년</td>
 					<th>연봉</th>
-					<td>28,000만원</td>
+					<td>10,000만원</td>
 				</tr>
 				
 				<tr>
 					<th>포지션</th>
 					<td>외야수</td>
 					<th>투타</th>
-					<td>우투좌타</td>
+					<td>좌투좌타</td>
 				</tr>
 				
 				<tr>
 					<th>프로경력</th>
-					<td colspan="4">삼성 라이온즈(2012 ~ ) </td>
+					<td colspan="4">애리조나 다이아몬드백스 산하 마이너(2013 ~ 2015)&nbsp;&nbsp;미네소타 트윈스 산하 마이너(2016 ~ 2017)<br />시카고 화이트삭스(2018 ~ 2019)&nbsp;&nbsp;삼성 라이온즈(2019 ~ ) </td>
 				</tr>
 			</table>
 		</div>

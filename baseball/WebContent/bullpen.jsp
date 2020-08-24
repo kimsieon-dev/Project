@@ -96,77 +96,77 @@
 	<section>
 		<div class="pitt">
 		<div class="ppit">
-			<a href="../bullpenplayer/kwonOhJun.bd"><img src="image/KwonOhJun.jpg" /></a>
+			<a href="kwonOhJun.bd"><img src="image/KwonOhJun.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.45&nbsp;<strong>권오준</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/kimDaeWoo.bd"><img src="image/KimDaeWoo.jpg" /></a>
+			<a href="kimDaeWoo.bd"><img src="image/KimDaeWoo.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.17&nbsp;<strong>김대우</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/kimYunSu.bd"><img src="image/KimYunSu.jpg" /></a>
+			<a href="kimYunSu.bd"><img src="image/KimYunSu.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.25&nbsp;<strong>김윤수</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/ohSeungHwan.bd"><img src="image/OhSeungHwan.jpg" /></a>
+			<a href="ohSeungHwan.bd"><img src="image/OhSeungHwan.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.21&nbsp;<strong>오승환</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/wooKyuMin.bd"><img src="image/WooKyuMin.jpg" /></a>
+			<a href="wooKyuMin.bd"><img src="image/WooKyuMin.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.2&nbsp;<strong>우규민</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/leeSeungHyun.bd"><img src="image/LeeSeungHyun.jpg" /></a>
+			<a href="leeSeungHyun.bd"><img src="image/LeeSeungHyun.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.20&nbsp;<strong>이승현</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/limHyunJun.bd"><img src="image/LimHyunJun.jpg" /></a>
+			<a href="limHyunJun.bd"><img src="image/LimHyunJun.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.57&nbsp;<strong>임현준</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/jangJiHun.bd"><img src="image/JangJiHun.jpg" /></a>
+			<a href="jangJiHun.bd"><img src="image/JangJiHun.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.43&nbsp;<strong>장지훈</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/jangPillJoon.bd"><img src="image/JangPillJoon.jpg" /></a>
+			<a href="jangPillJoon.bd"><img src="image/JangPillJoon.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.26&nbsp;<strong>장필준</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/choiJiGwang.bd"><img src="image/ChoiJigwang.jpg" /></a>
+			<a href="choiJiGwang.bd"><img src="image/ChoiJigwang.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.40&nbsp;<strong>최지광</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../bullpenplayer/hongJoungWoo.bd"><img src="image/HongJoungWoo.jpg" /></a>
+			<a href="hongJoungWoo.bd"><img src="image/HongJoungWoo.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.61&nbsp;<strong>홍정우</strong></p>
 			</div>

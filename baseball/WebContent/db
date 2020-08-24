@@ -57,3 +57,17 @@ create table comments(
     foreign key (sajahu_no) references sajahu (sajahu_no) on delete cascade
 );
 
+
+mysql
+<Resource
+		name="jdbc/baseball"
+		auth="Container"
+		type="javax.sql.DataSource"
+		username="emb1come"
+		password="emb1come"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+		url="jdbc:mysql://118.131.179.138:3306/embed1_come?useUnicode=true&amp;characterEncoding=UTF8&amp;serverTimezone=Asia/Seoul"
+		maxActive="500"
+		maxIdle="100"
+	/>

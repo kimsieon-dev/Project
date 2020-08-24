@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
+<!-- 	<Resource -->
+<!-- 		name="jdbc/baseball" -->
+<!-- 		auth="Container" -->
+<!-- 		type="javax.sql.DataSource" -->
+<!-- 		username="gondor3320" -->
+<!-- 		password="EhfdmlEkd1!" -->
+<!-- 		driverClassName="org.mariadb.jdbc.Driver" -->
+<!-- 		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" -->
+<!-- 		url="jdbc:mariadb://gondor3320.cafe24.com/gondor3320?useUnicode=true&amp;characterEncoding=UTF8&amp;serverTimezone=Asia/Seoul" -->
+<!-- 		maxActive="500" -->
+<!-- 		maxIdle="100" -->
+<!-- 	/> -->
+	
 	<Resource
 		name="jdbc/baseball"
 		auth="Container"
 		type="javax.sql.DataSource"
-		username="emb1come"
-		password="emb1come"
-		driverClassName="com.mysql.cj.jdbc.Driver"
+		username="gondor3320"
+		password="EhfdmlEkd1!"
+		driverClassName="org.mariadb.jdbc.Driver"
 		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-		url="jdbc:mysql://118.131.179.138:3306/embed1_come?useUnicode=true&amp;characterEncoding=UTF8&amp;serverTimezone=Asia/Seoul"
+		url="jdbc:mariadb://localhost:3306/gondor3320"
 		maxActive="500"
 		maxIdle="100"
 	/>

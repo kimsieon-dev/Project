@@ -96,49 +96,56 @@
 	<section>
 		<div class="pitt">
 		<div class="ppit">
-			<a href="../outfielder/kooJaWook.bd"><img src="image/KooJaWook.jpg" /></a>
+			<a href="PalKa.bd"><img src="image/PalKa.jpg" /></a>
+			<div class="ppit1">
+				<p>NO.69&nbsp;<strong>팔카</strong></p>
+			</div>
+		</div>
+		
+		<div class="ppit">
+			<a href="kooJaWook.bd"><img src="image/KooJaWook.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.5&nbsp;<strong>구자욱</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../outfielder/kimDongYub.bd"><img src="image/KimDongYub.jpg" /></a>
+			<a href="kimDongYub.bd"><img src="image/KimDongYub.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.38&nbsp;<strong>김동엽</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../outfielder/kimHunGon.bd"><img src="image/KimHunGon.jpg" /></a>
+			<a href="kimHunGon.bd"><img src="image/KimHunGon.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.34&nbsp;<strong>김헌곤</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../outfielder/parkSeungGyu.bd"><img src="image/ParkSeungGyu.jpg" /></a>
+			<a href="parkSeungGyu.bd"><img src="image/ParkSeungGyu.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.65&nbsp;<strong>박승규</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../outfielder/parkChanDo.bd"><img src="image/ParkChanDo.jpg" /></a>
+			<a href="parkChanDo.bd"><img src="image/ParkChanDo.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.9&nbsp;<strong>박찬도</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../outfielder/parkHaeMin.bd"><img src="image/ParkHaeMin.jpg" /></a>
+			<a href="parkHaeMin.bd"><img src="image/ParkHaeMin.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.13&nbsp;<strong>박해민</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../outfielder/leeSungKon.bd"><img src="image/LeeSungKon.jpg" /></a>
+			<a href="leeSungKon.bd"><img src="image/LeeSungKon.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.55&nbsp;<strong>이성곤</strong></p>
 			</div>

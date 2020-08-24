@@ -79,7 +79,7 @@
 				<span>></span>
 				<a href="#">선수단</a>
 				<span>></span>
-				<a href="#">외야수</a>
+				<a href="#">내야수</a>
 			</div>
 
 			<div class="page2">
@@ -88,52 +88,52 @@
 		</div>
 		
 		<div class="toptitle">
-			<p>외야수</p>
+			<p>내야수</p>
 		</div>
 	</section>
 	
 	<section>
 		<div class="main">
-			<img src=image/KooJaWook1.jpg />
+			<img src=image/kimSangSu1.jpg />
 		</div>
 		
 		<div class="maintitle">
-			<p>NO.5&nbsp;<strong>구자욱</strong></p>
+			<p>NO.7&nbsp;<strong>김상수</strong></p>
 		</div>
 		
 		<div class="main1">
 			<table>
 				<tr>
 					<th>생년월일</th>
-					<td>1993.02.12</td>
+					<td>1990.03.23</td>
 					<th>출생지</th>
-					<td>대구광역시 달서구</td>
+					<td>서울특별시</td>
 				</tr>
 				
 				<tr>
 					<th>신장</th>
-					<td>189cm</td>
+					<td>175cm</td>
 					<th>체중</th>
-					<td>75kg</td>
+					<td>68kg</td>
 				</tr>
 				
 				<tr>
 					<th>삼성입단</th>
-					<td>2012년</td>
+					<td>2009년</td>
 					<th>연봉</th>
-					<td>28,000만원</td>
+					<td>25,000만원</td>
 				</tr>
 				
 				<tr>
 					<th>포지션</th>
-					<td>외야수</td>
+					<td>내야수</td>
 					<th>투타</th>
-					<td>우투좌타</td>
+					<td>우투우타</td>
 				</tr>
 				
 				<tr>
 					<th>프로경력</th>
-					<td colspan="4">삼성 라이온즈(2012 ~ ) </td>
+					<td colspan="4">삼성 라이온즈(2009 ~ ) </td>
 				</tr>
 			</table>
 		</div>

@@ -35,7 +35,7 @@
 				
 				<li><a href="#">선수단</a>
 					<ul>
-						<<li><a href="starting.bd">선발</a></li>
+						<li><a href="starting.bd">선발</a></li>
 						<li><a href="bullpen.bd">불펜</a></li>
 						<li><a href="catcher.bd">포수</a></li>
 						<li><a href="infielder.bd">내야수</a></li>

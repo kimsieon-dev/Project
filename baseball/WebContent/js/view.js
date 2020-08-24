@@ -52,6 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
     	            title    :    'evt3',
     	            start    :    '2019-09-25T12:30:00',
     	            allDay    :    false
+    	        },
+    	        {
+    	            title    :    'evt3',
+    	            start    :    '2020-08-24T12:30:00',
+    	            allDay    :    false
     	        }
     	    ]
     });

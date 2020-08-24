@@ -96,42 +96,42 @@
 	<section>
 		<div class="pitt">
 		<div class="ppit">
-			<a href="../startingplayer/buchanan.bd"><img src="image/Buchanan.jpg" /></a>
+			<a href="buchanan.bd"><img src="image/Buchanan.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.4&nbsp;<strong>뷰캐넌</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../startingplayer/lively.bd"><img src="image/Lively.jpg" /></a>
+			<a href="lively.bd"><img src="image/Lively.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.39&nbsp;<strong>라이블리</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../startingplayer/baekJungHyun.bd"><img src="image/BaekJungHyun.jpg" /></a>
+			<a href="baekJungHyun.bd"><img src="image/BaekJungHyun.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.29&nbsp;<strong>백정현</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../startingplayer/choiChaeHeung.bd"><img src="image/ChoiChaeHeung.jpg" /></a>
+			<a href="choiChaeHeung.bd"><img src="image/ChoiChaeHeung.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.56&nbsp;<strong>최채흥</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../startingplayer/wonTaeIn.bd"><img src="image/WonTaeIn.jpg" /></a>
+			<a href="wonTaeIn.bd"><img src="image/WonTaeIn.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.46&nbsp;<strong>원태인</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../startingplayer/yunSungHwan.bd"><img src="image/YunSungHwan.jpg" /></a>
+			<a href="yunSungHwan.bd"><img src="image/YunSungHwan.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.1&nbsp;<strong>윤성환</strong></p>
 			</div>

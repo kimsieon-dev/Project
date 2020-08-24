@@ -96,35 +96,35 @@
 	<section>
 		<div class="pitt">
 		<div class="ppit">
-			<a href="../catcher/kangMinHo.bd"><img src="image/KangMinHo.jpg" /></a>
+			<a href="kangMinHo.bd"><img src="image/KangMinHo.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.47&nbsp;<strong>강민호</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../catcher/kimMinSu.bd"><img src="image/KimMinSu.jpg" /></a>
+			<a href="kimMinSu.bd"><img src="image/KimMinSu.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.12&nbsp;<strong>김민수</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../catcher/kimDoHwan.bd"><img src="image/KimDoHwan.jpg" /></a>
+			<a href="kimDoHwan.bd"><img src="image/KimDoHwan.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.42&nbsp;<strong>김도환</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../catcher/kimEungMin.bd"><img src="image/KimEungMin.jpg" /></a>
+			<a href="kimEungMin.bd"><img src="image/KimEungMin.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.27&nbsp;<strong>김응민</strong></p>
 			</div>
 		</div>
 		
 		<div class="ppit">
-			<a href="../catcher/chaeSangJun.bd"><img src="image/ChaeSangJun.jpg" /></a>
+			<a href="chaeSangJun.bd"><img src="image/ChaeSangJun.jpg" /></a>
 			<div class="ppit1">
 				<p>NO.114&nbsp;<strong>채상준</strong></p>
 			</div>

@@ -134,7 +134,7 @@ footer {
 }
 
 #login2 {
-	width: 90px;
+	width: 100px;
 	height: 50px;
 	line-height: 50px;
 	color: white;
@@ -142,7 +142,7 @@ footer {
 }
 
 #login2 > a {
-	width: 90px;
+	width: 100px;
 	color: white;
 	font-size: 14px;
 	margin-top: 2px;
@@ -274,7 +274,7 @@ footer {
     font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
 
-.mall > img {
+.mall > a > img {
 	width: 1280px;
 }
 

@@ -26,12 +26,10 @@ var check_id = false;
 
 
 /*이벤트 핸들러 연결*/
-
-
 id.addEventListener("change", checkId);
 
 /* 아이디 중복 확인 */
-id.addEventListener("blur", checkId)
+id.addEventListener("blur", checkId);
 pw1.addEventListener("change", checkPw);
 pw2.addEventListener("change", comparePw);
 userName.addEventListener("change", checkName);
@@ -59,6 +57,7 @@ function checkId() {
         check_id = false;
     } else {
     	error[0].innerHTML = "";
+    	overlap();
     }
     console.log("아이디 : ", check_id);
 }

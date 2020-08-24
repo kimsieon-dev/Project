@@ -12,15 +12,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/main.css" />
-<link rel="stylesheet" href="../css/starting.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/starting.css" />
 </head>
 <body>
 	<nav>
 		<div class="dropmenu">			
 			<ul>
 				<li id="logo1">
-					<a href="main.bd"><img src="../image/insignia1.svg.png"></a>
+					<a href="main.bd"><img src="image/insignia1.svg.png"></a>
 				</li>
 				
 			
@@ -68,14 +68,14 @@
 		</div>
 		
 		<div class="mainlogo">
-			<img src="../image/sllogo.png" />
+			<img src="image/sllogo.png" />
 		</div>
 	</nav>
 	
 	<section>
 		<div class="page">
 			<div class="page1">
-				<img src="../image/home_icon.png">
+				<img src="image/home_icon.png">
 				<span>></span>
 				<a href="#">선수단</a>
 				<span>></span>
@@ -94,7 +94,7 @@
 	
 	<section>
 		<div class="main">
-			<img src=../image/ParkGyeBum1.jpg />
+			<img src=image/ParkGyeBum1.jpg />
 		</div>
 		
 		<div class="maintitle">
@@ -147,24 +147,24 @@
 		<div class="footer">
 			<div class="foot">
 				<div class="footlogo">
-					<img src="../image/footlogo1.png">
+					<img src="image/footlogo1.png">
 				</div>
 
 				<div class="footsns">
 					<a href="https://www.facebook.com/snssamsunglions" target="_blank">
-					<img src="../image/facebook.png"> 
+					<img src="image/facebook.png"> 
 					</a>
 					
 					<a href="https://www.instagram.com/samsunglions_baseballclub/" target="_blank">
-					<img src="../image/instagram.png">
+					<img src="image/instagram.png">
 					</a>
 					
 					<a href="https://twitter.com/twittlions" target="_blank">
-					<img src="../image/twitter1.png">
+					<img src="image/twitter1.png">
 					</a>
 					
 					<a href="https://www.youtube.com/channel/UCMWAku3a3h65QpLm63Jf2pw" target="_blank">
-					<img src="../image/youtube.png">
+					<img src="image/youtube.png">
 					</a>
 				</div>
 			</div>
