@@ -84,7 +84,7 @@
 			</div>
 
 			<div class="page2">
-				<p>New Blue! New Lions! 삼성라이온즈를 이끌어가는 선수단을 소개합니다.</p>
+				<p>New Blue! New Lions! 삼성 라이온즈를 이끌어가는 선수단을 소개합니다.</p>
 			</div>
 		</div>
 		

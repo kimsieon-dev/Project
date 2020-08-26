@@ -293,6 +293,13 @@ public class BaseballController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		} else if (command.equals("/memberDetail.bd")) {
+			action = new MemberDetailAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		} else if (command.equals("/memberModifyForm.bd")) {
 			action = new MemberModifyFormAction();
 			try {

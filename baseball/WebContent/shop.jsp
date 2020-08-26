@@ -81,7 +81,7 @@
 			</div>
 
 			<div class="page2">
-				<p>New Blue! New Lions! 삼성 라이온즈를 소개합니다.</p>
+				<p>New Blue! New Lions! 삼성 라이온즈 온라인몰을 소개합니다.</p>
 			</div>
 		</div>
 		
