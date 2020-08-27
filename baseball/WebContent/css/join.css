@@ -184,7 +184,7 @@ select {
 	border-bottom-right-radius: 5px;
 	margin-right:-4px; 
 	font-family: 'NEXON Lv1 Gothic OTF Bold'; 
-	cursor: pointer
+	cursor: pointer;
 } 
 
 #btn_group button { 

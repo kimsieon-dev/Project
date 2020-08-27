@@ -4,10 +4,11 @@ import java.sql.Date;
 
 public class CommentBean {
 	private int comment_no;
-	private String comment_id;
+	private int sajahu_no;
+	private String memberbb_id;
 	private String comment_content;
 	private Date comment_date;
-	private int sajahu_no;
+	private int commentAvilable;
 	
 	public int getComment_no() {
 		return comment_no;
@@ -15,11 +16,17 @@ public class CommentBean {
 	public void setComment_no(int comment_no) {
 		this.comment_no = comment_no;
 	}
-	public String getComment_id() {
-		return comment_id;
+	public int getSajahu_no() {
+		return sajahu_no;
 	}
-	public void setComment_id(String comment_id) {
-		this.comment_id = comment_id;
+	public void setSajahu_no(int sajahu_no) {
+		this.sajahu_no = sajahu_no;
+	}
+	public String getMemberbb_id() {
+		return memberbb_id;
+	}
+	public void setMemberbb_id(String memberbb_id) {
+		this.memberbb_id = memberbb_id;
 	}
 	public String getComment_content() {
 		return comment_content;
@@ -33,12 +40,11 @@ public class CommentBean {
 	public void setComment_date(Date comment_date) {
 		this.comment_date = comment_date;
 	}
-	public int getSajahu_no() {
-		return sajahu_no;
+	public int getCommentAvilable() {
+		return commentAvilable;
 	}
-	public void setSajahu_no(int sajahu_no) {
-		this.sajahu_no = sajahu_no;
+	public void setCommentAvilable(int commentAvilable) {
+		this.commentAvilable = commentAvilable;
 	}
-	
 	
 }

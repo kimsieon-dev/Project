@@ -28,7 +28,10 @@
 								placeholder="Password" autocomplete="off" />
 						</div>
 					</div>
-					<button type="submit" class="btn_login">로그인</button>
+					
+					<div class="btn_group">
+						<button type="submit" class="btn_login">로그인</button>
+					</div>
 					<div class="login_append">
 						<div class="inp_chk">
 							<!-- 체크시 checked 추가 -->

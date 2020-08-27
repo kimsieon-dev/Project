@@ -73,6 +73,7 @@ table.type09 td:nth-child(2) {
 	border-top-right-radius: 5px; 
 	border-bottom-right-radius: 5px; 
 	margin-right:-4px; 
+	cursor: pointer;
 } 
 
 #btn_group button { 
@@ -150,6 +151,7 @@ table.type09 td:nth-child(2) {
 	float: left;
 	color: #ffffff;
 	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	cursor: pointer;
 }
 
 .search1 {
@@ -177,4 +179,5 @@ table.type09 td:nth-child(2) {
 	float: right;
 	color: #ffffff;
 	font-family: 'NEXON Lv1 Gothic OTF Bold';
+	cursor: pointer;
 }

@@ -276,6 +276,10 @@ footer {
   margin-top: 20px;
 }
 
+label {
+	cursor: pointer;
+}
+
 .tabmenu ul li{
   display:  inline-block;
   width:33.33%; 

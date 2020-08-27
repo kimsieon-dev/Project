@@ -142,6 +142,8 @@
 	%>
 	</section>
 	
+	
+	
 	<footer>
 		<div class="footer">
 			<div class="foot">
