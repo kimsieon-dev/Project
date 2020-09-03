@@ -118,7 +118,7 @@
                 
                 <div>
                     <h3 class="join_title">
-                        <label for="memberbb_password">비밀번호</label>
+                        <label for="memberbb_password" type="password">비밀번호</label>
                     </h3>
                     <span class="box int_id">
                         <%=article.getMemberbb_password() %>

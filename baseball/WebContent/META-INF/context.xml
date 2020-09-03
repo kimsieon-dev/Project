@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-<!-- 	<Resource -->
+<!-- 집에서 작업할떄 -->
+<!--	<Resource -->
 <!-- 		name="jdbc/baseball" -->
 <!-- 		auth="Container" -->
 <!-- 		type="javax.sql.DataSource" -->
@@ -13,16 +14,32 @@
 <!-- 		maxIdle="100" -->
 <!-- 	/> -->
 	
+<!-- war파일로 변환후 카페에 올릴때 -->
 	<Resource
 		name="jdbc/baseball"
 		auth="Container"
 		type="javax.sql.DataSource"
 		username="gondor3320"
-		password="EhfdmlEkd1!"
-		driverClassName="org.mariadb.jdbc.Driver"
-		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+ 		password="EhfdmlEkd1!"
+ 		driverClassName="org.mariadb.jdbc.Driver"
+ 		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
 		url="jdbc:mariadb://localhost:3306/gondor3320"
 		maxActive="500"
-		maxIdle="100"
+ 		maxIdle="100"
 	/>
+
+
+<!-- 학원에서 작업했을때 -->
+<!-- 	<Resource -->
+<!-- 		name="jdbc/baseball" -->
+<!-- 		auth="Container" -->
+<!-- 		type="javax.sql.DataSource" -->
+<!-- 		username="emb1come" -->
+<!-- 		password="emb1come" -->
+<!-- 		driverClassName="org.mysql.jdbc.Driver" -->
+<!-- 		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" -->
+<!-- 		url="jdbc:mysql://118.131.179.138:3306/embed1_come?serverTimezone=UTC" -->
+<!-- 		maxActive="500" -->
+<!-- 		maxIdle="100" -->
+<!-- 	/> -->
 </Context>

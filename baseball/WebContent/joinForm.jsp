@@ -90,7 +90,7 @@
                             <span class="box">
                                 <select id="memberbb_mm" name="memberbb_mm" class="sel">
                                     <option>월</option>
-                                    <option value="01">1</option>
+                                    <option value="01">z1</option>
                                     <option value="02">2</option>
                                     <option value="03">3</option>
                                     <option value="04">4</option>

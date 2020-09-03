@@ -75,7 +75,7 @@ function overlap() {		// 아이디 중복 확인
 		    data : {"check" : check},
 		    success : function(result) {
 		    	if(result.trim() == "true") {
-		    		error[0].innerHTML = "이미 사용중이거나 탈퇴한 아이디입니다.";
+		    		error[0].innerHTML = "이미 사용중인 아이디입니다.";
 		            error[0].style.color = "red";
 		            error[0].style.display = "block";
 		            check_id = false;
